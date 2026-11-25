@@ -7,8 +7,6 @@ dek450CatalogReady.then(() => {
   const form = byId("checkoutForm");
   const lines = byId("lines");
   const review = byId("review");
-  const requestText = byId("orderText");
-  const whatsapp = byId("whatsapp");
   const fallback = productIndex.get(new URLSearchParams(location.search).get("item"));
   let basket = getBasket();
   let pendingOrder;
@@ -35,10 +33,7 @@ dek450CatalogReady.then(() => {
     pendingOrder = null;
     review.hidden = true;
     form.hidden = false;
-    requestText.value = "";
-    whatsapp.removeAttribute("href");
-    byId("requestMessage").open = false;
-    byId("copyStatus").textContent = "";
+    byId("sendStatus").textContent = "";
     progress("details");
   }
 
@@ -82,6 +77,12 @@ dek450CatalogReady.then(() => {
       const price = document.createElement("p");
       name.textContent = product.name;
       info.append(name, price);
+      if (product.category === "Biomedical equipment") {
+        const lead = document.createElement("p");
+        lead.className = "line-timing";
+        lead.textContent = "Lead time to be confirmed";
+        info.append(lead);
+      }
 
       const tools = document.createElement("div");
       tools.className = "line-tools";
@@ -163,7 +164,8 @@ dek450CatalogReady.then(() => {
     const detailList = byId("reviewDetails");
     detailList.replaceChildren();
     const rows = [
-      ["Contact", [customer.name, customer.phone, customer.email, customer.company].filter(Boolean).join("\n")],
+      ["Contact", [customer.name, customer.email, customer.company].filter(Boolean).join("\n")],
+      ["WhatsApp", customer.phone],
       [delivery ? "Delivery address" : "Pickup location", delivery
         ? [[customer.address, customer.city, customer.region].join(", "), customer.directions].filter(Boolean).join("\n")
         : "PK GREENE SUPPLY VENTURE\nNDC Junction, Cowpea Street, CB69\nKlagon, Lashibi, Tema"],
@@ -184,9 +186,12 @@ dek450CatalogReady.then(() => {
   const phone = form.elements.namedItem("phone");
   function validatePhone() {
     const value = phone.value.trim();
-    const digits = value.replace(/\D/g, "").length;
-    phone.setCustomValidity(!value || (/^\+?[\d ()-]+$/.test(value) && digits >= 7 && digits <= 15)
-      ? "" : "Enter a valid phone number.");
+    const digits = value.replace(/\D/g, "");
+    const valid = /^\+?[\d ()-]+$/.test(value) && (
+      /^0\d{9}$/.test(digits) || /^233\d{9}$/.test(digits) ||
+      (value.startsWith("+") && /^[1-9]\d{7,14}$/.test(digits))
+    );
+    phone.setCustomValidity(!value || valid ? "" : "Enter a Ghana WhatsApp number or include + and the country code.");
   }
   phone.addEventListener("input", validatePhone);
   form.addEventListener("input", hideReview);
@@ -202,35 +207,13 @@ dek450CatalogReady.then(() => {
 
     const data = new FormData(form);
     const value = name => (data.get(name) || "").trim();
-    const request = [
-      "Hello PK GREENE SUPPLY VENTURE. I'd like to request the following order.", "", "Items",
-      ...basket.map(item => {
-        const product = productIndex.get(item.id);
-        const price = typeof product.price === "number"
-          ? formatMoney.format(item.quantity * product.price) + " estimated" : "quote requested";
-        return "- " + item.quantity + " × " + product.name + " (" + price + ")";
-      }),
-      "Estimated subtotal: " + byId("subtotal").textContent,
-      "", "Customer: " + value("name"), "Phone: " + value("phone")
-    ];
-
-    if (value("email")) request.push("Email: " + value("email"));
-    if (value("company")) request.push("Facility/company: " + value("company"));
-    if (value("method") === "delivery") {
-      request.push("", "Fulfilment: Delivery", "Address: " + [value("address"),value("city"),value("region")].join(", "));
-      if (value("directions")) request.push("Delivery instructions: " + value("directions"));
-    } else {
-      request.push("", "Fulfilment: Pickup");
-    }
-    if (value("notes")) request.push("Order requirements: " + value("notes"));
-    request.push("", "Please confirm stock, final prices, and fulfilment arrangements.");
     const customer = Object.fromEntries(["name", "phone", "email", "company", "method", "region", "city", "address", "directions", "notes"].map(name => [name, value(name)]));
+    customer.whatsappOptIn = data.has("whatsappOptIn");
     const packet = { customer, items: basket.map(({id, quantity}) => ({id, quantity})) };
-    if (!pendingOrder || pendingOrder.fingerprint !== JSON.stringify(packet)) {
-      pendingOrder = { payload: {...packet, id: crypto.randomUUID()}, fingerprint: JSON.stringify(packet) };
+    const fingerprint = JSON.stringify(packet);
+    if (!pendingOrder || pendingOrder.fingerprint !== fingerprint) {
+      pendingOrder = { payload: {...packet, id: crypto.randomUUID()}, fingerprint };
     }
-    requestText.value = request.join("\n");
-    whatsapp.href = "https://wa.me/233533805134?text=" + encodeURIComponent(requestText.value);
     renderReview(customer);
     form.hidden = true;
     review.hidden = false;
@@ -245,10 +228,9 @@ dek450CatalogReady.then(() => {
     sending = true;
     send.disabled = true;
     byId("editOrder").disabled = true;
-    whatsapp.inert = true;
     form.inert = true;
     lines.inert = true;
-    byId("copyStatus").textContent = "Sending your request…";
+    byId("sendStatus").textContent = "Sending your request…";
     try {
       const response = await fetch(dek450Service + "/api/order-requests", {
         method: "POST",
@@ -262,41 +244,34 @@ dek450CatalogReady.then(() => {
       form.reset();
       basket = [];
       pendingOrder = null;
-      requestText.value = "";
-      whatsapp.removeAttribute("href");
       byId("reviewDetails").replaceChildren();
-      byId("copyStatus").textContent = "";
+      byId("sendStatus").textContent = "";
       review.hidden = true;
       form.hidden = true;
       byId("basketPanel").hidden = true;
       document.querySelector(".layout").classList.add("is-complete");
       progress("sent");
       byId("orderReference").textContent = "Reference: " + result.id;
+      byId("confirmedWhatsApp").textContent = payload.customer.phone;
+      const invoice = byId("invoiceLink");
+      invoice.hidden = !result.invoiceUrl;
+      if (result.invoiceUrl) invoice.href = result.invoiceUrl;
+      byId("invoiceStatus").textContent = result.whatsapp === "accepted"
+        ? "Your invoice was submitted to WhatsApp."
+        : result.invoiceUrl ? "Your pro forma invoice is ready to view now." : "Sales will confirm your invoice when they reach out.";
       byId("followup").href = "https://wa.me/233533805134?text=" + encodeURIComponent("Hello PK GREENE SUPPLY VENTURE, I’m following up on order request " + result.id + ".");
       byId("orderSent").hidden = false;
       byId("orderSentHeading").focus();
     } catch (issue) {
-      byId("copyStatus").textContent = issue.name === "TypeError" || issue.name === "TimeoutError"
+      byId("sendStatus").textContent = issue.name === "TypeError" || issue.name === "TimeoutError"
         ? "We couldn’t confirm receipt. Tap Send order request again to check, or contact sales."
-        : issue.message + " You can also contact sales through WhatsApp.";
+        : issue.message;
     } finally {
       sending = false;
       send.disabled = false;
       byId("editOrder").disabled = false;
-      whatsapp.inert = false;
       form.inert = false;
       lines.inert = false;
-    }
-  });
-
-  byId("copy").addEventListener("click", async () => {
-    try {
-      await navigator.clipboard.writeText(requestText.value);
-      byId("copyStatus").textContent = "Request copied.";
-    } catch {
-      requestText.focus();
-      requestText.select();
-      byId("copyStatus").textContent = "Request selected. Use your device’s copy command.";
     }
   });
 

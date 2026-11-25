@@ -150,3 +150,14 @@ textarea::placeholder { color: #677c70; }
   .line img { width: 42px; height: 42px; }
   .form-actions .button, .review-actions .button { width: 100%; }
 }
+
+.checkout-heading { display: flex; align-items: center; gap: clamp(12px, 3vw, 27px); }
+.checkout-art { display: block; width: clamp(85px, 12vw, 148px); height: auto; flex: none; }
+.whatsapp-permission { display: flex; gap: 10px; align-items: flex-start; margin-top: 14px; color: var(--forest-deep); }
+.whatsapp-permission input { flex: none; width: 17px; min-width: 17px; height: 17px; min-height: 17px; margin: 3px 0 0; padding: 0; accent-color: var(--forest); }
+.fulfilment-note { margin-top: 12px; padding: 10px 13px; background: #f4f7ef; border-radius: 9px; color: var(--muted); font-size: .85rem; }
+.fulfilment-note p { margin: 4px 0; }
+.fulfilment-note strong { color: var(--forest-deep); }
+.line .line-timing { color: #785025; font-size: .75rem; }
+.receipt .invoice-status { color: var(--forest); font-weight: 750; }
+@media (max-width: 430px) { .checkout-art { width: 77px; } .checkout-heading p { margin-top: 5px; } }
