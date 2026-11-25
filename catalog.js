@@ -19,6 +19,101 @@ const products = [
     "id": "gynecology-examination-chair"
   },
   {
+    "id": "mindray-c5-1s-probe",
+    "name": "Mindray C5-1s convex ultrasound probe",
+    "category": "Ultrasound supplies",
+    "brand": "Mindray",
+    "model": "C5-1s",
+    "description": "Curved-array ultrasound transducer.",
+    "specification": "Confirm the scanner model and connector version with sales before ordering.",
+    "photos": [
+      {
+        "src": "https://www.bcfultrasound.com/cdn/shop/files/BCF_Transducer_C5-1s-1_55e00302-0cd2-4bd5-ab92-b62b26f51daa.jpg?v=1773355781&width=1000",
+        "source": "https://www.bcfultrasound.com/products/c5-1s-convex-transducer",
+        "label": "Supplier product view"
+      },
+      {
+        "src": "https://www.bcfultrasound.com/cdn/shop/files/BCF_Transducer_C5-1s-3.jpg?v=1773355759&width=1000",
+        "source": "https://www.bcfultrasound.com/products/c5-1s-convex-transducer",
+        "label": "Alternate supplier view"
+      }
+    ]
+  },
+  {
+    "id": "mindray-l14-6ns-probe",
+    "name": "Mindray L14-6Ns linear ultrasound probe",
+    "category": "Ultrasound supplies",
+    "brand": "Mindray",
+    "model": "L14-6Ns",
+    "description": "Linear-array ultrasound transducer.",
+    "specification": "Confirm the scanner model and connector version with sales before ordering.",
+    "photos": [
+      {
+        "src": "https://marsmed.com/cdn/shop/files/Mindray_Linear_transducer_L14-6Ns_980x980.png?v=1722984051",
+        "source": "https://marsmed.com/products/mindray-linear-transducer-l14-6ns",
+        "label": "Supplier product view"
+      },
+      {
+        "src": "https://sales.hilditchgroup.com/images/lot/1060/106061_xl.jpg?ts=1718795377",
+        "source": "https://sales.hilditchgroup.com/lot-details/index/catalog/603/lot/45579/Mindray-L14-6Ns-Linear-Array-Transducer",
+        "label": "Alternate listing photo"
+      }
+    ]
+  },
+  {
+    "id": "mindray-v11-3ws-probe",
+    "name": "Mindray V11-3Ws endocavity ultrasound probe",
+    "category": "Ultrasound supplies",
+    "brand": "Mindray",
+    "model": "V11-3Ws",
+    "description": "Endocavity ultrasound transducer.",
+    "specification": "Confirm the scanner model and connector version with sales before ordering.",
+    "photos": [
+      {
+        "src": "https://lakefieldmedical.com/cdn/shop/files/32_f87730fd-1feb-48bb-a3b6-09215756050d.jpg?v=1731724388&width=1445",
+        "source": "https://lakefieldmedical.com/products/mindray-v11-3ws-transvaginal-ultrasound-probe-transducer-for-te7-te7max-and-m9-2",
+        "label": "Supplier product view"
+      },
+      {
+        "src": "https://lakefieldmedical.com/cdn/shop/files/32_975af48c-46e5-499d-9375-2a4fa4118b77.jpg?v=1731724388&width=1445",
+        "source": "https://lakefieldmedical.com/products/mindray-v11-3ws-transvaginal-ultrasound-probe-transducer-for-te7-te7max-and-m9-2",
+        "label": "Alternate supplier view"
+      }
+    ]
+  },
+  {
+    "id": "parker-sterile-aquasonic-100",
+    "name": "Sterile Aquasonic 100 ultrasound gel",
+    "category": "Ultrasound supplies",
+    "brand": "Parker Laboratories",
+    "model": "Sterile Aquasonic 100",
+    "description": "Ultrasound transmission gel in single-use sterile packets.",
+    "specification": "Confirm the required packet size and case quantity with sales.",
+    "photos": [
+      {
+        "src": "https://www.parkerlabs.com/wp-content/uploads/2022/03/AQ100-Sterile_Web2560x1440.jpg",
+        "source": "https://www.parkerlabs.com/product/sterile-aquasonic-ultrasound-transmission-gel/",
+        "label": "Parker product image"
+      }
+    ]
+  },
+  {
+    "id": "civco-surgi-610-023",
+    "name": "CIVCO Surgi ultrasound probe cover",
+    "category": "Ultrasound supplies",
+    "brand": "CIVCO",
+    "model": "610-023",
+    "description": "Sterile cover for a compatible ultrasound transducer.",
+    "specification": "Confirm the probe type, cover dimensions, and pack size before ordering.",
+    "photos": [
+      {
+        "src": "https://dkcdkv8eldsua.cloudfront.net/media/catalog/product/b/1/b1f2bc63471b2cf8ed5ac7b458e15332.jpg?height=265&image-type=image&store=default&width=265",
+        "source": "https://imedsales.com/civco-610-023-surgi-transducer-cover",
+        "label": "Supplier package photo"
+      }
+    ]
+  },
+  {
     "name": "JT-S70A portable ultrasound",
     "category": "Biomedical equipment",
     "brand": "Brand to confirm",
@@ -880,6 +975,27 @@ const products = [
     ]
   },
   {
+    "id": "sensa-core-st-200-aqua",
+    "name": "Sensa Core ST-200 aQua electrolyte analyzer",
+    "category": "Biomedical equipment",
+    "brand": "Sensa Core",
+    "model": "ST-200 aQua",
+    "description": "Standalone benchtop analyzer for laboratory electrolyte testing.",
+    "specification": "Ion-selective electrode technology. Confirm the electrolyte panel and accessories for your requested configuration.",
+    "photos": [
+      {
+        "src": "https://www.sensacore.com/images/37aa62c32ac07c7d87731bf05ac748a8.png",
+        "source": "https://www.sensacore.com/product/electrolyte-analyzer-aqua",
+        "label": "Manufacturer product view"
+      },
+      {
+        "src": "https://shop.hlr.ua/image/cache/import_files/H0316908/21-800x800-product_popup.jpg",
+        "source": "https://shop.hlr.ua/analizator-elektrolitov-st-200-aqua-sensa-core-255414.html",
+        "label": "Supplier interior view"
+      }
+    ]
+  },
+  {
     "id": "urit-910c-plus-electrolyte-analyzer",
     "name": "URIT-910C Plus electrolyte analyzer",
     "category": "Biomedical equipment",
@@ -1221,6 +1337,134 @@ const products = [
       }
     ],
     "id": "hcg-pregnancy-rapid-test-kit"
+  },
+  {
+    "id": "finecare-lh-quantitative-test",
+    "name": "Finecare LH rapid quantitative test kit",
+    "category": "Laboratory test kits",
+    "brand": "Wondfo Finecare",
+    "model": "LH FIA assay",
+    "description": "Assay kit for quantitative measurement of luteinizing hormone.",
+    "specification": "For compatible Finecare FIA meters. Confirm the kit reference, meter compatibility, and pack size with sales.",
+    "photos": [
+      {
+        "src": "https://en.wondfo.com/vancheerfile/images/2020/9/20200916155038334.jpg",
+        "source": "https://en.wondfo.com/pt/lh-rapid-quantitative-test.html",
+        "label": "Wondfo product image"
+      }
+    ]
+  },
+  {
+    "id": "finecare-fsh-quantitative-test",
+    "name": "Finecare FSH rapid quantitative test kit",
+    "category": "Laboratory test kits",
+    "brand": "Wondfo Finecare",
+    "model": "FSH FIA assay",
+    "description": "Assay kit for quantitative measurement of follicle-stimulating hormone.",
+    "specification": "For compatible Finecare FIA meters. Confirm the kit reference, meter compatibility, and pack size with sales.",
+    "photos": [
+      {
+        "src": "https://en.wondfo.com/vancheerfile/images/2020/9/20200916155112523.jpg",
+        "source": "https://en.wondfo.com/pt/fsh-rapid-quantitative-test.html",
+        "label": "Wondfo product image"
+      }
+    ]
+  },
+  {
+    "id": "finecare-amh-quantitative-test",
+    "name": "Finecare AMH rapid quantitative test kit",
+    "category": "Laboratory test kits",
+    "brand": "Wondfo Finecare",
+    "model": "AMH FIA assay",
+    "description": "Assay kit for quantitative measurement of Anti-Müllerian hormone.",
+    "specification": "For compatible Finecare FIA meters. Confirm the kit reference, meter compatibility, and pack size with sales.",
+    "photos": [
+      {
+        "src": "https://en.wondfo.com/vancheerfile/images/2021/12/20211214084730861.png",
+        "source": "https://en.wondfo.com/pt/amh-rapid-quantitative-test.html",
+        "label": "Wondfo product image"
+      }
+    ]
+  },
+  {
+    "id": "finecare-testosterone-quantitative-test",
+    "name": "Finecare Testosterone rapid quantitative test kit",
+    "category": "Laboratory test kits",
+    "brand": "Wondfo Finecare",
+    "model": "Testosterone FIA assay",
+    "description": "Assay kit for quantitative measurement of testosterone.",
+    "specification": "For compatible Finecare FIA meters. Confirm the kit reference, meter compatibility, and pack size with sales.",
+    "photos": [
+      {
+        "src": "https://en.wondfo.com/vancheerfile/images/2020/9/2020091616346934.jpg",
+        "source": "https://en.wondfo.com/pt/testosterone-rapid-quantitative-test.html",
+        "label": "Wondfo product image"
+      }
+    ]
+  },
+  {
+    "id": "finecare-e2-quantitative-test",
+    "name": "Finecare Estradiol (E2) rapid quantitative test kit",
+    "category": "Laboratory test kits",
+    "brand": "Wondfo Finecare",
+    "model": "Estradiol (E2) FIA assay",
+    "description": "Assay kit for quantitative measurement of estradiol.",
+    "specification": "For compatible Finecare FIA meters. Confirm the kit reference, meter compatibility, and pack size with sales.",
+    "photos": [
+      {
+        "src": "https://en.wondfo.com/vancheerfile/images/2020/9/20200916163335686.jpg",
+        "source": "https://en.wondfo.com/pt/e2-rapid-quantitative-test.html",
+        "label": "Wondfo product image"
+      }
+    ]
+  },
+  {
+    "id": "finecare-prl-quantitative-test",
+    "name": "Finecare Prolactin (PRL) rapid quantitative test kit",
+    "category": "Laboratory test kits",
+    "brand": "Wondfo Finecare",
+    "model": "Prolactin (PRL) FIA assay",
+    "description": "Assay kit for quantitative measurement of prolactin.",
+    "specification": "For compatible Finecare FIA meters. Confirm the kit reference, meter compatibility, and pack size with sales.",
+    "photos": [
+      {
+        "src": "https://en.wondfo.com/vancheerfile/images/2020/9/20200916161523457.jpg",
+        "source": "https://en.wondfo.com/pt/prl-rapid-quantitative-test.html",
+        "label": "Wondfo product image"
+      }
+    ]
+  },
+  {
+    "id": "finecare-progesterone-quantitative-test",
+    "name": "Finecare Progesterone rapid quantitative test kit",
+    "category": "Laboratory test kits",
+    "brand": "Wondfo Finecare",
+    "model": "Progesterone FIA assay",
+    "description": "Assay kit for quantitative measurement of progesterone.",
+    "specification": "For compatible Finecare FIA meters. Confirm the kit reference, meter compatibility, and pack size with sales.",
+    "photos": [
+      {
+        "src": "https://en.wondfo.com/vancheerfile/images/2020/9/20200916161447752.jpg",
+        "source": "https://en.wondfo.com/pt/progesterone-rapid-quantitative-test.html",
+        "label": "Wondfo product image"
+      }
+    ]
+  },
+  {
+    "id": "finecare-beta-hcg-quantitative-test",
+    "name": "Finecare Beta-hCG rapid quantitative test kit",
+    "category": "Laboratory test kits",
+    "brand": "Wondfo Finecare",
+    "model": "Beta-hCG FIA assay",
+    "description": "Assay kit for quantitative measurement of beta-human chorionic gonadotropin.",
+    "specification": "For compatible Finecare FIA meters. Confirm the kit reference, meter compatibility, and pack size with sales.",
+    "photos": [
+      {
+        "src": "https://en.wondfo.com/vancheerfile/images/2020/9/20200916154956679.jpg",
+        "source": "https://en.wondfo.com/pt/%CE%B2-hcg-rapid-quantitative-test.html",
+        "label": "Wondfo product image"
+      }
+    ]
   },
   {
     "name": "Finecare TSH rapid quantitative test kit",
