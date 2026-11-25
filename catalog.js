@@ -34,6 +34,260 @@ const products = [
     "id": "jt-s70a-portable-ultrasound"
   },
   {
+    "id": "accuquik-typhoid",
+    "name": "AccuQuik Typhoid rapid test kit",
+    "category": "Laboratory test kits",
+    "brand": "AccuQuik by AdvaCare Pharma",
+    "model": "Typhoid",
+    "description": "Typhoid antibody screening.",
+    "specification": "25-kit box and individual pouch shown.",
+    "photos": [
+      {
+        "src": "https://www.advacarepharma.com/images/typhoid-test-kit-box.png?fit=contain&h=500&w=500",
+        "source": "https://www.advacarepharma.com/en/medical-devices/typhoid-test-kit",
+        "label": "Manufacturer box image"
+      },
+      {
+        "src": "https://www.advacarepharma.com/images/typhoid-test-kit-pouch.png?fit=contain&h=500&w=500",
+        "source": "https://www.advacarepharma.com/en/medical-devices/typhoid-test-kit",
+        "label": "Manufacturer pouch image"
+      }
+    ]
+  },
+  {
+    "id": "accuquik-malaria",
+    "name": "AccuQuik Malaria rapid test kits",
+    "category": "Laboratory test kits",
+    "brand": "AccuQuik by AdvaCare Pharma",
+    "model": "Malaria",
+    "description": "Malaria rapid test range.",
+    "specification": "Confirm the assay variant and format with sales.",
+    "photos": [
+      {
+        "src": "https://www.advacarepharma.com/images/malaria-test-kits-box.png?fit=contain&h=500&w=500",
+        "source": "https://www.advacarepharma.com/en/medical-devices/malaria-test-kits",
+        "label": "Manufacturer box image"
+      },
+      {
+        "src": "https://www.advacarepharma.com/images/malaria-test-kits-pouch.png?fit=contain&h=500&w=500",
+        "source": "https://www.advacarepharma.com/en/medical-devices/malaria-test-kits",
+        "label": "Manufacturer pouch image"
+      }
+    ]
+  },
+  {
+    "id": "accuquik-syphilis",
+    "name": "AccuQuik Syphilis rapid test kit",
+    "category": "Laboratory test kits",
+    "brand": "AccuQuik by AdvaCare Pharma",
+    "model": "Syphilis",
+    "description": "Syphilis antibody screening.",
+    "specification": "Cassette and strip formats are listed by the manufacturer.",
+    "photos": [
+      {
+        "src": "https://www.advacarepharma.com/images/syphilis-test-kit-box.png?fit=contain&h=500&w=500",
+        "source": "https://www.advacarepharma.com/en/medical-devices/syphilis-test-kit",
+        "label": "Manufacturer box image"
+      },
+      {
+        "src": "https://www.advacarepharma.com/images/syphilis-test-kit-pouch.png?fit=contain&h=500&w=500",
+        "source": "https://www.advacarepharma.com/en/medical-devices/syphilis-test-kit",
+        "label": "Manufacturer pouch image"
+      }
+    ]
+  },
+  {
+    "id": "accuquik-hiv-1-2",
+    "name": "AccuQuik HIV 1/2 antibody rapid test kit",
+    "category": "Laboratory test kits",
+    "brand": "AccuQuik by AdvaCare Pharma",
+    "model": "HIV 1/2 antibody",
+    "description": "HIV-1 and HIV-2 antibody screening.",
+    "specification": "25-kit box and individual pouch shown.",
+    "photos": [
+      {
+        "src": "https://www.advacarepharma.com/images/hiv-1-2-antibody-test-kits-box.png?fit=contain&h=500&w=500",
+        "source": "https://www.advacarepharma.com/en/medical-devices/hiv-test-kits",
+        "label": "Manufacturer box image"
+      },
+      {
+        "src": "https://www.advacarepharma.com/images/hiv-1-2-antibody-test-kits-pouch.png?fit=contain&h=500&w=500",
+        "source": "https://www.advacarepharma.com/en/medical-devices/hiv-test-kits",
+        "label": "Manufacturer pouch image"
+      }
+    ]
+  },
+  {
+    "id": "accuquik-dengue-ns1",
+    "name": "AccuQuik Dengue NS1 rapid test kit",
+    "category": "Laboratory test kits",
+    "brand": "AccuQuik by AdvaCare Pharma",
+    "model": "Dengue NS1",
+    "description": "Dengue NS1 antigen screening.",
+    "specification": "25-kit box and individual pouch shown.",
+    "photos": [
+      {
+        "src": "https://www.advacarepharma.com/images/dengue-test-kits-box-ns1.png?fit=contain&h=500&w=500",
+        "source": "https://www.advacarepharma.com/en/medical-devices/dengue-test-kits",
+        "label": "Manufacturer box image"
+      },
+      {
+        "src": "https://www.advacarepharma.com/images/dengue-test-kits-pouch-ns1.png?fit=contain&h=500&w=500",
+        "source": "https://www.advacarepharma.com/en/medical-devices/dengue-test-kits",
+        "label": "Manufacturer pouch image"
+      }
+    ]
+  },
+  {
+    "id": "accuquik-h-pylori-antigen",
+    "name": "AccuQuik H. pylori antigen rapid test kit",
+    "category": "Laboratory test kits",
+    "brand": "AccuQuik by AdvaCare Pharma",
+    "model": "H. pylori antigen",
+    "description": "H. pylori antigen screening.",
+    "specification": "25-kit box and individual pouch shown.",
+    "photos": [
+      {
+        "src": "https://www.advacarepharma.com/images/h-pylori-antigen-test-kits-box.png?fit=contain&h=500&w=500",
+        "source": "https://www.advacarepharma.com/en/medical-devices/h-pylori-test-kits",
+        "label": "Manufacturer box image"
+      },
+      {
+        "src": "https://www.advacarepharma.com/images/h-pylori-antigen-test-kits-pouch.png?fit=contain&h=500&w=500",
+        "source": "https://www.advacarepharma.com/en/medical-devices/h-pylori-test-kits",
+        "label": "Manufacturer pouch image"
+      }
+    ]
+  },
+  {
+    "id": "wondfo-malaria-pf-pan",
+    "name": "Wondfo Malaria HRP2/pLDH Pf/Pan rapid test",
+    "category": "Laboratory test kits",
+    "brand": "Wondfo",
+    "model": "Malaria HRP2/pLDH Pf/Pan rapid test",
+    "description": "Falciparum and pan-malaria antigen screening.",
+    "specification": "One Step Pf/Pan assay.",
+    "photos": [
+      {
+        "src": "https://en.wondfo.com/vancheerfile/images/2020/9/20200915160517424.jpg",
+        "source": "https://en.wondfo.com/pt/malaria-hrp2-pldh-pf-pan.html",
+        "label": "Manufacturer product image"
+      }
+    ]
+  },
+  {
+    "id": "wondfo-syphilis",
+    "name": "Wondfo One Step Syphilis rapid test",
+    "category": "Laboratory test kits",
+    "brand": "Wondfo",
+    "model": "One Step Syphilis rapid test",
+    "description": "Syphilis antibody screening.",
+    "specification": "One Step rapid test.",
+    "photos": [
+      {
+        "src": "https://en.wondfo.com/vancheerfile/images/2020/9/2020091516006153.jpg",
+        "source": "https://en.wondfo.com/pt/one-step-syphilis-test.html",
+        "label": "Manufacturer product image"
+      }
+    ]
+  },
+  {
+    "id": "wondfo-hiv-1-2",
+    "name": "Wondfo One Step HIV 1/2 rapid test",
+    "category": "Laboratory test kits",
+    "brand": "Wondfo",
+    "model": "One Step HIV 1/2 rapid test",
+    "description": "HIV-1 and HIV-2 antibody screening.",
+    "specification": "Two-line One Step version.",
+    "photos": [
+      {
+        "src": "https://en.wondfo.com/vancheerfile/images/2023/10/20231008085221776.jpg",
+        "source": "https://en.wondfo.com/pt/one-step-hiv-test.html",
+        "label": "Manufacturer product image"
+      }
+    ]
+  },
+  {
+    "id": "wondfo-hbsag",
+    "name": "Wondfo One Step HBsAg rapid test",
+    "category": "Laboratory test kits",
+    "brand": "Wondfo",
+    "model": "One Step HBsAg rapid test",
+    "description": "Hepatitis B surface antigen screening.",
+    "specification": "One Step HBsAg test.",
+    "photos": [
+      {
+        "src": "https://en.wondfo.com/vancheerfile/images/2020/9/2020091516095795.jpg",
+        "source": "https://en.wondfo.com/pt/hbsag-test.html",
+        "label": "Manufacturer product image"
+      }
+    ]
+  },
+  {
+    "id": "wondfo-hiv-hcv-hbsag-syphilis",
+    "name": "Wondfo HIV/HCV/HBsAg/Syphilis combo rapid test",
+    "category": "Laboratory test kits",
+    "brand": "Wondfo",
+    "model": "HIV/HCV/HBsAg/Syphilis combo rapid test",
+    "description": "Combined screening for HIV-1/2 antibodies, HCV antibodies, HBsAg, and syphilis antibodies.",
+    "specification": "Four-marker One Step combo for professional use.",
+    "photos": [
+      {
+        "src": "https://en.wondfo.com/vancheerfile/images/2022/6/20220627090357283.png",
+        "source": "https://en.wondfo.com/pt/one-step-hiv-hcv-hbsag-syphilis-combo-test.html",
+        "label": "Manufacturer product image"
+      }
+    ]
+  },
+  {
+    "id": "juschek-typhoid-igg-igm",
+    "name": "JusChek Typhoid IgG/IgM rapid test",
+    "category": "Laboratory test kits",
+    "brand": "JusChek",
+    "model": "Typhoid IgG/IgM rapid test",
+    "description": "Typhoid antibody screening.",
+    "specification": "25-test pack listed by the supplier.",
+    "photos": [
+      {
+        "src": "https://cdn1.sgliteasset.com/metromed_1/images/product/product-7167139/uTG4byXN69ce28011fb24_1775118337.png",
+        "source": "https://www.metromedicalsupplies.com.my/product/juschek-typhoid-igg-igm-rapid-test-25s",
+        "label": "Supplier product image"
+      }
+    ]
+  },
+  {
+    "id": "juschek-malaria-pf-pan",
+    "name": "JusChek Malaria Ag Pf/Pan rapid test",
+    "category": "Laboratory test kits",
+    "brand": "JusChek",
+    "model": "Malaria Ag Pf/Pan rapid test",
+    "description": "Falciparum and pan-malaria antigen screening.",
+    "specification": "25-cassette pack listed by the supplier.",
+    "photos": [
+      {
+        "src": "https://cdn1.sgliteasset.com/metromed_1/images/product/product-7165569/JU4ximWD69ce0bb9b2ba3_1775111097.png",
+        "source": "https://www.metromedicalsupplies.com.my/product/juschek-malaria-ag-pfpan-cassette-25s",
+        "label": "Supplier product image"
+      }
+    ]
+  },
+  {
+    "id": "juschek-dengue-ns1",
+    "name": "JusChek Dengue NS1 rapid test",
+    "category": "Laboratory test kits",
+    "brand": "JusChek",
+    "model": "Dengue NS1 rapid test",
+    "description": "Dengue NS1 antigen screening.",
+    "specification": "Rapid test cassette. Confirm the pack size with sales.",
+    "photos": [
+      {
+        "src": "https://static-01.daraz.pk/p/50cbec57240e2cd836487b2ddbed6a8a.jpg",
+        "source": "https://www.daraz.pk/products/dengue-ns1-rapid-test-cassettejuscheck-i433104204.html",
+        "label": "Supplier product image"
+      }
+    ]
+  },
+  {
     "name": "Accurate H. pylori antigen test cassette",
     "category": "Laboratory test kits",
     "brand": "Accurate",
