@@ -136,11 +136,6 @@ const products = [
     "specificationSource": "https://www.microscope.healthcare.nikon.com/en_EU/products/upright-microscopes/eclipse-e100",
     "photos": [
       {
-        "src": "https://www.coherent.com.au/content/products/E100.1.jpg",
-        "source": "https://www.coherent.com.au/products/optical-microscopes-imaging/microscopes-upright/nikon-eclipse-eled-educational-microscope-658.html",
-        "label": "Supplier product view"
-      },
-      {
         "src": "https://www.microscope.healthcare.nikon.com/guides/e100/en/images/quickguide/img1.jpg",
         "source": "https://www.microscope.healthcare.nikon.com/guides/e100/en/quickguide/",
         "label": "Manufacturer handling view"
