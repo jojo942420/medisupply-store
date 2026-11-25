@@ -126,6 +126,28 @@ const products = [
     ]
   },
   {
+    "id": "evident-olympus-cx43-microscope",
+    "name": "Olympus CX43 clinical microscope",
+    "category": "Microscopes",
+    "brand": "Evident · Olympus",
+    "model": "CX43",
+    "description": "Upright microscope for routine clinical laboratory slide examination.",
+    "specification": "Transmitted LED illumination with fixed Köhler optics, a universal condenser, and a five-position objective nosepiece. Optional configurations support phase contrast, darkfield or fluorescence. Confirm the observation tube and objective set with sales.",
+    "specificationSource": "https://evidentscientific.com/en/products/upright/cx43",
+    "photos": [
+      {
+        "src": "https://microscopemarketplace.com/cdn/shop/files/20241004_112705.jpg?v=1728057610&width=1080",
+        "source": "https://microscopemarketplace.com/products/olympus-microscope-cx43-led",
+        "label": "Supplier microscope photo"
+      },
+      {
+        "src": "https://evidentscientific.com/en/products/upright/media_1b78a88cc821963166db748e46668a8209d730041.jpg?format=jpg&optimize=medium&width=750",
+        "source": "https://evidentscientific.com/en/products/upright/cx43",
+        "label": "Manufacturer objective nosepiece detail"
+      }
+    ]
+  },
+  {
     "id": "nikon-eclipse-e100-microscope",
     "name": "Nikon Eclipse E100-LED binocular microscope",
     "category": "Microscopes",
