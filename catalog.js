@@ -1792,5 +1792,158 @@ const products = [
       }
     ],
     "id": "finecare-tsh-rapid-quantitative-test-kit"
+  },
+  {
+    "id": "randox-lan4214-assayed-chemistry-control-2",
+    "name": "Randox Acusera Premium Plus chemistry control · Level 2",
+    "category": "Laboratory test kits",
+    "brand": "Randox Acusera",
+    "model": "LAN4214",
+    "description": "Liquid assayed quality control material for clinical chemistry testing.",
+    "specification": "Ready-to-use human serum-based control. Level 2, 12 × 5 mL. Match the lot’s assigned values to your instrument and assay.",
+    "specificationSource": "https://store.randox.com/product/liquid-assayed-chemistry-premium-plus-level-2/",
+    "photos": [
+      {
+        "src": "https://www.henryschein.com/Products/1267389_US_front_01_600x600.jpg",
+        "source": "https://www.henryschein.com/us-en/medical/p/laboratory/clinical-analyzer-reagent-accessories/liq-assayed-chem-prem-lvl-2/1267389",
+        "label": "Henry Schein product photo"
+      }
+    ]
+  },
+  {
+    "id": "bio-rad-c-315-5-lyphochek-chemistry-control-2",
+    "name": "Bio-Rad Lyphochek Assayed Chemistry Control · Level 2",
+    "category": "Laboratory test kits",
+    "brand": "Bio-Rad",
+    "model": "C-315-5",
+    "description": "Multi-analyte control for monitoring routine clinical chemistry assay performance.",
+    "specification": "Lyophilized human serum-based control. Level 2, 12 × 5 mL. Consult the current lot insert for assigned values.",
+    "specificationSource": "https://www.bio-rad.com/webroot/web/pdf/cdg/literature/Q1534_Lyp_Assayed_Chemistry.pdf",
+    "photos": [
+      {
+        "src": "https://cdn11.bigcommerce.com/s-rihs34rpvk/images/stencil/1280x1280/products/93877/167861/2024-12-11_08_51_14__63012.1733925698.png?c=1",
+        "source": "https://medexsupply.com/lyphochek-assayed-chemistry-control-level-2-c-315-5/",
+        "label": "Medex Supply vial photo"
+      }
+    ]
+  },
+  {
+    "id": "roche-05117003190-precicontrol-clinchem-multi-1",
+    "name": "Roche PreciControl ClinChem Multi 1 chemistry control",
+    "category": "Laboratory test kits",
+    "brand": "Roche Diagnostics",
+    "model": "05117003190",
+    "description": "Multi-analyte quality control material for compatible cobas clinical chemistry assays.",
+    "specification": "Manufacturer catalog pack size: 20 × 5 mL. Check the assay insert for the required control and analyzer configuration.",
+    "specificationSource": "https://diagnostics.roche.com/content/dam/diagnostics/fr/documents/catalogue%202023_VF.pdf",
+    "photos": [
+      {
+        "src": "https://static.insales-cdn.com/images/products/1/3894/383455030/IMG_20201202_112621.jpg",
+        "source": "https://trio-medical.ru/product/chistyaschiy-rastvor-dlya-analizatorov-elektrolitov-cleaning-solution-for-electrolyte-systems-125ml-2",
+        "label": "Supplier carton photo"
+      }
+    ]
+  },
+  {
+    "id": "randox-cal2350-chemistry-calibration-serum-2",
+    "name": "Randox chemistry calibration serum · Level 2",
+    "category": "Laboratory test kits",
+    "brand": "Randox Acusera",
+    "model": "CAL2350",
+    "description": "Assayed calibration serum for compatible clinical chemistry methods.",
+    "specification": "Lyophilized human serum-based calibrator. Level 2, 20 × 5 mL. Confirm the application and lot-specific values for your analyzer.",
+    "specificationSource": "https://store.randox.com/product/clinical-chemistry-calibration-serum-level-2/",
+    "photos": [
+      {
+        "src": "https://www.labcarecolombia.com/web/image/product.image/378/image_1024/Multicalibrador%20Quimica%20Clinica%20Nivel%202%20Randox%20%28UK%29?unique=446ab6a",
+        "source": "https://www.labcarecolombia.com/shop/ra-cal2350-multicalibrador-quimica-clinica-nivel-2-randox-uk-24735",
+        "label": "Supplier carton photo"
+      }
+    ]
+  },
+  {
+    "id": "randox-cal2351-chemistry-calibration-serum-3",
+    "name": "Randox chemistry calibration serum · Level 3",
+    "category": "Laboratory test kits",
+    "brand": "Randox Acusera",
+    "model": "CAL2351",
+    "description": "Assayed calibration serum for compatible clinical chemistry methods.",
+    "specification": "Lyophilized human serum-based calibrator. Level 3, 20 × 5 mL. Confirm the application and lot-specific values for your analyzer.",
+    "specificationSource": "https://store.randox.com/product/clinical-chemistry-calibration-serum-level-3/",
+    "photos": [
+      {
+        "src": "https://www.labcarecolombia.com/web/image/product.image/376/image_1024/Multicalibrador%20Qu%C3%ADmica%20Cl%C3%ADnica%20Nivel%203%20Randox%20%28UK%29?unique=8236d2f",
+        "source": "https://www.labcarecolombia.com/shop/ra-cal2351-multicalibrador-quimica-clinica-nivel-3-randox-uk-24765",
+        "label": "Supplier carton photo"
+      }
+    ]
+  },
+  {
+    "id": "roche-10759350190-cfas-chemistry-calibrator",
+    "name": "Roche cobas C.f.a.s. chemistry calibrator",
+    "category": "Laboratory test kits",
+    "brand": "Roche Diagnostics",
+    "model": "10759350190",
+    "description": "Calibrator for automated systems for compatible Roche clinical chemistry assays.",
+    "specification": "Manufacturer store pack size: 12 × 3 mL. Verify the required calibrator reference for your analyzer and reagent pack.",
+    "specificationSource": "https://shop.roche-diagnostics.ch/laboratoire/10759350190",
+    "photos": [
+      {
+        "src": "https://shop.roche-diagnostics.ch/media/catalog/product/cache/278da0c52867934285e583d0a19e9197/a/r/article_10759350190_im_en_um0m7dhhci1allni.png",
+        "source": "https://shop.roche-diagnostics.ch/laboratoire/10759350190",
+        "label": "Roche store pack photo"
+      }
+    ]
+  },
+  {
+    "id": "mindray-105-002225-00-hematology-probe-cleanser",
+    "name": "Mindray hematology probe cleanser · 50 mL",
+    "category": "Laboratory test kits",
+    "brand": "Mindray",
+    "model": "105-002225-00",
+    "description": "Probe cleaning reagent for compatible Mindray hematology analyzers.",
+    "specification": "50 mL bottle. The supplier lists compatibility with the BC-30s, BC-20s and selected BC-6000-series models. Verify your exact model before ordering.",
+    "specificationSource": "https://monarcalab.net/shop/105-002225-00-probe-cleanser-50-ml-mindray-bc-20s-bc21-bc-10-bc-11-bc-6000-bc600-plus-bc-6100-bc-6100-plus-bc-6200-bc-6600plus-bc-700plus-bc6800plus-bc30s-65897",
+    "photos": [
+      {
+        "src": "https://monarcalab.net/web/image/product.template/65897/image_1920?unique=1482c68",
+        "source": "https://monarcalab.net/shop/105-002225-00-probe-cleanser-50-ml-mindray-bc-20s-bc21-bc-10-bc-11-bc-6000-bc600-plus-bc-6100-bc-6100-plus-bc-6200-bc-6600plus-bc-700plus-bc6800plus-bc30s-65897",
+        "label": "Monarca product photo"
+      }
+    ]
+  },
+  {
+    "id": "sysmex-83401621-cellclean-50ml",
+    "name": "Sysmex CELLCLEAN hematology cleanser · 50 mL",
+    "category": "Laboratory test kits",
+    "brand": "Sysmex",
+    "model": "83401621 · 50 mL",
+    "description": "Alkaline maintenance cleaner for the fluidic system of compatible Sysmex hematology instruments.",
+    "specification": "50 mL bottle. Check the analyzer manual for the required cleaner and pack format.",
+    "specificationSource": "https://shop.sysmex.ch/fr_ch/cellclean-50-ml/83401621",
+    "photos": [
+      {
+        "src": "https://shop.sysmex.ch/media/51/cb/8c/1702302710/Cellclean.jpg?ts=1702302710",
+        "source": "https://shop.sysmex.ch/fr_ch/cellclean-50-ml/83401621",
+        "label": "Sysmex store bottle photo"
+      }
+    ]
+  },
+  {
+    "id": "sysmex-bq095093-cellclean-auto",
+    "name": "Sysmex CELLCLEAN AUTO hematology cleanser",
+    "category": "Laboratory test kits",
+    "brand": "Sysmex",
+    "model": "BQ095093 · 20 × 4 mL",
+    "description": "Packaged alkaline cleaning reagent for the fluidic system of compatible Sysmex hematology analyzers.",
+    "specification": "20 × 4 mL. Verify that the analyzer calls for the AUTO format before ordering.",
+    "specificationSource": "https://shop.sysmex.ch/cellclean-auto/bq095093",
+    "photos": [
+      {
+        "src": "https://shop.sysmex.ch/media/5c/cc/c2/1702302736/Cellclean-Auto.jpg?ts=1702302736",
+        "source": "https://shop.sysmex.ch/cellclean-auto/bq095093",
+        "label": "Sysmex store pack photo"
+      }
+    ]
   }
 ];
