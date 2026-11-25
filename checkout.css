@@ -28,8 +28,10 @@ button, input, textarea { font: inherit; }
 .icon { width: 1.15em; height: 1.15em; flex: none; fill: none; stroke: currentColor; stroke-width: 1.65; stroke-linecap: round; stroke-linejoin: round; }
 .site-header { background: #fcfdf9; border-bottom: 1px solid var(--line); }
 .topbar { min-height: 77px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-.brand { display: block; flex: none; }
-.brand img { display: block; width: clamp(140px, 24vw, 192px); height: auto; }
+.brand { display: inline-flex; flex: none; gap:8px; align-items:center; text-decoration:none; line-height:1.12; }
+.identity-mark { display:block; width:clamp(35px, 8vw, 48px); height:auto; }
+.wordmark { color:var(--forest-deep); font-size:clamp(.9rem, 2.4vw, 1.21rem); font-weight:800; white-space:nowrap; letter-spacing:-.035em; }
+.wordmark span { display:block; margin-top:3px; color:var(--muted); font-size:.67em; letter-spacing:.095em; }
 .nav-link { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; font-size: .88rem; font-weight: 750; text-decoration: none; }
 .nav-link:hover { text-decoration: underline; }
 .checkout { padding-block: 38px 28px; }

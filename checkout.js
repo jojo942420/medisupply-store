@@ -203,7 +203,7 @@ dek450CatalogReady.then(() => {
     const data = new FormData(form);
     const value = name => (data.get(name) || "").trim();
     const request = [
-      "Hello Dek450 Medsupplies. I'd like to request the following order.", "", "Items",
+      "Hello PK GREENE SUPPLY VENTURE. I'd like to request the following order.", "", "Items",
       ...basket.map(item => {
         const product = productIndex.get(item.id);
         const price = typeof product.price === "number"
@@ -272,7 +272,7 @@ dek450CatalogReady.then(() => {
       document.querySelector(".layout").classList.add("is-complete");
       progress("sent");
       byId("orderReference").textContent = "Reference: " + result.id;
-      byId("followup").href = "https://wa.me/233533805134?text=" + encodeURIComponent("Hello Dek450, I’m following up on order request " + result.id + ".");
+      byId("followup").href = "https://wa.me/233533805134?text=" + encodeURIComponent("Hello PK GREENE SUPPLY VENTURE, I’m following up on order request " + result.id + ".");
       byId("orderSent").hidden = false;
       byId("orderSentHeading").focus();
     } catch (issue) {

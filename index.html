@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Shop trusted medical supplies, clinical disposables and biomedical equipment.">
-<title>Dek450 Medsupplies Limited | Medical and Laboratory Supplies</title>
+<title>PK GREENE SUPPLY VENTURE | Medical and Laboratory Supplies</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
@@ -28,9 +28,8 @@ h1,h2,h3,p,figure {margin:0}
 .masthead {background:var(--white);border-bottom:1px solid var(--line)}
 .nav {min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:28px}
 .brand {display:inline-flex;align-items:center;gap:12px;line-height:1.12}
-.wordmark {font-size:1.25rem;letter-spacing:-.055em;font-weight:800}
-.brand-name {display:block;font-size:.7rem;letter-spacing:.06em;margin-top:5px;color:var(--muted)}
-.brand-mark {display:grid;place-items:center;background:var(--dark);color:white;border-radius:8px;width:40px;height:40px;font-size:1.6rem;line-height:1}
+.wordmark {white-space:nowrap;color:var(--dark);font-size:clamp(.94rem,2vw,1.22rem);letter-spacing:-.035em;font-weight:800}
+.wordmark span {display:block;margin-top:3px;font-size:.67em;letter-spacing:.095em;color:var(--muted)}
 .navlinks {display:flex;align-items:center;gap:25px;font-size:.875rem;font-weight:650}
 .navlinks a:hover,.phone:hover,.quote-link:hover {text-decoration:underline;text-underline-offset:4px}
 .navright {display:flex;align-items:center;gap:16px;font-size:.82rem;font-weight:700}
@@ -217,9 +216,8 @@ footer {background:#eeefe8;border-top:1px solid var(--line);padding:23px 0;color
 
 
 .brand, nav .brand {display:inline-flex;flex-shrink:0;align-items:center}
-.identity-logo {display:block;width:216px;height:auto}
-@media(max-width:620px) {.identity-logo{width:164px}}
-@media(max-width:350px) {.identity-logo{width:145px}}
+.identity-mark {display:block;width:46px;height:46px;object-fit:contain}
+@media(max-width:620px) {.brand{gap:7px}.identity-mark{width:36px;height:36px}}
 </style>
 <link rel="icon" type="image/png" href="assets/brand/dek450-3d-mark.png">
 </head>
@@ -228,8 +226,9 @@ footer {background:#eeefe8;border-top:1px solid var(--line);padding:23px 0;color
 <a class="skip" href="#catalog">Skip to catalog</a>
 <header class="masthead">
   <div class="nav wrap">
-    <a class="brand" href="#" aria-label="Dek450 Medsupplies Limited home">
-      <img class="identity-logo" src="assets/brand/dek450-3d-logo.png" width="540" height="190" alt="Dek450 Medsupplies Limited">
+    <a class="brand" href="#" aria-label="PK GREENE SUPPLY VENTURE home">
+      <img class="identity-mark" src="assets/brand/dek450-3d-mark.png" width="48" height="48" alt="">
+      <span class="wordmark">PK GREENE <span>SUPPLY VENTURE</span></span>
     </a>
     <nav class="navlinks" aria-label="Main navigation">
       <a href="#catalog" data-category-link="All">Catalog</a>
@@ -296,7 +295,7 @@ footer {background:#eeefe8;border-top:1px solid var(--line);padding:23px 0;color
       <div class="contact-location">
         <h3>Visit us</h3>
         <address>NDC Junction · Cowpea Street · CB69<br>Klagon, Lashibi, Tema<br>Near Sakumono Police Station</address>
-        <p class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Dek450+Pharmacy+Limited%2C+Cowpea+Street%2C+Lashibi%2C+Tema%2C+Ghana" target="_blank" rel="noopener noreferrer">Find Dek450 on Google Maps</a><a href="https://www.google.com/maps/dir/?api=1&amp;destination=5.62225%2C-0.06865" target="_blank" rel="noopener noreferrer">Directions to Sakumono Police Station</a></p>
+        <p class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Dek450+Pharmacy+Limited%2C+Cowpea+Street%2C+Lashibi%2C+Tema%2C+Ghana" target="_blank" rel="noopener noreferrer">Find the pickup location on Google Maps</a><a href="https://www.google.com/maps/dir/?api=1&amp;destination=5.62225%2C-0.06865" target="_blank" rel="noopener noreferrer">Directions to Sakumono Police Station</a></p>
       </div>
     </div>
     <div class="contact-photo" aria-hidden="true"></div>
@@ -304,7 +303,7 @@ footer {background:#eeefe8;border-top:1px solid var(--line);padding:23px 0;color
 </main>
 <footer>
   <div class="wrap foot">
-    <span>© <span id="year"></span> Dek450 Medsupplies Limited</span>
+    <span>© <span id="year"></span> PK GREENE SUPPLY VENTURE</span>
     <span>Sample prices and stock. Call to confirm before ordering.</span>
   </div>
 </footer>
