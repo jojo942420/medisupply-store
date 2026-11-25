@@ -383,6 +383,107 @@ const products = [
     ]
   },
   {
+    "id": "juschek-rotavirus-antigen",
+    "name": "JusChek Rotavirus rapid test",
+    "category": "Laboratory test kits",
+    "brand": "JusChek",
+    "model": "Rotavirus stool antigen test",
+    "description": "Rapid cassette for rotavirus antigen screening in stool specimens.",
+    "specification": "Confirm the order reference and pack size with sales.",
+    "photos": [
+      {
+        "src": "https://cdn1.sgliteasset.com/metromed_1/images/product/product-7170030/QYzTnhpn69cf71ef0888f_1775202799.png",
+        "source": "https://www.metromedicalsupplies.com.my/product/juschek-rotavirus-rapid-test-feces",
+        "label": "Product listing photograph"
+      }
+    ]
+  },
+  {
+    "id": "juschek-h-pylori-antigen",
+    "name": "JusChek H. pylori antigen rapid test",
+    "category": "Laboratory test kits",
+    "brand": "JusChek",
+    "model": "H. pylori stool antigen test",
+    "description": "Rapid test for H. pylori antigen in stool specimens.",
+    "specification": "Confirm the order reference and pack size with sales.",
+    "photos": [
+      {
+        "src": "https://www.gosupps.com/media/catalog/product/7/1/71rpg4vq74L.jpg",
+        "source": "https://www.gosupps.com/helicobacter-pylori-test-feces-helicobacter-test.html",
+        "label": "Product listing photograph"
+      }
+    ]
+  },
+  {
+    "id": "juschek-hcg-pregnancy-cassette",
+    "name": "JusChek hCG pregnancy rapid test cassette",
+    "category": "Laboratory test kits",
+    "brand": "JusChek",
+    "model": "hCG rapid test cassette",
+    "description": "Rapid cassette for qualitative hCG screening. Supplier lists a 25-test pack.",
+    "specification": "Confirm the order reference and pack size with sales.",
+    "photos": [
+      {
+        "src": "https://s-s.sa/image/cache/catalog/products/Clinical%20Rapid%20/1-%20hCG%20Pregnancy%20Rapid%20Test%20Cassette-500x500.png",
+        "source": "https://s-s.sa/hcg-pregnancy-rapid-test-cassette-urine-serum-plasma-juschek",
+        "label": "Product listing photograph"
+      }
+    ]
+  },
+  {
+    "id": "juschek-urinalysis-10-parameter",
+    "name": "JusChek 10-parameter urinalysis strips",
+    "category": "Laboratory test kits",
+    "brand": "JusChek",
+    "model": "10-parameter urinalysis strips",
+    "description": "Multi-parameter urine reagent strips. Supplier lists 100 strips.",
+    "specification": "Confirm the order reference and pack size with sales.",
+    "photos": [
+      {
+        "src": "https://www.medisave.co.uk/cdn/shop/files/Urinalysis_US004_3Urinalysis_US004_edited.jpg?v=1721375995&width=2048",
+        "source": "https://www.medisave.co.uk/products/insight-urinalysis-strips-10-parameter-x100-strips",
+        "label": "Product listing photograph"
+      },
+      {
+        "src": "https://www.medisave.co.uk/cdn/shop/files/Urinalysis_US004_4Urinalysis_US004_edited.jpg?v=1721375995",
+        "source": "https://www.medisave.co.uk/products/insight-urinalysis-strips-10-parameter-x100-strips",
+        "label": "Alternate product view"
+      }
+    ]
+  },
+  {
+    "id": "juschek-fob-rapid-test",
+    "name": "JusChek FOB rapid test",
+    "category": "Laboratory test kits",
+    "brand": "JusChek",
+    "model": "Fecal occult blood test",
+    "description": "Rapid test for occult blood in stool specimens.",
+    "specification": "Confirm the order reference and pack size with sales.",
+    "photos": [
+      {
+        "src": "https://image.ceneostatic.pl/data/products/151649685/i-test-fob-kal-na-krew-utajona.jpg",
+        "source": "https://www.ceneo.pl/151649685",
+        "label": "Product listing photograph"
+      }
+    ]
+  },
+  {
+    "id": "juschek-5-panel-urine-drug-test",
+    "name": "JusChek 5-panel urine drug screening test",
+    "category": "Laboratory test kits",
+    "brand": "JusChek",
+    "model": "5-in-1 panel with MDMA",
+    "description": "Multipanel urine drug screening kit. Supplier lists a 25-test pack that includes an MDMA panel.",
+    "specification": "Confirm the order reference and pack size with sales.",
+    "photos": [
+      {
+        "src": "https://cdn1.sgliteasset.com/metromed_1/images/product/product-7170733/6wrcqzpT6a0eb0e17cbdd_1779347681.png",
+        "source": "https://www.metromedicalsupplies.com.my/product/juschek-5in1-mdma-urine-drug-test-25s",
+        "label": "Product listing photograph"
+      }
+    ]
+  },
+  {
     "name": "Accurate H. pylori antigen test cassette",
     "category": "Laboratory test kits",
     "brand": "Accurate",
@@ -532,12 +633,18 @@ const products = [
     "category": "Laboratory test kits",
     "brand": "Wondfo Finecare",
     "model": "Assay to confirm",
-    "description": "Assorted Finecare rapid quantitative assay packs for compatible analyzers.",
-    "specification": "Several distinct assay packs are shown. Confirm the requested assay when ordering.",
+    "description": "Finecare assay selection for compatible Wondfo FIA meters. The gallery shows manufacturer photos of LH and FSH kits.",
+    "specification": "Confirm the individual assay, meter compatibility, pack size, and availability with sales.",
     "photos": [
       {
-        "src": "assets/products/finecare-assortment.jpg",
-        "label": "Assortment of Finecare assay boxes"
+        "src": "https://en.wondfo.com/vancheerfile/images/2020/9/20200916155038334.jpg",
+        "source": "https://en.wondfo.com/pt/lh-rapid-quantitative-test.html",
+        "label": "Manufacturer example: Finecare LH kit"
+      },
+      {
+        "src": "https://en.wondfo.com/vancheerfile/images/2020/9/20200916155112523.jpg",
+        "source": "https://en.wondfo.com/pt/fsh-rapid-quantitative-test.html",
+        "label": "Manufacturer example: Finecare FSH kit"
       }
     ],
     "id": "finecare-immunoassay-kit-assortment"
