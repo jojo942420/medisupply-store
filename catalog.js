@@ -44,6 +44,11 @@ const products = [
       {
         "src": "assets/products/accurate-h-pylori.jpg",
         "label": "Box label and packaging"
+      },
+      {
+        "label": "Supplier packaging photo",
+        "src": "https://shopit.ug/images/detailed/129/WhatsApp_Image_2024-11-22_at_9.00.26_AM.jpeg",
+        "source": "https://shopit.ug/accurate-h-pylori-antigen-rapid-25-test-cassettes.html"
       }
     ],
     "id": "accurate-h-pylori-antigen-test-cassette"
@@ -59,6 +64,11 @@ const products = [
       {
         "src": "assets/products/vivatest-sickle-cell.jpg",
         "label": "Box and test components"
+      },
+      {
+        "label": "Supplier kit photograph",
+        "src": "https://image.made-in-china.com/2f0j00RNzbpeOHHqrG/Diagnostic-Test-Kit-Home-Self-Test-Electrophoresis-Sickle-Cell-Rapid-Test-Kit.webp",
+        "source": "https://fr.made-in-china.com/co_huichaomed/product_Diagnostic-Test-Kit-Home-Self-Test-Electrophoresis-Sickle-Cell-Rapid-Test-Kit_yuuosieyyy.html"
       }
     ],
     "id": "vivatest-sickle-cell-screening-kit"
@@ -321,6 +331,11 @@ const products = [
       {
         "src": "https://cdn11.bigcommerce.com/s-mkp1sb9vcu/images/stencil/450x450/products/1825/4387/HEM-7183__06800.1779617289.png?c=1",
         "label": "Product photo"
+      },
+      {
+        "label": "Retail packaging",
+        "src": "https://cdn.nhathuoclongchau.com.vn/v1/static/MAY_DO_HUYET_AP_BAP_TAY_OMRON_EZ_HEM_7183_HO_TRO_DO_HUYET_AP_NHIP_TIM_00050892_2_9ad7822d7b.png",
+        "source": "https://nhathuoclongchau.com.vn/trang-thiet-bi-y-te/may-do-huyet-ap-bap-tay-omron-ez-hem-7183-ho-tro-do-huyet-ap-nhip-tim.html"
       }
     ],
     "id": "digital-blood-pressure-monitor"
@@ -375,6 +390,11 @@ const products = [
       {
         "src": "https://assets.fishersci.com/TFS-Assets/CCG/product-images/502522222.JPG-650.jpg",
         "label": "Product photo"
+      },
+      {
+        "label": "Glove and packaging",
+        "src": "https://m.media-amazon.com/images/I/71saRx%2BrQGL._AC_UL1500_.jpg",
+        "source": "https://www.ubuy.co.in/product/4CT5Q0JT4-nacosa-nitrile-gloves-disposable-gloves-latex-free-medical-nitrile-gloves-medium-4-mil-thick-exam-gloves-powder-free-1000-count-with-textured-fingers"
       }
     ],
     "id": "examination-gloves-nitrile"
@@ -429,6 +449,11 @@ const products = [
       {
         "src": "https://www.dnrwheels.com/cdn/shop/products/860051AmmedaSterileGauzeSwabs7.5x7.5cm_2_1000x.png?v=1584596552",
         "label": "Product photo"
+      },
+      {
+        "label": "Ready-Pak packaging",
+        "src": "https://www.pinkpharm.com/cdn/shop/files/SterileGauzeSwabs7.5x7.5cm_1080x1080.jpg?v=1733806916",
+        "source": "https://www.pinkpharm.com/products/sterile-gauze-swab-12ply-7-5x7-5cm-5s"
       }
     ],
     "id": "gauze-swabs-sterile"
@@ -447,6 +472,11 @@ const products = [
       {
         "src": "https://images.prom.ua/2750583036_w640_h640_2750583036.jpg",
         "label": "Product photo"
+      },
+      {
+        "label": "Supplier product view",
+        "src": "https://img.gkbcdn.com/s3/p/2022-03-15/BOXYM-C1-OLED-Fingertip-Pulse-Oximeter-497785-2.jpg",
+        "source": "https://www.geekbuying.com/item/BOXYM-C1-OLED-Fingertip-Pulse-Oximeter-497785.html"
       }
     ],
     "id": "pulse-oximeter"
@@ -465,6 +495,16 @@ const products = [
       {
         "src": "https://www.mountainside-medical.com/cdn/shop/files/esp-O2-Portable-Home-Suction-Machine-Unit-with-Rechargeable-Lithium-Ion-Battery_512x512.jpg?v=1710793460",
         "label": "Product photo"
+      },
+      {
+        "label": "Manufacturer view",
+        "src": "https://cdn-881a96c5-a77b871b.commercebuild.com/e5679379b58995ada200c19806353331/contents/32305/32305%404.png",
+        "source": "https://dynarex.com/markets-we-serve/homecare/32305-homecare-suction-unit--portable"
+      },
+      {
+        "label": "Supplier view",
+        "src": "https://www.mountainside-medical.com/cdn/shop/files/32305_2_749x749.png?v=1734026117",
+        "source": "https://www.mountainside-medical.com/products/resp-o2-portable-home-suction-machine-unit-with-rechargeable-lithium-ion-battery"
       }
     ],
     "id": "portable-suction-machine"
@@ -483,6 +523,11 @@ const products = [
       {
         "src": "https://anatomiyamed.com/upload/resize_cache/iblock/71c/93xac1xe40k9u228sjcgtddpsrbzujk7/800_800_2/%D0%9C%D0%BE%D0%BD%D0%B8%D1%82%D0%BE%D1%80%20%D0%BF%D0%B0%D1%86%D0%B8%D0%B5%D0%BD%D1%82%D0%B0%20Mindray%20ePM%2012m%20%D0%B5%D1%89%D0%B5%20%281%29.jpg",
         "label": "Product photo"
+      },
+      {
+        "label": "Rear view",
+        "src": "https://quincemedical.com/cdn/shop/files/Mindray-ePM-12M-1-2.jpg?v=1737558474",
+        "source": "https://quincemedical.com/products/mindray-epm-12m-patient-monitor"
       }
     ],
     "id": "patient-monitor-5-parameter"
@@ -501,6 +546,16 @@ const products = [
       {
         "src": "https://cdn.shopify.com/s/files/1/1290/8299/products/Yuwell8F-5AOxygenConcentrator-2.jpg?v=1626340221",
         "label": "Product photo"
+      },
+      {
+        "label": "Side view",
+        "src": "https://www.medbox.pl/images/yuwell-8F-5a-koncentrator-tlenu-sterowany-pilotem-bok.jpg",
+        "source": "https://www.medbox.pl/yuwell-8f-5a-koncentrator-tlenu-sterowany-pilotem-p-1940.html"
+      },
+      {
+        "label": "Rear view",
+        "src": "https://www.medbox.pl/images/mini/450px_yuwell-8F-5a-koncentrator-tlenu-sterowany-pilotem-tyl.webp",
+        "source": "https://www.medbox.pl/yuwell-8f-5a-koncentrator-tlenu-sterowany-pilotem-p-1940.html"
       }
     ],
     "id": "oxygen-concentrator-5-l"
@@ -519,6 +574,11 @@ const products = [
       {
         "src": "https://bizweb.dktcdn.net/100/415/687/products/bkm-z18b-tbpt.jpg?v=1748056737633",
         "label": "Product photo"
+      },
+      {
+        "label": "Supplier product view",
+        "src": "https://bizweb.dktcdn.net/100/522/753/products/wicomed-bkm-z18b.jpg?v=1750299620113",
+        "source": "https://wicomed.com/noi-hap-tiet-trung-say-chan-khong-18-lit-bkm-z18b"
       }
     ],
     "id": "autoclave-18-l"
@@ -537,6 +597,11 @@ const products = [
       {
         "src": "https://ueeshop.ly200-cdn.com/u_file/UPAP/UPAP543/2501/7499906cf9.jpg.500x500.jpg",
         "label": "Product photo"
+      },
+      {
+        "label": "Rear panel",
+        "src": "https://labmedik.ru/image/cache/catalog/product/labmedik/meditsinskie_analizatory/biohimicheskie_analizatory/0/editor23531-1000x1000.jpg",
+        "source": "https://labmedik.ru/analizator-biohimicheskij-mindray-ba-88a"
       }
     ],
     "id": "mindray-ba-88a-semi-auto-chemistry-analyzer"
@@ -555,6 +620,11 @@ const products = [
       {
         "src": "https://d3edssu4vf7j1p.cloudfront.net/images/detailed/112/Erba_Chem_5x_Clinical_Chemistry_Analyzer_z78v-mx.jpg",
         "label": "Product photo"
+      },
+      {
+        "label": "Supplier product photograph",
+        "src": "https://cpimg.tistatic.com/09030290/b/7/Erba-Chem-5x-Clinical-Chemistry-Analyzer.jpg",
+        "source": "https://www.tradeindia.com/products/erba-chem-5x-clinical-chemistry-analyzer-c9030290.html"
       }
     ],
     "id": "erba-chem-5x-semi-auto-chemistry-analyzer"
@@ -591,6 +661,11 @@ const products = [
       {
         "src": "https://img.medicalexpo.com/pt/images_me/photo-g/70856-18748688.webp",
         "label": "Product photo"
+      },
+      {
+        "label": "Supplier product view",
+        "src": "https://medicalequipment-msl.com/upload/img/20181114/201811141654398640.jpg",
+        "source": "https://www.medicalequipment-msl.com/htm/mindray-analyzer/Mindray-BC-30s.html"
       }
     ],
     "id": "mindray-bc-30s-hematology-analyzer"
@@ -609,6 +684,16 @@ const products = [
       {
         "src": "https://www.rajbiosis.org/assets/front/images/BS-240.jpg",
         "label": "Product photo"
+      },
+      {
+        "label": "Open-lid product view",
+        "src": "https://ueeshop.ly200-cdn.com/u_file/UPAP/UPAP543/2303/12e507aa18.jpg",
+        "source": "https://icenteco.com/products/new-mindray-bs-240-fully-automatic-biochemistry-analyzer-1281"
+      },
+      {
+        "label": "Supplier product view",
+        "src": "https://skrooll.com.ph/images/thumbnails/1593/1376/detailed/4/chemistry2_bs240_mindray.png",
+        "source": "https://skrooll.com.ph/bs-240-mindray-chemistry-analyzer-automated/"
       }
     ],
     "id": "mindray-bs-240-fully-automatic-chemistry-analyzer"
@@ -627,6 +712,11 @@ const products = [
       {
         "src": "https://cpimg.tistatic.com/12177298/b/4/Finecare-FIA-Meter.jpeg",
         "label": "Product photo"
+      },
+      {
+        "label": "Analyzer with cartridges",
+        "src": "https://image.made-in-china.com/2f0j00UdOiKwsjpHqu/Finecare-Fia-Meter-Plus-FS-113-Portable-Fluorescence-Immunoassay-Analyzer.jpg",
+        "source": "https://es.made-in-china.com/co_iclear-mic/product_Finecare-Fia-Meter-Plus-FS-113-Portable-Fluorescence-Immunoassay-Analyzer_reoginnhg.html"
       }
     ],
     "id": "finecare-fia-meter-hormone-analyzer"
@@ -753,6 +843,11 @@ const products = [
       {
         "src": "https://demo.ahgez.com/projects/yourmedicalsuppliers/image/cache/catalog/Point%20Of%20Care%20Kits/Wondfo/FineCare/TSH%20Test/1-2586x1940.jpg",
         "label": "Product photo"
+      },
+      {
+        "label": "Supplier box photograph",
+        "src": "https://5.imimg.com/data5/SELLER/Default/2023/5/305919778/AA/XP/MM/125039132/fine-care-tsh-kits-500x500.webp",
+        "source": "https://www.biotexlifescience.com/soil-testing-kit.html"
       }
     ],
     "id": "finecare-tsh-rapid-quantitative-test-kit"
