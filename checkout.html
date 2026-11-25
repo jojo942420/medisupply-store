@@ -1,140 +1,158 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Checkout | Dek450 Medsupplies Limited</title>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{color-scheme:light;--ink:#182a2e;--muted:#506266;--accent:#123b36;--paper:#f8f7f2;--line:#dce2dc}
-*{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 "Manrope",system-ui,sans-serif}
-[hidden]{display:none!important}
-a{color:var(--accent);text-underline-offset:4px}
-a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #b66232;outline-offset:3px}
-.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
-header{background:white;border-bottom:1px solid var(--line);padding:18px 0}
-nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
-nav .brand{font-weight:800;text-decoration:none} nav a{font-size:.88rem}
-main{padding:36px 0 60px}
-h1,h2{font-family:"Source Serif 4",Georgia,serif;font-weight:400;margin:0 0 9px;line-height:1.12}
-h1{font-size:clamp(2.6rem,6vw,4rem)} h2{font-size:1.72rem}
-.intro{color:var(--muted);margin:0 0 26px}
-.layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:24px;align-items:start}
-.panel{border:1px solid var(--line);border-radius:8px;background:white;padding:clamp(16px,3vw,27px)}
-.basket + .panel{margin-top:14px}
-.line{display:grid;grid-template-columns:54px minmax(0,1fr) 65px;gap:12px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
-.line img{display:block;width:54px;height:54px;object-fit:contain;border-radius:4px;background:#f3f6f2}
-.line p{margin:3px 0;color:var(--muted);font-size:.82rem}
-.quantity{font-size:.75rem;color:var(--muted)}
-.quantity input{padding:5px}
-.remove{border:0;background:transparent;color:var(--accent);text-decoration:underline;padding:0;cursor:pointer;font-size:.8rem}
-.total{display:flex;justify-content:space-between;gap:10px;margin:14px 0 5px;font-weight:800}
-.note{font-size:.84rem;color:var(--muted);margin:8px 0 16px}
-fieldset{padding:0;margin:0 0 23px;border:0;min-width:0}
-legend{font-size:1.07rem;font-weight:800;margin-bottom:8px;padding:0}
-.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-label{display:block;font-weight:650;font-size:.87rem}
-.full{grid-column:1/-1}
-input,textarea,select{display:block;width:100%;font:inherit;color:var(--ink);background:white;border:1px solid #bdcbc3;border-radius:5px;padding:9px 10px;margin-top:4px}
-textarea{resize:vertical;min-height:78px}
-button,.button{font:inherit}
-.button{display:inline-flex;justify-content:center;align-items:center;border:1px solid var(--accent);border-radius:5px;background:var(--accent);color:white;padding:10px 15px;font-weight:700;text-decoration:none;cursor:pointer}
-.button.secondary{background:white;color:var(--accent)}
-.button:disabled{opacity:.55;cursor:default}
-.review-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:12px}
-#review{margin-top:22px}
-#orderText{min-height:215px;font-size:.86rem}
-@media(max-width:740px){.layout{grid-template-columns:1fr} main{padding-top:25px}}
-@media(max-width:410px){.fields{grid-template-columns:1fr}.wrap{width:calc(100% - 24px)}}
-
-
-.brand, nav .brand {display:inline-flex;flex-shrink:0;align-items:center}
-.identity-logo {display:block;width:216px;height:auto}
-@media(max-width:620px) {.identity-logo{width:164px}}
-@media(max-width:350px) {.identity-logo{width:145px}}
-</style>
-<link rel="icon" type="image/png" href="assets/brand/dek450-3d-mark.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout | Dek450 Medsupplies Limited</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/png" href="assets/brand/dek450-3d-mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="checkout.css?v=1">
 </head>
 <body>
-<header><nav class="wrap" aria-label="Checkout navigation"><a class="brand" href="index.html" aria-label="Dek450 Medsupplies Limited home"><img class="identity-logo" src="assets/brand/dek450-3d-logo.png" width="540" height="190" alt="Dek450 Medsupplies Limited"></a><a href="index.html#catalog">Back to catalog</a></nav></header>
-<main class="wrap">
-<h1>Checkout</h1>
-<p class="intro">Review your basket and send an order request to the Dek450 sales team.</p>
-<div class="layout">
-<section class="panel basket" aria-labelledby="basketHeading">
-  <h2 id="basketHeading">Your basket</h2>
-  <p id="emptyBasket" hidden>Your basket is empty. <a href="index.html#catalog">Browse products</a></p>
-  <div id="lines"></div>
-  <div id="totals" hidden>
-    <div class="total"><span>Estimated subtotal</span><span id="subtotal"></span></div>
-    <p class="note">Quote items and delivery are separate. Sales will confirm prices, stock, and any delivery fees.</p>
-  </div>
-  <p class="note" id="basketStatus" role="status"></p>
-</section>
-<div>
-<form class="panel" id="checkoutForm">
-  <h2>Contact and delivery</h2>
-  <p class="note">Fields marked * are required.</p>
-  <fieldset>
-    <legend>Customer details</legend>
-    <div class="fields">
-      <label>Full name *<input name="name" autocomplete="name" maxlength="100" required></label>
-      <label>Phone number *<input name="phone" type="tel" autocomplete="tel" maxlength="25" required></label>
-      <label>Email<input name="email" type="email" autocomplete="email" maxlength="120"></label>
-      <label>Facility or company<input name="company" autocomplete="organization" maxlength="120"></label>
+<svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <symbol id="co-back" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M5 12h14"/></symbol>
+  <symbol id="co-bag" viewBox="0 0 24 24"><path d="M5 8h14l1.3 12H3.7L5 8ZM9 9V7a3 3 0 0 1 6 0v2"/></symbol>
+  <symbol id="co-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2"/><path d="M5 20v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1"/></symbol>
+  <symbol id="co-truck" viewBox="0 0 24 24"><path d="M3 5h12v12H3zM15 9h3l3 4v4h-6"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></symbol>
+  <symbol id="co-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="co-note" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6M9 16h6"/></symbol>
+  <symbol id="co-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+  <symbol id="co-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/></symbol>
+  <symbol id="co-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+  <symbol id="co-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-8 8 8 8 0 0 1-3.4-.8L4 20l1.2-4A8 8 0 1 1 20 11.5Z"/><path d="M9 12h.01m3 0h.01m3 0h.01"/></symbol>
+  <symbol id="co-check" viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></symbol>
+  <symbol id="co-phone" viewBox="0 0 24 24"><path d="M7 3h3l1 5-2 1a13 13 0 0 0 6 6l1-2 5 1v3a3 3 0 0 1-3 3C10 20 4 14 4 6a3 3 0 0 1 3-3Z"/></symbol>
+  <symbol id="co-minus" viewBox="0 0 24 24"><path d="M6 12h12"/></symbol>
+  <symbol id="co-plus" viewBox="0 0 24 24"><path d="M6 12h12M12 6v12"/></symbol>
+  <symbol id="co-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3m3 0-1 13H7L6 7m4 4v5m4-5v5"/></symbol>
+</svg>
+<header class="site-header">
+  <nav class="wrap topbar" aria-label="Checkout navigation">
+    <a href="index.html" class="brand"><img src="assets/brand/dek450-3d-logo.png" width="540" height="190" alt="Dek450 Medsupplies Limited"></a>
+    <a class="nav-link" href="index.html#catalog"><svg class="icon" aria-hidden="true" focusable="false"><use href="#co-back"></use></svg><span>Back to catalog</span></a>
+  </nav>
+</header>
+<main class="wrap checkout">
+  <div class="heading">
+    <div>
+      <h1>Checkout</h1>
+      <p>Send your order request to the Dek450 sales team.</p>
     </div>
-  </fieldset>
-  <fieldset>
-    <legend>Delivery or pickup</legend>
-    <label>Fulfilment method *
-      <select id="method" name="method" required>
-        <option value="">Select a method</option>
-        <option value="delivery">Delivery</option>
-        <option value="pickup">Pickup</option>
-      </select>
-    </label>
-    <p id="pickupNote" class="note" hidden>Pickup at Dek450 Pharmacy, NDC Junction · Cowpea Street · CB69, Klagon, Lashibi, Tema, Near Sakumono Police Station. Sales will confirm the pickup time. <a href="https://www.google.com/maps/search/?api=1&amp;query=Dek450+Pharmacy+Limited%2C+Cowpea+Street%2C+Lashibi%2C+Tema%2C+Ghana" target="_blank" rel="noopener noreferrer">Find Dek450 on Google Maps</a></p>
-    <div class="fields" style="margin-top:12px" id="deliveryFields" hidden>
-      <label>Region *<input name="region" autocomplete="address-level1" maxlength="100" required disabled></label>
-      <label>Town or city *<input name="city" autocomplete="address-level2" maxlength="100" required disabled></label>
-      <label class="full">Street address or GhanaPost GPS address *<input name="address" autocomplete="street-address" maxlength="180" required disabled></label>
-      <label class="full">Landmark or delivery instructions<textarea name="directions" maxlength="350" disabled></textarea></label>
+    <ol class="progress" aria-label="Checkout progress">
+      <li id="step-details" aria-current="step">Details</li>
+      <li id="step-review">Review</li>
+      <li id="step-sent">Request sent</li>
+    </ol>
+  </div>
+
+  <div class="layout">
+    <aside id="basketPanel" class="panel basket" aria-labelledby="basketHeading">
+      <div class="basket-title"><span class="basket-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#co-bag"></use></svg></span><h2 id="basketHeading">Order summary</h2><span class="basket-count" id="basketCount" hidden></span></div>
+      <p id="basketLoading" class="empty-basket">Loading your basket…</p>
+      <div id="emptyBasket" class="empty-basket" hidden>
+        <p>Your basket is empty.</p><a href="index.html#catalog">Browse the catalog <svg class="icon" aria-hidden="true" focusable="false"><use href="#co-arrow"></use></svg></a>
+      </div>
+      <div id="lines"></div>
+      <div id="totals" hidden>
+        <div class="total"><span>Estimated subtotal</span><strong id="subtotal"></strong></div>
+        <p class="summary-note"><svg class="icon" aria-hidden="true" focusable="false"><use href="#co-info"></use></svg><span>Sales will confirm stock, final prices, and any delivery fees.</span></p>
+      </div>
+      <p class="status" id="basketStatus" role="status"></p>
+    </aside>
+
+    <div class="checkout-content">
+      <form class="panel form-panel" id="checkoutForm" method="post" aria-labelledby="detailsHeading">
+        <div class="panel-heading"><h2 id="detailsHeading" tabindex="-1">Order details</h2><span class="hint">* Required</span></div>
+        <fieldset>
+          <legend><span><svg class="icon" aria-hidden="true" focusable="false"><use href="#co-user"></use></svg> Contact details</span></legend>
+          <div class="fields">
+            <label>Full name <span class="required">*</span><input name="name" autocomplete="name" maxlength="100" required></label>
+            <label>Phone number <span class="required">*</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="25" required></label>
+            <label>Email <small>Optional</small><input name="email" type="email" autocomplete="email" maxlength="120"></label>
+            <label>Facility or company <small>Optional</small><input name="company" autocomplete="organization" maxlength="120"></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="separated">
+          <legend><span><svg class="icon" aria-hidden="true" focusable="false"><use href="#co-truck"></use></svg> Delivery or pickup <span class="required">*</span></span></legend>
+          <div class="method-options">
+            <label class="method-option">
+              <input type="radio" name="method" value="delivery" required>
+              <span class="method-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#co-truck"></use></svg></span>
+              <span><strong>Delivery</strong><small>Send to your address</small></span>
+            </label>
+            <label class="method-option">
+              <input type="radio" name="method" value="pickup" required>
+              <span class="method-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#co-pin"></use></svg></span>
+              <span><strong>Pickup</strong><small>Collect at Dek450 Pharmacy</small></span>
+            </label>
+          </div>
+          <div id="pickupNote" class="pickup-note" hidden>
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#co-pin"></use></svg><div><strong>Dek450 Pharmacy</strong>
+            <p>NDC Junction · Cowpea Street · CB69<br>Klagon, Lashibi, Tema<br>Near Sakumono Police Station</p>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Dek450+Pharmacy+Limited%2C+Cowpea+Street%2C+Lashibi%2C+Tema%2C+Ghana" target="_blank" rel="noopener noreferrer">Find Dek450 on Google Maps</a>
+            <small>Sales will confirm your pickup time.</small></div>
+          </div>
+          <div class="fields delivery-fields" id="deliveryFields" hidden>
+            <label>Region <span class="required">*</span><input name="region" autocomplete="address-level1" maxlength="100" required disabled></label>
+            <label>Town or city <span class="required">*</span><input name="city" autocomplete="address-level2" maxlength="100" required disabled></label>
+            <label class="full">Street address or GhanaPost GPS address <span class="required">*</span><input name="address" autocomplete="street-address" maxlength="180" required disabled></label>
+            <label class="full">Landmark or delivery instructions <small>Optional</small><textarea name="directions" maxlength="350" rows="2"></textarea></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="separated">
+          <legend><span><svg class="icon" aria-hidden="true" focusable="false"><use href="#co-note"></use></svg> Order notes <small>Optional</small></span></legend>
+          <label><span class="sr-only">Order notes</span><textarea name="notes" maxlength="500" rows="2" placeholder="Product sizes, equipment models, or other order requirements" aria-describedby="notesHint"></textarea></label>
+          <p id="notesHint" class="hint notes-hint">Please leave patient information out of this field.</p>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit" class="button primary" id="reviewButton" disabled>Review request <svg class="icon" aria-hidden="true" focusable="false"><use href="#co-arrow"></use></svg></button>
+          <p class="hint">Payment and delivery are arranged with sales.</p>
+        </div>
+      </form>
+
+      <section id="review" class="panel review-panel" aria-labelledby="reviewHeading" hidden>
+        <div class="panel-heading"><h2 id="reviewHeading" tabindex="-1">Review your request</h2></div>
+        <p class="review-intro">Check your details before sending your request to Dek450.</p>
+        <dl class="review-details" id="reviewDetails"></dl>
+        <button class="text-button" id="editOrder" type="button"><svg class="icon" aria-hidden="true" focusable="false"><use href="#co-back"></use></svg> Edit order details</button>
+        <div class="review-actions">
+          <button class="button primary" id="sendOrder" type="button">Send order request <svg class="icon" aria-hidden="true" focusable="false"><use href="#co-arrow"></use></svg></button>
+          <a class="button secondary" id="whatsapp" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="#co-chat"></use></svg> Send via WhatsApp instead</a>
+        </div>
+        <details class="request-message" id="requestMessage">
+          <summary>View request message</summary>
+          <label for="orderText" class="sr-only">Request message</label><textarea id="orderText" readonly></textarea>
+          <button class="button secondary copy-button" id="copy" type="button"><svg class="icon" aria-hidden="true" focusable="false"><use href="#co-copy"></use></svg> Copy request</button>
+        </details>
+        <p class="status" id="copyStatus" role="status"></p>
+      </section>
+
+      <section id="orderSent" class="panel receipt" aria-labelledby="orderSentHeading" hidden>
+        <span class="receipt-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#co-check"></use></svg></span>
+        <h2 id="orderSentHeading" tabindex="-1">Order request received</h2>
+        <p>Our sales team will contact you to confirm availability, final pricing, and pickup or delivery.</p>
+        <p id="orderReference" class="reference"></p>
+        <div class="review-actions">
+          <a class="button primary" id="followup" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="#co-chat"></use></svg> Follow up on WhatsApp</a>
+          <a class="button secondary" href="index.html#catalog">Back to catalog <svg class="icon" aria-hidden="true" focusable="false"><use href="#co-arrow"></use></svg></a>
+        </div>
+      </section>
     </div>
-  </fieldset>
-  <fieldset>
-    <legend>Order requirements</legend>
-    <label>Product options, quantities for quote, or other requests<textarea name="notes" maxlength="500" placeholder="For example, glove sizes or an equipment model"></textarea></label>
-  </fieldset>
-  <button type="submit" class="button" id="reviewButton" disabled>Review request</button>
-  <p class="note">Dek450 uses your contact and delivery details to handle this request. Payment and delivery are arranged with sales. Please leave patient information out of the order notes.</p>
-</form>
-<section id="review" class="panel" aria-labelledby="reviewHeading" hidden>
-  <h2 id="reviewHeading" tabindex="-1">Review your request</h2>
-  <label for="orderText">Request text</label><textarea id="orderText" readonly></textarea>
-  <div class="review-actions">
-    <button class="button" id="sendOrder" type="button">Send order request</button>
-    <a class="button secondary" id="whatsapp" target="_blank" rel="noopener noreferrer">Send via WhatsApp instead</a>
-    <button class="button secondary" id="copy" type="button">Copy request</button>
   </div>
-  <p class="note">Use WhatsApp if you prefer to send your request there. For questions, call <a href="tel:0533805134">0533805134</a>.</p>
-  <p class="note" id="copyStatus" role="status"></p>
-</section>
-<section id="orderSent" class="panel" aria-labelledby="orderSentHeading" hidden>
-  <h2 id="orderSentHeading" tabindex="-1">Order request received</h2>
-  <p id="orderReference"></p>
-  <p>Our sales team will contact you to confirm availability, final pricing, and pickup or delivery.</p>
-  <div class="review-actions">
-    <a class="button secondary" id="followup" target="_blank" rel="noopener noreferrer">Follow up on WhatsApp</a>
-    <a class="button secondary" href="index.html#catalog">Back to catalog</a>
-  </div>
-</section>
-</div>
-</div>
 </main>
+<footer class="wrap checkout-footer">
+  <span>Dek450 Medsupplies Limited</span>
+  <a href="tel:+233533805134"><svg class="icon" aria-hidden="true" focusable="false"><use href="#co-phone"></use></svg> Checkout help · 053 380 5134</a>
+</footer>
 <script src="catalog.js?v=olympus-cx43-1"></script>
 <script src="basket.js"></script>
 <script src="store-service.js?v=1"></script>
-<script src="checkout.js?v=orders-1"></script>
+<script src="checkout.js?v=checkout-design-1"></script>
 </body>
 </html>

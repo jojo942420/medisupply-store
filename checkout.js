@@ -20,21 +20,54 @@ dek450CatalogReady.then(() => {
     history.replaceState(null, "", location.pathname);
   }
 
+  function progress(current) {
+    const steps = ["details", "review", "sent"];
+    for (const [index, step] of steps.entries()) {
+      const item = byId("step-" + step);
+      if (step === current) item.setAttribute("aria-current", "step");
+      else item.removeAttribute("aria-current");
+      item.classList.toggle("done", index < steps.indexOf(current));
+    }
+  }
+
   function hideReview() {
+    if (sending) return;
     pendingOrder = null;
     review.hidden = true;
+    form.hidden = false;
     requestText.value = "";
     whatsapp.removeAttribute("href");
+    byId("requestMessage").open = false;
     byId("copyStatus").textContent = "";
+    progress("details");
+  }
+
+  function createIcon(name) {
+    const namespace = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(namespace, "svg");
+    svg.setAttribute("class", "icon");
+    svg.setAttribute("aria-hidden", "true");
+    svg.setAttribute("focusable", "false");
+    const use = document.createElementNS(namespace, "use");
+    use.setAttribute("href", "#co-" + name);
+    svg.append(use);
+    return svg;
+  }
+
+  function renderTotals() {
+    const count = basket.reduce((sum, item) => sum + item.quantity, 0);
+    const priced = basket.filter(item => typeof productIndex.get(item.id).price === "number");
+    const subtotal = priced.reduce((sum, item) => sum + productIndex.get(item.id).price * item.quantity, 0);
+    byId("basketCount").textContent = count + (count === 1 ? " item" : " items");
+    byId("basketCount").hidden = !count;
+    byId("emptyBasket").hidden = count > 0;
+    byId("totals").hidden = !count;
+    byId("reviewButton").disabled = !count;
+    byId("subtotal").textContent = priced.length ? formatMoney.format(subtotal) : "Quote required";
   }
 
   function renderOrder() {
     lines.replaceChildren();
-    byId("emptyBasket").hidden = basket.length > 0;
-    byId("totals").hidden = !basket.length;
-    byId("reviewButton").disabled = !basket.length;
-
-    let subtotal = 0;
     for (const item of basket) {
       const product = productIndex.get(item.id);
       const row = document.createElement("div");
@@ -42,65 +75,110 @@ dek450CatalogReady.then(() => {
       const image = document.createElement("img");
       image.src = product.photos[0].src;
       image.alt = "";
+      image.loading = "lazy";
       image.addEventListener("error", () => { image.style.visibility = "hidden"; });
       const info = document.createElement("div");
       const name = document.createElement("strong");
-      name.textContent = product.name;
       const price = document.createElement("p");
-      if (typeof product.price === "number") {
-        const total = product.price * item.quantity;
-        subtotal += total;
-        price.textContent = formatMoney.format(total) + " estimated";
-      } else {
-        price.textContent = "Price on request";
+      name.textContent = product.name;
+      info.append(name, price);
+
+      const tools = document.createElement("div");
+      tools.className = "line-tools";
+      const control = document.createElement("div");
+      control.className = "quantity";
+      const quantity = document.createElement("input");
+      Object.assign(quantity, {type:"number", inputMode:"numeric", min:1, max:999, step:1, value:item.quantity, required:true});
+      quantity.setAttribute("aria-label", "Quantity for " + product.name);
+      function quantityButton(label, icon, delta) {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.setAttribute("aria-label", label + " for " + product.name);
+        button.append(createIcon(icon));
+        button.addEventListener("click", () => setQuantity(item.quantity + delta));
+        return button;
       }
+      const minus = quantityButton("Decrease quantity", "minus", -1);
+      const plus = quantityButton("Increase quantity", "plus", 1);
+      control.append(minus, quantity, plus);
+      quantity.addEventListener("change", () => setQuantity(quantity.valueAsNumber));
+      function updateLine() {
+        price.textContent = typeof product.price === "number"
+          ? formatMoney.format(product.price * item.quantity) + " estimated" : "Price on request";
+        quantity.value = item.quantity;
+        minus.disabled = item.quantity <= 1;
+        plus.disabled = item.quantity >= 999;
+      }
+      function setQuantity(value) {
+        if (sending) return;
+        if (!Number.isInteger(value) || value < 1 || value > 999) {
+          updateLine();
+          byId("basketStatus").textContent = "Enter a quantity from 1 to 999.";
+          return;
+        }
+        if (value === item.quantity) return;
+        item.quantity = value;
+        saveBasket(basket);
+        hideReview();
+        updateLine();
+        renderTotals();
+        byId("basketStatus").textContent = "Quantity updated.";
+      }
+      updateLine();
       const remove = document.createElement("button");
       remove.type = "button";
       remove.className = "remove";
-      remove.textContent = "Remove";
+      remove.append(createIcon("trash"), "Remove");
       remove.setAttribute("aria-label", "Remove " + product.name);
       remove.addEventListener("click", () => {
+        if (sending) return;
         basket = basket.filter(line => line.id !== item.id);
         saveBasket(basket);
         hideReview();
         renderOrder();
         byId("basketStatus").textContent = product.name + " removed.";
+        const target = lines.querySelector(".remove") || byId("emptyBasket").querySelector("a");
+        target.focus();
       });
-      const label = document.createElement("label");
-      label.className = "quantity";
-      label.textContent = "Qty";
-      const quantity = document.createElement("input");
-      Object.assign(quantity, {type:"number", min:1, max:999, step:1, value:item.quantity, required:true});
-      quantity.setAttribute("aria-label", "Quantity for " + product.name);
-      quantity.addEventListener("input", hideReview);
-      quantity.addEventListener("change", () => {
-        const value = quantity.valueAsNumber;
-        if (!quantity.checkValidity()) {
-          quantity.value = item.quantity;
-          byId("basketStatus").textContent = "Enter a quantity from 1 to 999.";
-          return;
-        }
-        item.quantity = value;
-        saveBasket(basket);
-        renderOrder();
-        byId("basketStatus").textContent = "Quantity updated.";
-      });
-      label.append(quantity);
-      info.append(name, price, remove);
-      row.append(image, info, label);
+      tools.append(control, remove);
+      row.append(image, info, tools);
       lines.append(row);
     }
-
-    byId("subtotal").textContent = basket.some(item => typeof productIndex.get(item.id).price === "number")
-      ? formatMoney.format(subtotal) : "Quote required";
+    renderTotals();
   }
 
   function syncDelivery() {
-    const method = byId("method").value;
+    const method = form.elements.method.value;
     const delivery = byId("deliveryFields");
     delivery.hidden = method !== "delivery";
     delivery.querySelectorAll("input, textarea").forEach(field => { field.disabled = delivery.hidden; });
     byId("pickupNote").hidden = method !== "pickup";
+    for (const option of form.querySelectorAll(".method-option")) {
+      option.classList.toggle("selected", option.querySelector("input").checked);
+    }
+  }
+
+  function renderReview(customer) {
+    const delivery = customer.method === "delivery";
+    const detailList = byId("reviewDetails");
+    detailList.replaceChildren();
+    const rows = [
+      ["Contact", [customer.name, customer.phone, customer.email, customer.company].filter(Boolean).join("\n")],
+      [delivery ? "Delivery address" : "Pickup location", delivery
+        ? [[customer.address, customer.city, customer.region].join(", "), customer.directions].filter(Boolean).join("\n")
+        : "Dek450 Pharmacy\nNDC Junction, Cowpea Street, CB69\nKlagon, Lashibi, Tema"],
+      ["Order notes", customer.notes],
+    ];
+    for (const [label, value] of rows) {
+      if (!value) continue;
+      const group = document.createElement("div");
+      const term = document.createElement("dt");
+      const description = document.createElement("dd");
+      term.textContent = label;
+      description.textContent = value;
+      group.append(term, description);
+      detailList.append(group);
+    }
   }
 
   const phone = form.elements.namedItem("phone");
@@ -112,7 +190,11 @@ dek450CatalogReady.then(() => {
   }
   phone.addEventListener("input", validatePhone);
   form.addEventListener("input", hideReview);
-  byId("method").addEventListener("change", syncDelivery);
+  for (const option of form.elements.method) option.addEventListener("change", syncDelivery);
+  byId("editOrder").addEventListener("click", () => {
+    hideReview();
+    byId("detailsHeading").focus();
+  });
   form.addEventListener("submit", event => {
     event.preventDefault();
     validatePhone();
@@ -149,7 +231,10 @@ dek450CatalogReady.then(() => {
     }
     requestText.value = request.join("\n");
     whatsapp.href = "https://wa.me/233533805134?text=" + encodeURIComponent(requestText.value);
+    renderReview(customer);
+    form.hidden = true;
     review.hidden = false;
+    progress("review");
     byId("reviewHeading").focus();
   });
 
@@ -159,6 +244,8 @@ dek450CatalogReady.then(() => {
     const payload = pendingOrder.payload;
     sending = true;
     send.disabled = true;
+    byId("editOrder").disabled = true;
+    whatsapp.inert = true;
     form.inert = true;
     lines.inert = true;
     byId("copyStatus").textContent = "Sending your request…";
@@ -174,10 +261,16 @@ dek450CatalogReady.then(() => {
       saveBasket([]);
       form.reset();
       basket = [];
-      hideReview();
-      syncDelivery();
-      renderOrder();
+      pendingOrder = null;
+      requestText.value = "";
+      whatsapp.removeAttribute("href");
+      byId("reviewDetails").replaceChildren();
+      byId("copyStatus").textContent = "";
+      review.hidden = true;
       form.hidden = true;
+      byId("basketPanel").hidden = true;
+      document.querySelector(".layout").classList.add("is-complete");
+      progress("sent");
       byId("orderReference").textContent = "Reference: " + result.id;
       byId("followup").href = "https://wa.me/233533805134?text=" + encodeURIComponent("Hello Dek450, I’m following up on order request " + result.id + ".");
       byId("orderSent").hidden = false;
@@ -189,6 +282,8 @@ dek450CatalogReady.then(() => {
     } finally {
       sending = false;
       send.disabled = false;
+      byId("editOrder").disabled = false;
+      whatsapp.inert = false;
       form.inert = false;
       lines.inert = false;
     }
@@ -206,5 +301,6 @@ dek450CatalogReady.then(() => {
   });
 
   syncDelivery();
+  byId("basketLoading").hidden = true;
   renderOrder();
 });
