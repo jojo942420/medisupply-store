@@ -1945,5 +1945,73 @@ const products = [
         "label": "Sysmex store pack photo"
       }
     ]
+  },
+  {
+    "id": "mindray-105-001127-00-multi-sera-chemistry-calibrator",
+    "name": "Mindray Multi Sera Chemistry Calibrator",
+    "category": "Laboratory test kits",
+    "brand": "Mindray",
+    "model": "105-001127-00 · MSM161",
+    "description": "Multi-analyte serum calibrator for compatible Mindray clinical chemistry assays.",
+    "specification": "20 × 3 mL. Listed for BS-230 and BS-240 applications by the supplier. Confirm the assay-specific instructions and lot values before ordering.",
+    "specificationSource": "https://www.uzzmed.com/product/mindray-supporting-calibrator-for-bs-230bs-240/",
+    "photos": [
+      {
+        "src": "https://img.mbizmarket.co.id/products/thumbs/800x800/2025/01/22/ad67b4fa58d2cb072a99f07c36b89112.jpg",
+        "source": "https://www.mbizmarket.co.id/catalog/detail/mindray-chemistry-multi-sera-calibrator-5006210-8301090.html",
+        "label": "Supplier carton and vial photo"
+      }
+    ]
+  },
+  {
+    "id": "mindray-105-001128-00-lipids-chemistry-calibrator",
+    "name": "Mindray Lipids Chemistry Calibrator",
+    "category": "Laboratory test kits",
+    "brand": "Mindray",
+    "model": "105-001128-00",
+    "description": "Calibrator for compatible Mindray lipid assays on clinical chemistry analyzers.",
+    "specification": "5 × 1 mL. Check the reagent insert for your analyzer and lipid assay before ordering.",
+    "specificationSource": "https://www.uzzmed.com/product/mindray-supporting-calibrator-for-bs-230bs-240/",
+    "photos": [
+      {
+        "src": "https://www.med-us.shop/images/uploader/re/reagentas-lipids-calibrator-5x1ml-1.jpg",
+        "source": "https://www.med-us.shop/en/reagent-lipids-calibrator-5x1ml",
+        "label": "MedUS Medical pack photo"
+      }
+    ]
+  },
+  {
+    "id": "mindray-105-009119-00-clinchem-multi-control-1",
+    "name": "Mindray ClinChem Multi Control · Level 1",
+    "category": "Laboratory test kits",
+    "brand": "Mindray",
+    "model": "105-009119-00",
+    "description": "Level 1 quality control material for compatible Mindray clinical chemistry assays.",
+    "specification": "6 × 5 mL. Use the lot-specific assigned values for your analyzer and assay. Confirm the required reference with sales.",
+    "specificationSource": "https://www.uzzmed.com/product/mindray-supporting-controller-for-bs-230bs-240/",
+    "photos": [
+      {
+        "src": "https://www.med-us.shop/images/uploader/re/388x388.g/reagentas-clinchem-multi-control-l-1-1.jpg?v=1714042378",
+        "source": "https://www.med-us.shop/en/reagent-clinchem-multi-control-l-1",
+        "label": "MedUS Medical Level 1 vial photo"
+      }
+    ]
+  },
+  {
+    "id": "mindray-105-009120-00-clinchem-multi-control-2",
+    "name": "Mindray ClinChem Multi Control · Level 2",
+    "category": "Laboratory test kits",
+    "brand": "Mindray",
+    "model": "105-009120-00",
+    "description": "Level 2 quality control material for compatible Mindray clinical chemistry assays.",
+    "specification": "6 × 5 mL. Use the lot-specific assigned values for your analyzer and assay. Confirm the required reference with sales.",
+    "specificationSource": "https://www.uzzmed.com/product/mindray-supporting-controller-for-bs-230bs-240/",
+    "photos": [
+      {
+        "src": "https://s.alicdn.com/%40sc04/kf/H90db8d85bb8945f58148101ece96b4dcv/ORIGINAL-Mindray-Chemistry-Reagents-Quality-Control-Calibrators-for-Mindray-Chemistry-Analyzer-BS200-BS400-BS800.jpg",
+        "source": "https://www.alibaba.com/showroom/chemistry-analyzer-bs-400.html",
+        "label": "Supplier Level 2 vial photo"
+      }
+    ]
   }
 ];
