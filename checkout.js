@@ -166,7 +166,7 @@ dek450CatalogReady.then(() => {
       ["Contact", [customer.name, customer.phone, customer.email, customer.company].filter(Boolean).join("\n")],
       [delivery ? "Delivery address" : "Pickup location", delivery
         ? [[customer.address, customer.city, customer.region].join(", "), customer.directions].filter(Boolean).join("\n")
-        : "Dek450 Pharmacy\nNDC Junction, Cowpea Street, CB69\nKlagon, Lashibi, Tema"],
+        : "PK GREENE SUPPLY VENTURE\nNDC Junction, Cowpea Street, CB69\nKlagon, Lashibi, Tema"],
       ["Order notes", customer.notes],
     ];
     for (const [label, value] of rows) {
