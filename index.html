@@ -178,21 +178,20 @@ footer {background:#eeefe8;border-top:1px solid var(--line);padding:23px 0;color
   overflow:hidden;
   border:1px solid #e4eae5;
   border-radius:10px;
-  background:radial-gradient(ellipse at top,#fff 0%,#f6f8f5 60%,#e9efe9 100%);
+  background:#f8faf7 url('assets/products/catalog-studio.jpg') center 62% / cover no-repeat;
 }
-.gallery-open {display:block;width:100%;aspect-ratio:1.22;border:0;background:none;padding:0;cursor:zoom-in;overflow:hidden}
-.gallery-open img {width:100%;height:100%;object-fit:contain;padding:14px;mix-blend-mode:multiply;transition:transform 180ms ease}
-.gallery-open img.detail {transform:scale(1.45)}
-.gallery-open:hover img:not(.detail) {transform:scale(1.035)}
+.gallery-open {display:block;width:100%;aspect-ratio:1.18;border:0;background:none;padding:0;cursor:zoom-in;overflow:hidden}
+.gallery-open img {display:block;width:100%;height:100%;object-fit:contain;padding:clamp(9px, 1.35vw, 20px);mix-blend-mode:multiply;transition:transform 180ms ease}
+.gallery-open:hover img {transform:scale(1.035)}
 .gallery-open img[hidden] {display:none}
 .gallery-open .photo-unavailable {display:grid;place-items:center;height:100%}
 .gallery-open .photo-unavailable[hidden] {display:none}
-.gallery-expand {position:absolute;bottom:8px;right:8px;border:1px solid #d7e2d9;background:#fffffff2;border-radius:5px;color:#25483f;padding:3px 7px;font-size:.64rem;font-weight:750;pointer-events:none}
-.gallery-thumbs {display:flex;gap:6px;padding:8px 10px 0;min-height:44px}
-.gallery-thumbs button {width:37px;height:33px;border:1px solid #d5e0d7;border-radius:5px;overflow:hidden;padding:2px;background:#ffffffb5;cursor:pointer}
+.gallery-expand {position:absolute;bottom:8px;right:8px;display:grid;place-items:center;width:29px;height:29px;border:1px solid #dce6de;background:#fffffff2;border-radius:50%;color:#25483f;font-size:1rem;line-height:1;pointer-events:none}
+.gallery-thumbs {display:flex;flex-wrap:wrap;gap:6px;padding:8px 10px 0;min-height:44px}
+.gallery-thumbs button {width:42px;height:37px;border:1px solid #d5e0d7;border-radius:6px;overflow:hidden;padding:3px;background:#ffffffc4;cursor:pointer}
+.gallery-open:focus-visible,.gallery-thumbs button:focus-visible {outline:2px solid #28645a;outline-offset:-2px}
 .gallery-thumbs button[aria-pressed="true"] {border-color:#28645a;box-shadow:0 0 0 1px #28645a inset}
 .gallery-thumbs img {width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
-.gallery-thumbs img.detail {transform:scale(1.55)}
 .card-category {font-size:.66rem;font-weight:800;letter-spacing:.02em;color:#3d655b;margin-bottom:5px}
 .card .body {padding:12px 15px 15px}
 .card .body h3 {font-weight:800}
@@ -206,13 +205,12 @@ footer {background:#eeefe8;border-top:1px solid var(--line);padding:23px 0;color
 .photo-dialog button {background:#e9f1eb;border:1px solid #cedbd2;border-radius:5px;padding:6px 10px;color:#214d42;cursor:pointer}
 .dialog-image {display:grid;place-items:center;margin:13px 0; height:min(55vh,480px);overflow:hidden;background:#f2f6f1;border-radius:8px}
 .dialog-image img {width:100%;height:100%;min-height:0;object-fit:contain;padding:9px;mix-blend-mode:multiply}
-.dialog-image img.detail {transform:scale(1.55)}
 .dialog-image img[hidden],.dialog-image span[hidden],.photo-dialog a[hidden] {display:none}
 .dialog-caption {font-size:.82rem;color:#435c54}
 .dialog-links {display:flex;gap:15px;flex-wrap:wrap;margin-top:9px;font-size:.75rem}
 .dialog-links a {text-decoration:underline;text-underline-offset:3px}
 @media (max-width:620px) {.card .body {padding:10px}.gallery-stage{margin:6px 6px 0}.gallery-open img{padding:7px}.gallery-thumbs{padding:6px 7px 0}.gallery-expand{bottom:5px;right:5px}}
-@media (prefers-reduced-motion:reduce) {.gallery-open img {transition:none}.gallery-open:hover img:not(.detail){transform:none}}
+@media (prefers-reduced-motion:reduce) {.gallery-open img {transition:none}.gallery-open:hover img{transform:none}}
 
 
 .brand, nav .brand {display:inline-flex;flex-shrink:0;align-items:center}
@@ -318,7 +316,7 @@ footer {background:#eeefe8;border-top:1px solid var(--line);padding:23px 0;color
     <a id="photoSource" target="_blank" rel="noopener noreferrer" hidden>Photo source</a>
   </div>
 </dialog>
-<script src="catalog.js?v=mindray-chemistry-1"></script>
+<script src="catalog.js?v=studio-catalog-1"></script>
 <script src="basket.js"></script>
 <script src="store-service.js?v=1"></script>
 <script>
@@ -331,27 +329,18 @@ const escapeHtml = value => String(value).replace(/[&<>"']/g, character => ({
 }[character]));
 
 
-function photoViews(product) {
-  return product.photos.length > 1 ? product.photos : [
-    product.photos[0],
-    {...product.photos[0], label:"Close-up of the same photo", detail:true}
-  ];
-}
-
 function renderPhotoGallery(product, name) {
-  const views = photoViews(product);
-  const first = views[0];
-  const thumbnails = views.map((view, index) =>
-    '<button type="button" data-photo="' + index + '" title="' + escapeHtml(view.label) +
-    '" aria-label="' + escapeHtml(view.label) + '" aria-pressed="' + (index === 0) +
-    '"><img class="' + (view.detail ? "detail" : "") + '" src="' +
-    escapeHtml(view.src) + '" alt="" loading="lazy"></button>'
-  ).join("");
+  const [first, ...additional] = product.photos;
+  const thumbnails = additional.length ? product.photos.map((photo, index) =>
+    '<button type="button" data-photo="' + index + '" title="' + escapeHtml(photo.label) +
+    '" aria-label="' + escapeHtml(photo.label) + '" aria-pressed="' + (index === 0) +
+    '"><img src="' + escapeHtml(photo.src) + '" alt="" loading="lazy" decoding="async"></button>'
+  ).join("") : "";
   return '<div class="gallery-stage"><button type="button" class="gallery-open" data-gallery aria-label="Open photo gallery for ' +
     name + '"><img src="' + escapeHtml(first.src) + '" alt="' + name + ' — ' + escapeHtml(first.label) +
-    '" loading="lazy"><span class="photo-unavailable" hidden>Photo unavailable</span></button>' +
-    '<span class="gallery-expand" aria-hidden="true">Enlarge</span></div><div class="gallery-thumbs" role="group" aria-label="Photo views for ' +
-    name + '">' + thumbnails + '</div>';
+    '" loading="lazy" decoding="async"><span class="photo-unavailable" hidden>Photo unavailable</span></button>' +
+    '<span class="gallery-expand" aria-hidden="true">↗</span></div>' +
+    (thumbnails ? '<div class="gallery-thumbs" role="group" aria-label="Photo views for ' + name + '">' + thumbnails + '</div>' : '');
 }
 
 function productCard(product, index) {
@@ -366,7 +355,7 @@ function productCard(product, index) {
     escapeHtml(product.model) + '</p><p>' + escapeHtml(product.description) +
     '</p><details class="product-specs"><summary>Specifications</summary><p>' + escapeHtml(product.specification) +
     '</p>' + (product.specificationSource ? '<p><a href="' + escapeHtml(product.specificationSource) +
-      '" target="_blank" rel="noopener noreferrer">Manufacturer specifications</a></p>' : '') +
+      '" target="_blank" rel="noopener noreferrer">Product specifications source</a></p>' : '') +
     '</details><div class="stock ' + (product.stock === true ? "in" : product.stock === false ? "out" : "") +
     '">' + (typeof product.stock === "boolean" ? '<i class="dot"></i>' : "") + availability +
     '</div><div class="buyrow">' + pricing + '</div></div></article>';
@@ -395,7 +384,6 @@ function showPhoto(image, error, photo, name) {
   image.hidden = false;
   error.hidden = true;
   image.alt = name + " — " + photo.label;
-  image.classList.toggle("detail", Boolean(photo.detail));
   image.src = photo.src;
   if (image.complete && image.naturalWidth === 0 && image.currentSrc === image.src) {
     image.hidden = true;
@@ -404,18 +392,23 @@ function showPhoto(image, error, photo, name) {
 }
 
 function updateDialog() {
-  const views = photoViews(galleryProduct);
+  const views = galleryProduct.photos;
   const photo = views[galleryIndex];
   showPhoto(largePhoto, photoError, photo, galleryProduct.name);
   document.querySelector("#photoTitle").textContent = galleryProduct.name;
-  document.querySelector("#photoCaption").textContent = photo.label + " · " + (galleryIndex + 1) + " of " + views.length;
+  document.querySelector("#photoCaption").textContent = views.length > 1
+    ? photo.label + " · " + (galleryIndex + 1) + " of " + views.length
+    : photo.label;
+  document.querySelector("#photoPrevious").hidden = views.length < 2;
+  document.querySelector("#photoNext").hidden = views.length < 2;
   document.querySelector("#photoOriginal").href = photo.src;
   sourceLink.hidden = !photo.source;
   if (photo.source) sourceLink.href = photo.source;
 }
 
 function moveGallery(step) {
-  const count = photoViews(galleryProduct).length;
+  const count = galleryProduct.photos.length;
+  if (count < 2) return;
   galleryIndex = (galleryIndex + step + count) % count;
   updateDialog();
 }
@@ -454,7 +447,7 @@ catalog.addEventListener("click", event => {
     return;
   }
   const position = Number(control.dataset.photo);
-  const photo = photoViews(product)[position];
+  const photo = product.photos[position];
   card.dataset.view = position;
   const image = card.querySelector(".gallery-open img");
   showPhoto(image, image.nextElementSibling, photo, product.name);

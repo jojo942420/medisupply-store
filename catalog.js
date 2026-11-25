@@ -4,8 +4,8 @@ const products = [
     "category": "Medical supplies",
     "brand": "Brand to confirm",
     "model": "Configuration to confirm",
-    "description": "Padded examination chair with a segmented seat and leg supports.",
-    "specification": "Pink upholstery and metal frame. Step and footrest configurations are pictured separately.",
+    "description": "Padded gynecology examination chair with a segmented seat, angled backrest and leg supports.",
+    "specification": "The photos show two configurations, one with a separate two-step stool and one with a frame-mounted footrest. Confirm the supplied configuration and dimensions with sales.",
     "photos": [
       {
         "src": "assets/products/exam-chair-steps.jpg",
@@ -58,10 +58,15 @@ const products = [
     "category": "Laboratory test kits",
     "brand": "Eldon Biologicals",
     "model": "EldonCard 2511",
-    "description": "Dry-reagent card for forward ABO and RhD blood grouping.",
-    "specification": "Card fields contain anti-A, anti-B and anti-D reagents plus a control field. Ask sales for the available pack size.",
-    "specificationSource": "https://eldoncard.com/wp-content/uploads/2022/12/product-sheet-2511-dec-2022.pdf",
+    "description": "Dry-reagent card for professional forward ABO and RhD blood grouping.",
+    "specification": "Four 20 mm fields contain anti-A, anti-B, anti-D and a control. One card is intended for one person. Ask sales for the pack size.",
+    "specificationSource": "https://eldoncard.com/eldoncard-types/",
     "photos": [
+      {
+        "src": "assets/products/eldoncard-2511.png",
+        "label": "EldonCard 2511 test fields",
+        "source": "https://eldoncard.com/eldoncard-types/"
+      },
       {
         "src": "https://i.ebayimg.com/images/g/ntEAAeSwhk9o9ioQ/s-l1200.png",
         "source": "https://www.ebay.com/itm/116836585379",
@@ -284,15 +289,16 @@ const products = [
     "category": "Ultrasound supplies",
     "brand": "Parker Laboratories",
     "model": "Sterile Aquasonic 100",
-    "description": "Ultrasound transmission gel in single-use sterile packets.",
-    "specification": "Confirm the required packet size and case quantity with sales.",
+    "description": "Sterile ultrasound coupling gel supplied in sealed single-use packets.",
+    "specification": "Water-soluble Aquasonic 100 gel. Ask sales for the packet size and case count.",
     "photos": [
       {
         "src": "https://www.parkerlabs.com/wp-content/uploads/2022/03/AQ100-Sterile_Web2560x1440.jpg",
         "source": "https://www.parkerlabs.com/product/sterile-aquasonic-ultrasound-transmission-gel/",
         "label": "Parker product image"
       }
-    ]
+    ],
+    "specificationSource": "https://www.parkerlabs.com/product/sterile-aquasonic-ultrasound-transmission-gel/"
   },
   {
     "id": "civco-surgi-610-023",
@@ -300,23 +306,24 @@ const products = [
     "category": "Ultrasound supplies",
     "brand": "CIVCO",
     "model": "610-023",
-    "description": "Sterile cover for a compatible ultrasound transducer.",
-    "specification": "Confirm the probe type, cover dimensions, and pack size before ordering.",
+    "description": "Sterile CIVCO cover designed for compatible intraoperative ultrasound transducers.",
+    "specification": "Reference 610-023. Confirm probe fit, cover dimensions and pack count with sales.",
     "photos": [
       {
         "src": "https://dkcdkv8eldsua.cloudfront.net/media/catalog/product/b/1/b1f2bc63471b2cf8ed5ac7b458e15332.jpg?height=265&image-type=image&store=default&width=265",
         "source": "https://imedsales.com/civco-610-023-surgi-transducer-cover",
         "label": "Supplier package photo"
       }
-    ]
+    ],
+    "specificationSource": "https://www.civco.com/products/ultrasound-probe-covers/surgi-intraoperative-covers/"
   },
   {
     "name": "JT-S70A portable ultrasound",
     "category": "Biomedical equipment",
     "brand": "Brand to confirm",
     "model": "JT-S70A",
-    "description": "Laptop-style digital ultrasound system for clinical facilities.",
-    "specification": "The pictured brochure lists a 12.1-inch display, two active probe connectors, and a rechargeable lithium-ion battery.",
+    "description": "Portable laptop-style digital ultrasound system with an integrated screen and keyboard.",
+    "specification": "The pictured JT-S70A brochure lists a 12.1-inch display, two active probe connectors, USB and a rechargeable battery. Confirm which probes are included.",
     "photos": [
       {
         "src": "assets/products/jt-s70a.jpg",
@@ -331,8 +338,8 @@ const products = [
     "category": "Laboratory test kits",
     "brand": "AccuQuik by AdvaCare Pharma",
     "model": "Typhoid",
-    "description": "Typhoid antibody screening.",
-    "specification": "25-kit box and individual pouch shown.",
+    "description": "Rapid test kit for detecting antibodies to Salmonella Typhi.",
+    "specification": "The manufacturer shows a 25-test box and a single-test pouch. Confirm the assay format and specimen type for the pack you order.",
     "photos": [
       {
         "src": "https://www.advacarepharma.com/images/typhoid-test-kit-box.png?fit=contain&h=500&w=500",
@@ -344,7 +351,8 @@ const products = [
         "source": "https://www.advacarepharma.com/en/medical-devices/typhoid-test-kit",
         "label": "Manufacturer pouch image"
       }
-    ]
+    ],
+    "specificationSource": "https://www.advacarepharma.com/en/medical-devices/typhoid-test-kit"
   },
   {
     "id": "accuquik-malaria",
@@ -352,8 +360,8 @@ const products = [
     "category": "Laboratory test kits",
     "brand": "AccuQuik by AdvaCare Pharma",
     "model": "Malaria",
-    "description": "Malaria rapid test range.",
-    "specification": "Confirm the assay variant and format with sales.",
+    "description": "AccuQuik qualitative malaria rapid tests, available in several assay formats.",
+    "specification": "AdvaCare lists cassette and strip options. Confirm the parasite targets and specimen type for the selected kit.",
     "photos": [
       {
         "src": "https://www.advacarepharma.com/images/malaria-test-kits-box.png?fit=contain&h=500&w=500",
@@ -365,7 +373,8 @@ const products = [
         "source": "https://www.advacarepharma.com/en/medical-devices/malaria-test-kits",
         "label": "Manufacturer pouch image"
       }
-    ]
+    ],
+    "specificationSource": "https://www.advacarepharma.com/en/medical-devices/malaria-test-kits"
   },
   {
     "id": "accuquik-syphilis",
@@ -373,8 +382,8 @@ const products = [
     "category": "Laboratory test kits",
     "brand": "AccuQuik by AdvaCare Pharma",
     "model": "Syphilis",
-    "description": "Syphilis antibody screening.",
-    "specification": "Cassette and strip formats are listed by the manufacturer.",
+    "description": "Rapid immunoassay kit for antibodies associated with syphilis screening.",
+    "specification": "AdvaCare lists cassette and strip formats. Confirm the format and pack size with sales.",
     "photos": [
       {
         "src": "https://www.advacarepharma.com/images/syphilis-test-kit-box.png?fit=contain&h=500&w=500",
@@ -386,7 +395,8 @@ const products = [
         "source": "https://www.advacarepharma.com/en/medical-devices/syphilis-test-kit",
         "label": "Manufacturer pouch image"
       }
-    ]
+    ],
+    "specificationSource": "https://www.advacarepharma.com/en/medical-devices/syphilis-test-kit"
   },
   {
     "id": "accuquik-hiv-1-2",
@@ -394,8 +404,8 @@ const products = [
     "category": "Laboratory test kits",
     "brand": "AccuQuik by AdvaCare Pharma",
     "model": "HIV 1/2 antibody",
-    "description": "HIV-1 and HIV-2 antibody screening.",
-    "specification": "25-kit box and individual pouch shown.",
+    "description": "Rapid AccuQuik immunoassay for HIV-1 and HIV-2 antibodies.",
+    "specification": "Confirm the supplied pack reference, test format and specimen type with sales.",
     "photos": [
       {
         "src": "https://www.advacarepharma.com/images/hiv-1-2-antibody-test-kits-box.png?fit=contain&h=500&w=500",
@@ -407,7 +417,8 @@ const products = [
         "source": "https://www.advacarepharma.com/en/medical-devices/hiv-test-kits",
         "label": "Manufacturer pouch image"
       }
-    ]
+    ],
+    "specificationSource": "https://www.advacarepharma.com/en/medical-devices/hiv-test-kits"
   },
   {
     "id": "accuquik-dengue-ns1",
@@ -415,8 +426,8 @@ const products = [
     "category": "Laboratory test kits",
     "brand": "AccuQuik by AdvaCare Pharma",
     "model": "Dengue NS1",
-    "description": "Dengue NS1 antigen screening.",
-    "specification": "25-kit box and individual pouch shown.",
+    "description": "Rapid kit for qualitative detection of dengue NS1 antigen.",
+    "specification": "Confirm the AccuQuik reference and pack size for the NS1 version.",
     "photos": [
       {
         "src": "https://www.advacarepharma.com/images/dengue-test-kits-box-ns1.png?fit=contain&h=500&w=500",
@@ -428,7 +439,8 @@ const products = [
         "source": "https://www.advacarepharma.com/en/medical-devices/dengue-test-kits",
         "label": "Manufacturer pouch image"
       }
-    ]
+    ],
+    "specificationSource": "https://www.advacarepharma.com/en/medical-devices/dengue-test-kits"
   },
   {
     "id": "accuquik-h-pylori-antigen",
@@ -436,8 +448,8 @@ const products = [
     "category": "Laboratory test kits",
     "brand": "AccuQuik by AdvaCare Pharma",
     "model": "H. pylori antigen",
-    "description": "H. pylori antigen screening.",
-    "specification": "25-kit box and individual pouch shown.",
+    "description": "Rapid test kit for H. pylori antigen detection.",
+    "specification": "Ask for the antigen version and confirm the specimen type and pack size for the supplied kit.",
     "photos": [
       {
         "src": "https://www.advacarepharma.com/images/h-pylori-antigen-test-kits-box.png?fit=contain&h=500&w=500",
@@ -449,7 +461,8 @@ const products = [
         "source": "https://www.advacarepharma.com/en/medical-devices/h-pylori-test-kits",
         "label": "Manufacturer pouch image"
       }
-    ]
+    ],
+    "specificationSource": "https://www.advacarepharma.com/en/medical-devices/h-pylori-test-kits"
   },
   {
     "id": "wondfo-malaria-pf-pan",
@@ -457,15 +470,16 @@ const products = [
     "category": "Laboratory test kits",
     "brand": "Wondfo",
     "model": "Malaria HRP2/pLDH Pf/Pan rapid test",
-    "description": "Falciparum and pan-malaria antigen screening.",
-    "specification": "One Step Pf/Pan assay.",
+    "description": "Qualitative rapid test for P. falciparum and pan-malaria antigens.",
+    "specification": "Wondfo One Step HRP2/pLDH Pf/Pan assay. Confirm the pack reference and number of cassettes.",
     "photos": [
       {
         "src": "https://en.wondfo.com/vancheerfile/images/2020/9/20200915160517424.jpg",
         "source": "https://en.wondfo.com/pt/malaria-hrp2-pldh-pf-pan.html",
         "label": "Manufacturer product image"
       }
-    ]
+    ],
+    "specificationSource": "https://en.wondfo.com/pt/malaria-hrp2-pldh-pf-pan.html"
   },
   {
     "id": "wondfo-syphilis",
@@ -473,15 +487,16 @@ const products = [
     "category": "Laboratory test kits",
     "brand": "Wondfo",
     "model": "One Step Syphilis rapid test",
-    "description": "Syphilis antibody screening.",
-    "specification": "One Step rapid test.",
+    "description": "Wondfo One Step rapid test for antibodies to Treponema pallidum.",
+    "specification": "Confirm the format, specimen type and number of tests for the supplied pack.",
     "photos": [
       {
         "src": "https://en.wondfo.com/vancheerfile/images/2020/9/2020091516006153.jpg",
         "source": "https://en.wondfo.com/pt/one-step-syphilis-test.html",
         "label": "Manufacturer product image"
       }
-    ]
+    ],
+    "specificationSource": "https://en.wondfo.com/pt/one-step-syphilis-test.html"
   },
   {
     "id": "wondfo-hiv-1-2",
@@ -489,15 +504,16 @@ const products = [
     "category": "Laboratory test kits",
     "brand": "Wondfo",
     "model": "One Step HIV 1/2 rapid test",
-    "description": "HIV-1 and HIV-2 antibody screening.",
-    "specification": "Two-line One Step version.",
+    "description": "Wondfo One Step rapid test for HIV-1 and HIV-2 antibodies.",
+    "specification": "Two-line assay. Confirm the exact reference and pack contents with sales.",
     "photos": [
       {
         "src": "https://en.wondfo.com/vancheerfile/images/2023/10/20231008085221776.jpg",
         "source": "https://en.wondfo.com/pt/one-step-hiv-test.html",
         "label": "Manufacturer product image"
       }
-    ]
+    ],
+    "specificationSource": "https://en.wondfo.com/pt/one-step-hiv-test.html"
   },
   {
     "id": "wondfo-hbsag",
@@ -505,15 +521,16 @@ const products = [
     "category": "Laboratory test kits",
     "brand": "Wondfo",
     "model": "One Step HBsAg rapid test",
-    "description": "Hepatitis B surface antigen screening.",
-    "specification": "One Step HBsAg test.",
+    "description": "Rapid in vitro test for hepatitis B surface antigen (HBsAg).",
+    "specification": "Wondfo One Step HBsAg product. Confirm the specimen type and pack size for the supplied reference.",
     "photos": [
       {
         "src": "https://en.wondfo.com/vancheerfile/images/2020/9/2020091516095795.jpg",
         "source": "https://en.wondfo.com/pt/hbsag-test.html",
         "label": "Manufacturer product image"
       }
-    ]
+    ],
+    "specificationSource": "https://en.wondfo.com/pt/hbsag-test.html"
   },
   {
     "id": "wondfo-hiv-hcv-hbsag-syphilis",
@@ -521,15 +538,16 @@ const products = [
     "category": "Laboratory test kits",
     "brand": "Wondfo",
     "model": "HIV/HCV/HBsAg/Syphilis combo rapid test",
-    "description": "Combined screening for HIV-1/2 antibodies, HCV antibodies, HBsAg, and syphilis antibodies.",
-    "specification": "Four-marker One Step combo for professional use.",
+    "description": "One cassette screens for HIV-1/2 antibodies, HCV antibodies, hepatitis B surface antigen and syphilis antibodies.",
+    "specification": "Wondfo One Step four-marker combo test for professional use. Confirm the supplied reference and pack size.",
     "photos": [
       {
-        "src": "https://en.wondfo.com/vancheerfile/images/2022/6/20220627090357283.png",
-        "source": "https://en.wondfo.com/pt/one-step-hiv-hcv-hbsag-syphilis-combo-test.html",
-        "label": "Manufacturer product image"
+        "src": "assets/products/wondfo-four-marker-combo.jpg",
+        "label": "Wondfo combo kit carton",
+        "source": "https://en.wondfo.com/pt/one-step-hiv-hcv-hbsag-syphilis-combo-test.html"
       }
-    ]
+    ],
+    "specificationSource": "https://en.wondfo.com/pt/one-step-hiv-hcv-hbsag-syphilis-combo-test.html"
   },
   {
     "id": "juschek-typhoid-igg-igm",
@@ -553,15 +571,16 @@ const products = [
     "category": "Laboratory test kits",
     "brand": "JusChek",
     "model": "Malaria Ag Pf/Pan rapid test",
-    "description": "Falciparum and pan-malaria antigen screening.",
-    "specification": "25-cassette pack listed by the supplier.",
+    "description": "JusChek cassette test for P. falciparum and pan-malaria antigens.",
+    "specification": "Supplier lists a 25-test pack. Confirm the exact pack reference with sales.",
     "photos": [
       {
-        "src": "https://cdn1.sgliteasset.com/metromed_1/images/product/product-7165569/JU4ximWD69ce0bb9b2ba3_1775111097.png",
-        "source": "https://www.metromedicalsupplies.com.my/product/juschek-malaria-ag-pfpan-cassette-25s",
-        "label": "Supplier product image"
+        "src": "assets/products/juschek-malaria-pf-pan.jpg",
+        "label": "JusChek box, pouch and cassette",
+        "source": "https://www.metromedicalsupplies.com.my/product/juschek-malaria-ag-pfpan-cassette-25s"
       }
-    ]
+    ],
+    "specificationSource": "https://www.metromedicalsupplies.com.my/product/juschek-malaria-ag-pfpan-cassette-25s"
   },
   {
     "id": "juschek-dengue-ns1",
@@ -633,20 +652,21 @@ const products = [
     "category": "Laboratory test kits",
     "brand": "JusChek",
     "model": "10-parameter urinalysis strips",
-    "description": "Multi-parameter urine reagent strips. Supplier lists 100 strips.",
-    "specification": "Confirm the order reference and pack size with sales.",
+    "description": "JusChek reagent strips for a 10-parameter urine screen.",
+    "specification": "Supplier reference JC01URI-10. Confirm the strip count and reagent panel with sales.",
     "photos": [
       {
-        "src": "https://www.medisave.co.uk/cdn/shop/files/Urinalysis_US004_3Urinalysis_US004_edited.jpg?v=1721375995&width=2048",
-        "source": "https://www.medisave.co.uk/products/insight-urinalysis-strips-10-parameter-x100-strips",
-        "label": "Product listing photograph"
+        "src": "assets/products/juschek-urinalysis-view.jpg",
+        "label": "JusChek carton, vial and insert",
+        "source": "https://www.healthandcare.co.uk/diabetes/juschek-10-parameter-urinalysis-strips-pack-of-100.html"
       },
       {
-        "src": "https://www.medisave.co.uk/cdn/shop/files/Urinalysis_US004_4Urinalysis_US004_edited.jpg?v=1721375995",
-        "source": "https://www.medisave.co.uk/products/insight-urinalysis-strips-10-parameter-x100-strips",
-        "label": "Alternate product view"
+        "src": "assets/products/juschek-urinalysis-pack.jpg",
+        "label": "JusChek carton and reference chart",
+        "source": "https://bayit.mx/pruebas-rapidas/65-juschek-urianalysis-reagent-strips-10-parametros.html"
       }
-    ]
+    ],
+    "specificationSource": "https://bayit.mx/pruebas-rapidas/65-juschek-urianalysis-reagent-strips-10-parametros.html"
   },
   {
     "id": "juschek-fob-rapid-test",
@@ -674,9 +694,9 @@ const products = [
     "specification": "Confirm the order reference and pack size with sales.",
     "photos": [
       {
-        "src": "https://cdn1.sgliteasset.com/metromed_1/images/product/product-7170733/6wrcqzpT6a0eb0e17cbdd_1779347681.png",
-        "source": "https://www.metromedicalsupplies.com.my/product/juschek-5in1-mdma-urine-drug-test-25s",
-        "label": "Product listing photograph"
+        "src": "assets/products/juschek-mdma-5in1.jpg",
+        "label": "JusChek MDMA five-panel kit",
+        "source": "https://www.metromedicalsupplies.com.my/product/juschek-5in1-mdma-urine-drug-test-25s"
       }
     ]
   },
@@ -685,17 +705,12 @@ const products = [
     "category": "Laboratory test kits",
     "brand": "Accurate",
     "model": "25 tests",
-    "description": "Cassette kit for H. pylori antigen testing in stool specimens.",
-    "specification": "Box label lists 25 test cassettes and 25 buffer tubes.",
+    "description": "Accurate cassette kit for qualitative H. pylori antigen screening in stool.",
+    "specification": "The box label lists 25 test cassettes, 25 buffer tubes and a package insert.",
     "photos": [
       {
         "src": "assets/products/accurate-h-pylori.jpg",
         "label": "Box label and packaging"
-      },
-      {
-        "label": "Supplier packaging photo",
-        "src": "https://shopit.ug/images/detailed/129/WhatsApp_Image_2024-11-22_at_9.00.26_AM.jpeg",
-        "source": "https://shopit.ug/accurate-h-pylori-antigen-rapid-25-test-cassettes.html"
       }
     ],
     "id": "accurate-h-pylori-antigen-test-cassette"
@@ -705,8 +720,8 @@ const products = [
     "category": "Laboratory test kits",
     "brand": "Vivatest",
     "model": "One Step Rapid Test",
-    "description": "Sickle cell screening kit for in vitro diagnostic use.",
-    "specification": "Photo shows individually wrapped test components and the kit insert.",
+    "description": "VivaTest one-step rapid kit for sickle cell screening.",
+    "specification": "The submitted photo shows individual test components and the package insert. Ask sales for the exact pack reference.",
     "photos": [
       {
         "src": "assets/products/vivatest-sickle-cell.jpg",
@@ -740,8 +755,8 @@ const products = [
     "category": "Medical supplies",
     "brand": "Brand to confirm",
     "model": "Boro 3.3",
-    "description": "Clear graduated glass lab bottle with a blue screw cap.",
-    "specification": "250 mL nominal capacity and approximate volume markings.",
+    "description": "Clear borosilicate reagent bottle with printed graduations and a blue screw cap.",
+    "specification": "Marked Boro 3.3 and 250 mL. Includes a write-on area. The printed graduations are approximate.",
     "photos": [
       {
         "src": "assets/products/boro-bottle.jpg",
@@ -770,8 +785,8 @@ const products = [
     "category": "Medical supplies",
     "brand": "Brand to confirm",
     "model": "Model to confirm",
-    "description": "Wheeled hospital bed frame with segmented mattress platform.",
-    "specification": "Raised backrest, scissor-style base, and wood-look end panels pictured.",
+    "description": "Adjustable hospital bed frame with articulated head and leg sections.",
+    "specification": "The pictured configuration has wood-tone end panels and caster wheels. Confirm the mattress, rails and adjustment mechanism with sales.",
     "photos": [
       {
         "src": "assets/products/hospital-bed.jpg",
@@ -785,8 +800,8 @@ const products = [
     "category": "Medical supplies",
     "brand": "Brand to confirm",
     "model": "Model to confirm",
-    "description": "Wheeled clinical trolley for organizing supplies and instruments.",
-    "specification": "Two shelves, guard rails, two drawers, and a side bowl pictured.",
+    "description": "Mobile dressing trolley with two shelves for instruments and supplies.",
+    "specification": "Pictured with two drawers, a bowl holder, shelf rails and caster wheels. Confirm dimensions with sales.",
     "photos": [
       {
         "src": "assets/products/dressing-trolley.jpg",
@@ -851,8 +866,8 @@ const products = [
     "category": "Laboratory test kits",
     "brand": "Golden Care",
     "model": "G6PD kit",
-    "description": "Golden Care in vitro diagnostic kit for glucose-6-phosphate dehydrogenase (G6PD) testing.",
-    "specification": "Confirm the catalog reference, pack size, and supplied components with sales.",
+    "description": "Golden Care kit for in vitro glucose-6-phosphate dehydrogenase (G6PD) testing.",
+    "specification": "Ask sales for the reference number, test count and kit contents. The photo shows the supplied Golden Care packaging.",
     "photos": [
       {
         "src": "assets/products/golden-care-ivd.jpg",
@@ -973,36 +988,37 @@ const products = [
   {
     "name": "Digital blood pressure monitor",
     "category": "Medical supplies",
-    "description": "Automatic upper-arm monitor with clear digital display.",
+    "description": "Omron automatic upper-arm blood pressure monitor with a digital display and cuff placement guide.",
     "price": 420,
     "stock": true,
     "unit": "each",
     "brand": "Omron",
     "model": "HEM-7183 pictured",
-    "specification": "Digital upper-arm cuff monitor",
+    "specification": "Model HEM-7183 EZ. Omron lists IntelliSense inflation and memory for up to 30 readings.",
     "photos": [
+      {
+        "src": "assets/products/omron-hem7183.jpg",
+        "label": "Omron HEM-7183 with upper-arm cuff",
+        "source": "https://www.omronhealthcare-ap.com/vn/product/1750-ez"
+      },
       {
         "src": "https://cdn11.bigcommerce.com/s-mkp1sb9vcu/images/stencil/450x450/products/1825/4387/HEM-7183__06800.1779617289.png?c=1",
         "label": "Product photo"
-      },
-      {
-        "label": "Retail packaging",
-        "src": "https://cdn.nhathuoclongchau.com.vn/v1/static/MAY_DO_HUYET_AP_BAP_TAY_OMRON_EZ_HEM_7183_HO_TRO_DO_HUYET_AP_NHIP_TIM_00050892_2_9ad7822d7b.png",
-        "source": "https://nhathuoclongchau.com.vn/trang-thiet-bi-y-te/may-do-huyet-ap-bap-tay-omron-ez-hem-7183-ho-tro-do-huyet-ap-nhip-tim.html"
       }
     ],
-    "id": "digital-blood-pressure-monitor"
+    "id": "digital-blood-pressure-monitor",
+    "specificationSource": "https://www.omronhealthcare-ap.com/vn/product/1750-ez"
   },
   {
     "name": "Clinical stethoscope",
     "category": "Medical supplies",
-    "description": "Lightweight acoustic stethoscope for daily assessments.",
+    "description": "Littmann acoustic stethoscope shown with black tubing and a rainbow-finish chestpiece.",
     "price": 185,
     "stock": true,
     "unit": "each",
     "brand": "Littmann",
     "model": "Model to confirm",
-    "specification": "Black tubing and rainbow-finish chestpiece",
+    "specification": "Confirm the exact model, tubing length and included accessories with sales.",
     "photos": [
       {
         "src": "assets/products/littmann-stethoscope.jpg",
@@ -1032,13 +1048,13 @@ const products = [
   {
     "name": "Examination gloves · nitrile",
     "category": "Disposables",
-    "description": "Powder-free, single-use examination gloves. Box of 100.",
+    "description": "Powder-free, single-use nitrile examination gloves in a dispensing carton.",
     "price": 95,
     "stock": true,
     "unit": "box",
     "brand": "NACOSA",
     "model": "100 per box pictured",
-    "specification": "Powder-free nitrile examination gloves",
+    "specification": "NACOSA 100-count packaging is pictured. Confirm glove size and available box configuration.",
     "photos": [
       {
         "src": "https://assets.fishersci.com/TFS-Assets/CCG/product-images/502522222.JPG-650.jpg",
@@ -1055,13 +1071,13 @@ const products = [
   {
     "name": "Surgical face masks",
     "category": "Disposables",
-    "description": "Pleated disposable masks with comfortable ear loops.",
+    "description": "Disposable pleated face masks with ear loops for routine clinical supplies.",
     "price": 38,
     "stock": true,
     "unit": "box of 50",
     "brand": "Medi Mask",
     "model": "50 per box pictured",
-    "specification": "Pleated single-use masks with ear loops",
+    "specification": "Medi Mask 50-count carton is pictured. Confirm the applicable mask standard and pack configuration with sales.",
     "photos": [
       {
         "src": "https://hpa.chebupharma.com/web/image/product.template/19073/image",
@@ -1073,40 +1089,42 @@ const products = [
   {
     "name": "Syringes · 5 ml",
     "category": "Disposables",
-    "description": "Sterile, single-use syringes. Individually wrapped.",
+    "description": "Sterile, single-use 5 mL syringes with a graduated barrel.",
     "price": 2.5,
     "stock": true,
     "unit": "each",
     "brand": "Brand to confirm",
     "model": "5 mL",
-    "specification": "Individually wrapped single-use syringe",
+    "specification": "The BD reference photos show a 5 mL Luer-Lok syringe. Confirm the supplied brand, tip style and whether a needle is included.",
     "photos": [
       {
-        "src": "https://www.gotosuppliers.com/files/info/202304/12/aai20loucljiyo8.jpg",
-        "label": "Product photo"
+        "src": "assets/products/bd-syringe-5ml.avif",
+        "label": "BD 5 mL syringe reference photo",
+        "source": "https://www.bd.com/en-us/products-and-solutions/products/product-page.309646"
+      },
+      {
+        "src": "assets/products/bd-syringe-5ml-pack.avif",
+        "label": "BD syringe package reference photo",
+        "source": "https://www.bd.com/en-us/products-and-solutions/products/product-page.309646"
       }
     ],
-    "id": "syringes-5-ml"
+    "id": "syringes-5-ml",
+    "specificationSource": "https://www.bd.com/en-us/products-and-solutions/products/product-page.309646"
   },
   {
     "name": "Gauze swabs · sterile",
     "category": "Disposables",
-    "description": "Soft sterile gauze for wound care. Pack of 100.",
+    "description": "Sterile woven gauze swabs for dressings and wound care supplies.",
     "price": 55,
     "stock": false,
     "unit": "pack",
     "brand": "Ammeda",
     "model": "7.5 × 7.5 cm pictured",
-    "specification": "Sterile woven gauze swabs. Confirm pack size.",
+    "specification": "7.5 × 7.5 cm Ammeda swabs are pictured. Confirm ply and pack count with sales.",
     "photos": [
       {
         "src": "https://www.dnrwheels.com/cdn/shop/products/860051AmmedaSterileGauzeSwabs7.5x7.5cm_2_1000x.png?v=1584596552",
-        "label": "Product photo"
-      },
-      {
-        "label": "Ready-Pak packaging",
-        "src": "https://www.pinkpharm.com/cdn/shop/files/SterileGauzeSwabs7.5x7.5cm_1080x1080.jpg?v=1733806916",
-        "source": "https://www.pinkpharm.com/products/sterile-gauze-swab-12ply-7-5x7-5cm-5s"
+        "label": "Ammeda gauze swabs pack"
       }
     ],
     "id": "gauze-swabs-sterile"
@@ -1114,13 +1132,13 @@ const products = [
   {
     "name": "Pulse oximeter",
     "category": "Biomedical equipment",
-    "description": "Finger-tip SpO₂ and pulse rate monitor with OLED screen.",
+    "description": "Fingertip pulse oximeter with an OLED display for oxygen saturation and pulse rate.",
     "price": 310,
     "stock": true,
     "unit": "each",
     "brand": "Boxym",
     "model": "C1 OLED pictured",
-    "specification": "Fingertip display for SpO₂ and pulse rate",
+    "specification": "Boxym C1 OLED is pictured. Confirm the supplied model and accessories with sales.",
     "photos": [
       {
         "src": "https://images.prom.ua/2750583036_w640_h640_2750583036.jpg",
@@ -1137,45 +1155,48 @@ const products = [
   {
     "name": "Portable suction machine",
     "category": "Biomedical equipment",
-    "description": "Compact electric suction unit for clinical environments.",
+    "description": "Dynarex Resp-O2 portable suction unit with a collection canister and rechargeable battery.",
     "price": 2850,
     "stock": false,
     "unit": "each",
     "brand": "Dynarex",
     "model": "Resp-O2 pictured",
-    "specification": "Portable electric suction unit with collection canister",
+    "specification": "Model 32305. Confirm the included tubing and accessories with sales.",
     "photos": [
       {
-        "src": "https://www.mountainside-medical.com/cdn/shop/files/esp-O2-Portable-Home-Suction-Machine-Unit-with-Rechargeable-Lithium-Ion-Battery_512x512.jpg?v=1710793460",
-        "label": "Product photo"
+        "src": "assets/products/dynarex-32305-kit.jpg",
+        "label": "Dynarex suction unit and accessories",
+        "source": "https://dynarex.com/markets-we-serve/homecare/32305-homecare-suction-unit--portable"
+      },
+      {
+        "src": "assets/products/dynarex-32305-side.jpg",
+        "label": "Suction unit and canister side view",
+        "source": "https://dynarex.com/markets-we-serve/homecare/32305-homecare-suction-unit--portable"
       },
       {
         "label": "Manufacturer view",
         "src": "https://cdn-881a96c5-a77b871b.commercebuild.com/e5679379b58995ada200c19806353331/contents/32305/32305%404.png",
         "source": "https://dynarex.com/markets-we-serve/homecare/32305-homecare-suction-unit--portable"
-      },
-      {
-        "label": "Supplier view",
-        "src": "https://www.mountainside-medical.com/cdn/shop/files/32305_2_749x749.png?v=1734026117",
-        "source": "https://www.mountainside-medical.com/products/resp-o2-portable-home-suction-machine-unit-with-rechargeable-lithium-ion-battery"
       }
     ],
-    "id": "portable-suction-machine"
+    "id": "portable-suction-machine",
+    "specificationSource": "https://dynarex.com/markets-we-serve/homecare/32305-homecare-suction-unit--portable"
   },
   {
     "name": "Patient monitor · 5 parameter",
     "category": "Biomedical equipment",
-    "description": "Bedside monitoring for ECG, SpO₂, NIBP, temperature and pulse.",
+    "description": "Mindray ePM 12M bedside patient monitor with a touchscreen and configurable parameters.",
     "price": 12800,
     "stock": true,
     "unit": "each",
     "brand": "Mindray",
     "model": "ePM12m pictured",
-    "specification": "Bedside multiparameter monitor. Confirm configuration.",
+    "specification": "Supports ECG, SpO₂, noninvasive blood pressure and temperature monitoring. Confirm the installed modules and accessories for the supplied configuration.",
     "photos": [
       {
-        "src": "https://anatomiyamed.com/upload/resize_cache/iblock/71c/93xac1xe40k9u228sjcgtddpsrbzujk7/800_800_2/%D0%9C%D0%BE%D0%BD%D0%B8%D1%82%D0%BE%D1%80%20%D0%BF%D0%B0%D1%86%D0%B8%D0%B5%D0%BD%D1%82%D0%B0%20Mindray%20ePM%2012m%20%D0%B5%D1%89%D0%B5%20%281%29.jpg",
-        "label": "Product photo"
+        "src": "assets/products/mindray-epm12m-bedside.avif",
+        "label": "Mindray ePM 12M on a bedside cart",
+        "source": "https://www.mindray.com/na/products/patient-monitoring/continuous-patient-monitoring/mid-low-acuity/epm-12m-10m/"
       },
       {
         "label": "Rear view",
@@ -1183,7 +1204,8 @@ const products = [
         "source": "https://quincemedical.com/products/mindray-epm-12m-patient-monitor"
       }
     ],
-    "id": "patient-monitor-5-parameter"
+    "id": "patient-monitor-5-parameter",
+    "specificationSource": "https://www.mindray.com/na/products/patient-monitoring/continuous-patient-monitoring/mid-low-acuity/epm-12m-10m/"
   },
   {
     "name": "Oxygen concentrator · 5 L",
@@ -1216,13 +1238,13 @@ const products = [
   {
     "name": "Autoclave · 18 L",
     "category": "Biomedical equipment",
-    "description": "Tabletop steam sterilizer with simple cycle controls.",
+    "description": "BIOBASE benchtop steam sterilizer with an 18 L chamber.",
     "price": 7200,
     "stock": false,
     "unit": "each",
     "brand": "BIOBASE",
     "model": "BKM-Z18B pictured",
-    "specification": "18 L tabletop steam sterilizer",
+    "specification": "BKM-Z18B is pictured. Ask sales to confirm the cycle options, power requirements and included trays.",
     "photos": [
       {
         "src": "https://bizweb.dktcdn.net/100/415/687/products/bkm-z18b-tbpt.jpg?v=1748056737633",
@@ -1234,7 +1256,8 @@ const products = [
         "source": "https://wicomed.com/noi-hap-tiet-trung-say-chan-khong-18-lit-bkm-z18b"
       }
     ],
-    "id": "autoclave-18-l"
+    "id": "autoclave-18-l",
+    "specificationSource": "https://wicomed.com/noi-hap-tiet-trung-say-chan-khong-18-lit-bkm-z18b"
   },
   {
     "id": "mindray-bs-600m-chemistry-ise",
@@ -1242,8 +1265,8 @@ const products = [
     "category": "Biomedical equipment",
     "brand": "Mindray",
     "model": "BS-600M",
-    "description": "Clinical chemistry analyzer with built-in electrolyte testing.",
-    "specification": "Integrated ion-selective electrode (ISE) module for sodium, potassium, and chloride.",
+    "description": "Benchtop clinical chemistry analyzer with an integrated electrolyte module.",
+    "specification": "Mindray lists the BS-600M with built-in ion-selective electrodes for sodium, potassium and chloride. Confirm the installed configuration.",
     "photos": [
       {
         "label": "Mindray product photograph",
@@ -1255,7 +1278,8 @@ const products = [
         "src": "https://www.mindray.com/content/dam/xpace/en/products-solutions/products/laboratory-diagnostics/chemistry/medium-test-volume/bs-600m/bs-600m-fig5-1-pc.jpg",
         "source": "https://www.mindray.com/en/products/laboratory-diagnostics/chemistry/medium-test-volume/bs-600m"
       }
-    ]
+    ],
+    "specificationSource": "https://www.mindray.com/en/products/laboratory-diagnostics/chemistry/medium-test-volume/bs-600m"
   },
   {
     "id": "urit-5160-hematology-analyzer",
@@ -1263,8 +1287,8 @@ const products = [
     "category": "Biomedical equipment",
     "brand": "URIT",
     "model": "URIT-5160",
-    "description": "Automated hematology analyzer for laboratory blood counts.",
-    "specification": "Confirm the instrument configuration, reagent package, and installation with sales.",
+    "description": "Automated 5-part differential hematology analyzer for clinical laboratories.",
+    "specification": "URIT lists up to 60 samples per hour and a 10.4-inch color touchscreen.",
     "photos": [
       {
         "label": "Supplier product photograph",
@@ -1276,7 +1300,8 @@ const products = [
         "src": "https://ueeshop.ly200-cdn.com/u_file/UPAP/UPAP543/2501/3d57f6b167.jpg",
         "source": "https://icenteco.com/products/urit-5160-fully-auto-blood-analyzerhematology-analyzer-price-2309"
       }
-    ]
+    ],
+    "specificationSource": "https://umc-medical.com/wp-content/uploads/2025/04/URIT-5160.pdf"
   },
   {
     "id": "sensa-core-st-200-aqua",
@@ -1284,20 +1309,26 @@ const products = [
     "category": "Biomedical equipment",
     "brand": "Sensa Core",
     "model": "ST-200 aQua",
-    "description": "Standalone benchtop analyzer for laboratory electrolyte testing.",
-    "specification": "Ion-selective electrode technology. Confirm the electrolyte panel and accessories for your requested configuration.",
+    "description": "Benchtop electrolyte analyzer using ion-selective electrodes.",
+    "specification": "Sensa Core lists several configurations for sodium, potassium, chloride, calcium, lithium and pH. Ask sales which panel is fitted.",
     "photos": [
       {
-        "src": "https://www.sensacore.com/images/37aa62c32ac07c7d87731bf05ac748a8.png",
-        "source": "https://www.sensacore.com/product/electrolyte-analyzer-aqua",
-        "label": "Manufacturer product view"
+        "src": "assets/products/sensa-st200-aqua.jpg",
+        "label": "Sensa Core ST-200 aQua front view",
+        "source": "https://www.sensacore.com/product/electrolyte-analyzer-aqua"
+      },
+      {
+        "src": "assets/products/sensa-st200-aqua-angle.jpg",
+        "label": "ST-200 aQua angled view",
+        "source": "https://www.sensacore.com/product/electrolyte-analyzer-aqua"
       },
       {
         "src": "https://shop.hlr.ua/image/cache/import_files/H0316908/21-800x800-product_popup.jpg",
         "source": "https://shop.hlr.ua/analizator-elektrolitov-st-200-aqua-sensa-core-255414.html",
         "label": "Supplier interior view"
       }
-    ]
+    ],
+    "specificationSource": "https://www.sensacore.com/product/electrolyte-analyzer-aqua"
   },
   {
     "id": "urit-910c-plus-electrolyte-analyzer",
@@ -1305,8 +1336,8 @@ const products = [
     "category": "Biomedical equipment",
     "brand": "URIT",
     "model": "URIT-910C Plus",
-    "description": "Standalone analyzer for laboratory electrolyte testing.",
-    "specification": "Confirm the electrolyte panel and sampling configuration with sales.",
+    "description": "Standalone ion-selective electrode analyzer for electrolyte testing.",
+    "specification": "URIT-910C Plus. Confirm the supplied electrolyte panel and accessories with sales.",
     "photos": [
       {
         "label": "URIT product listing photograph",
@@ -1323,7 +1354,8 @@ const products = [
         "src": "https://ueeshop.ly200-cdn.com/u_file/UPAP/UPAP842/2502/products/14/a04d84634e.jpg.500x500.jpg",
         "source": "https://www.ysenmedical.com/products/urit-910c-plus-electrolyte-analyzer"
       }
-    ]
+    ],
+    "specificationSource": "https://www.medicalexpo.fr/prod/guilin-urit-electronic-group-co-ltd/product-96897-1034500.html"
   },
   {
     "id": "urit-8021a-chemistry-analyzer",
@@ -1331,8 +1363,8 @@ const products = [
     "category": "Biomedical equipment",
     "brand": "URIT",
     "model": "URIT-8021A",
-    "description": "Fully automatic clinical chemistry analyzer.",
-    "specification": "Confirm the reagent configuration and included accessories with sales.",
+    "description": "Fully automatic benchtop clinical chemistry analyzer for routine laboratory testing.",
+    "specification": "URIT-8021A. Confirm the reagent configuration and installation package with sales.",
     "photos": [
       {
         "label": "Equipment store product view",
@@ -1340,11 +1372,17 @@ const products = [
         "source": "https://www.watermed.com/product/urit-8021a-fully-automatic-chemistry-analyzer-blood-test-machine/3904"
       },
       {
+        "src": "assets/products/urit-8021a-open.jpg",
+        "label": "URIT-8021A with top cover open",
+        "source": "https://www.watermed.com/product/urit-8021a-fully-automatic-chemistry-analyzer-blood-test-machine/3904"
+      },
+      {
         "label": "Alternate equipment store view",
         "src": "https://oss-cdn.watermed.com/shop/product/MSLBA73/3.jpg",
         "source": "https://www.watermed.com/product/urit-8021a-fully-automatic-chemistry-analyzer-blood-test-machine/3904"
       }
-    ]
+    ],
+    "specificationSource": "https://www.watermed.com/product/urit-8021a-fully-automatic-chemistry-analyzer-blood-test-machine/3904"
   },
   {
     "id": "sysmex-xn-550-hematology-analyzer",
@@ -1352,8 +1390,8 @@ const products = [
     "category": "Biomedical equipment",
     "brand": "Sysmex",
     "model": "XN-550",
-    "description": "Automated hematology analyzer from the Sysmex XN-L series.",
-    "specification": "Confirm the configuration and installation package with sales.",
+    "description": "Compact XN-L hematology analyzer with an automatic sample loader for open and closed tubes.",
+    "specification": "Sysmex specifies up to 60 whole-blood samples per hour. Reticulocyte and body-fluid testing require optional licenses.",
     "photos": [
       {
         "label": "Sysmex product photograph",
@@ -1370,7 +1408,8 @@ const products = [
         "src": "https://www.sysmex.com/-/media/project/sysmex/sysmex/images/product_carousel/xn-550_straight_589x415.png?h=415&hash=2E0DFD8DE5CEC1F4FB1B9C06204359F8&iar=0&sc_lang=en-ca&w=589",
         "source": "https://www.sysmex.com/en-ca/lab-solutions/hematology/xn-l-series/xn-550"
       }
-    ]
+    ],
+    "specificationSource": "https://www.sysmex.com/-/media/project/sysmex/sysmex/documents/brochures/xn-550-specsheet.pdf?sc_lang=en-us"
   },
   {
     "id": "sysmex-biomajesty-jca-bm6010-c",
@@ -1378,31 +1417,27 @@ const products = [
     "category": "Biomedical equipment",
     "brand": "Sysmex BioMajesty",
     "model": "JCA-BM6010/C",
-    "description": "Clinical chemistry system featured in the Sysmex Asia Pacific catalog.",
-    "specification": "Supports sodium, potassium, and chloride measurement by indirect ISE.",
+    "description": "Automated BioMajesty chemistry analyzer for laboratories requiring high-volume testing.",
+    "specification": "The JCA-BM6010/C supports sodium, potassium and chloride through an indirect ion-selective electrode configuration.",
     "photos": [
-      {
-        "label": "Sysmex product photograph",
-        "src": "https://www.sysmex-ap.com/wp-content/uploads/2020/05/JCA-BM6010.jpg",
-        "source": "https://www.sysmex-ap.com/product/jca-bm6010-c/"
-      },
       {
         "label": "BioMajesty alternate product photograph",
         "src": "https://www.jeol.com/products/assets/images/56_g02.jpg",
         "source": "https://www.jeol.com/products/medical/ca/JCA-BM6010_C.php"
       }
-    ]
+    ],
+    "specificationSource": "https://www.jeol.com/products/medical/ca/JCA-BM6010_C.php"
   },
   {
     "name": "Mindray BA-88A semi-auto chemistry analyzer",
     "category": "Biomedical equipment",
-    "description": "Compact analyzer for routine clinical chemistry assays with touchscreen operation.",
+    "description": "Semi-automatic clinical chemistry analyzer with a 7-inch touchscreen.",
     "price": 18500,
     "stock": true,
     "unit": "each",
     "brand": "Mindray",
     "model": "BA-88A",
-    "specification": "Semi-automatic benchtop clinical chemistry analyzer",
+    "specification": "Mindray lists endpoint, fixed-time, kinetic and absorbance measurement modes.",
     "photos": [
       {
         "label": "Mindray product photograph",
@@ -1415,30 +1450,33 @@ const products = [
         "source": "https://www.mindray.com/in/products/laboratory-diagnostics/chemistry/small-test-volume/ba-88a/"
       }
     ],
-    "id": "mindray-ba-88a-semi-auto-chemistry-analyzer"
+    "id": "mindray-ba-88a-semi-auto-chemistry-analyzer",
+    "specificationSource": "https://www.mindray.com/content/dam/xpace/en_in/resources/brochures/ba-88a-product-brochure-en_in.pdf"
   },
   {
     "name": "Erba Chem 5x semi-auto chemistry analyzer",
     "category": "Biomedical equipment",
-    "description": "Semi-automated analyzer for routine biochemistry testing in small and medium labs.",
+    "description": "Semi-automatic benchtop analyzer for routine clinical chemistry and immunoturbidimetric assays.",
     "price": 22000,
     "stock": true,
     "unit": "each",
     "brand": "Erba",
     "model": "Chem 5x",
-    "specification": "Semi-automatic clinical chemistry analyzer",
+    "specification": "Erba lists a dual-cuvette system, multipoint calibration, USB and an integrated thermal printer.",
     "photos": [
       {
-        "src": "https://d3edssu4vf7j1p.cloudfront.net/images/detailed/112/Erba_Chem_5x_Clinical_Chemistry_Analyzer_z78v-mx.jpg",
-        "label": "Product photo"
+        "src": "assets/products/erba-chem-5x.jpg",
+        "label": "Erba Chem 5X manufacturer photo",
+        "source": "https://transasia.co.in/instrument/clinical-chemistry/chem-5x/89"
       },
       {
-        "label": "Supplier product photograph",
-        "src": "https://cpimg.tistatic.com/09030290/b/7/Erba-Chem-5x-Clinical-Chemistry-Analyzer.jpg",
-        "source": "https://www.tradeindia.com/products/erba-chem-5x-clinical-chemistry-analyzer-c9030290.html"
+        "src": "https://d3edssu4vf7j1p.cloudfront.net/images/detailed/112/Erba_Chem_5x_Clinical_Chemistry_Analyzer_z78v-mx.jpg",
+        "label": "Supplier product view",
+        "source": "https://www.hospitalstore.com/erba-chem-5x-clinical-chemistry-analyzer/"
       }
     ],
-    "id": "erba-chem-5x-semi-auto-chemistry-analyzer"
+    "id": "erba-chem-5x-semi-auto-chemistry-analyzer",
+    "specificationSource": "https://transasia.co.in/instrument/clinical-chemistry/chem-5x/89"
   },
   {
     "name": "Bioelab ES-100P semi-auto chemistry analyzer",
@@ -1461,37 +1499,33 @@ const products = [
   {
     "name": "Mindray BC-30s hematology analyzer",
     "category": "Biomedical equipment",
-    "description": "Automated 3-part differential hematology analyzer for complete blood count testing.",
+    "description": "Compact automated hematology analyzer for CBC and a 3-part white cell differential.",
     "price": 68000,
     "stock": true,
     "unit": "each",
     "brand": "Mindray",
     "model": "BC-30s",
-    "specification": "Automated CBC with 3-part differential",
+    "specification": "Mindray lists up to 70 samples per hour, 21 parameters, three histograms and a 10.4-inch touchscreen.",
     "photos": [
       {
         "label": "Mindray product photograph",
         "src": "https://www.mindray.com/content/dam/xpace/en/products-solutions/products/laboratory-diagnostics/hematology/small-test-volume/bc-30s/glp10-s1-web.jpg",
         "source": "https://www.mindray.com/en/products/laboratory-diagnostics/hematology/3-part-differential-analyzers/bc-30s"
-      },
-      {
-        "label": "Mindray brochure cover",
-        "src": "https://www.mindray.com/content/dam/xpace/en_in/resources/brochures/bc-30s-product-brochure-en_in.pdf.thumb.1280.1280.png",
-        "source": "https://www.mindray.com/in/products/laboratory-diagnostics/hematology/3-part-differential-analyzers/bc-30s/"
       }
     ],
-    "id": "mindray-bc-30s-hematology-analyzer"
+    "id": "mindray-bc-30s-hematology-analyzer",
+    "specificationSource": "https://www.mindray.com/en/products/laboratory-diagnostics/hematology/3-part-differential-analyzers/bc-30s"
   },
   {
     "name": "Mindray BS-240 fully automatic chemistry analyzer",
     "category": "Biomedical equipment",
-    "description": "Benchtop analyzer for routine clinical chemistry testing.",
+    "description": "Fully automatic benchtop chemistry analyzer for routine testing in clinical laboratories.",
     "price": 145000,
     "stock": false,
     "unit": "each",
     "brand": "Mindray",
     "model": "BS-240",
-    "specification": "Fully automatic benchtop chemistry analyzer",
+    "specification": "Mindray rates the BS-240 at up to 200 chemistry tests per hour. Confirm whether the optional electrolyte module is included.",
     "photos": [
       {
         "label": "Mindray BS-240 product photograph",
@@ -1509,22 +1543,24 @@ const products = [
         "source": "https://www.mindray.com/en/products/laboratory-diagnostics/chemistry/small-test-volume/bs-240"
       }
     ],
-    "id": "mindray-bs-240-fully-automatic-chemistry-analyzer"
+    "id": "mindray-bs-240-fully-automatic-chemistry-analyzer",
+    "specificationSource": "https://www.mindray.com/en/products/laboratory-diagnostics/chemistry/small-test-volume/bs-240"
   },
   {
     "name": "Finecare FIA Meter hormone analyzer",
     "category": "Biomedical equipment",
-    "description": "Fluorescence immunoassay platform for point-of-care hormone and biomarker testing.",
+    "description": "Wondfo FS-113 fluorescence immunoassay analyzer for compatible hormone and other biomarker assays.",
     "price": 32000,
     "stock": true,
     "unit": "each",
     "brand": "Wondfo",
     "model": "Finecare FIA Meter Plus FS-113 pictured",
-    "specification": "Fluorescence immunoassay reader",
+    "specification": "Finecare FIA Meter Plus includes an 8-inch touchscreen, built-in temperature control and a thermal printer.",
     "photos": [
       {
-        "src": "https://cpimg.tistatic.com/12177298/b/4/Finecare-FIA-Meter.jpeg",
-        "label": "Product photo"
+        "src": "assets/products/finecare-fs113.jpg",
+        "label": "Wondfo Finecare FIA Meter Plus FS-113",
+        "source": "https://en.wondfo.com/pt/finecare-fia-meter-plus-fs-113.html"
       },
       {
         "label": "Analyzer with cartridges",
@@ -1532,25 +1568,28 @@ const products = [
         "source": "https://es.made-in-china.com/co_iclear-mic/product_Finecare-Fia-Meter-Plus-FS-113-Portable-Fluorescence-Immunoassay-Analyzer_reoginnhg.html"
       }
     ],
-    "id": "finecare-fia-meter-hormone-analyzer"
+    "id": "finecare-fia-meter-hormone-analyzer",
+    "specificationSource": "https://en.wondfo.com/pt/finecare-fia-meter-plus-fs-113.html"
   },
   {
     "name": "Glucose reagent kit · GOD-POD",
     "category": "Laboratory test kits",
-    "description": "Clinical chemistry reagents and glucose standard for quantitative glucose testing.",
+    "description": "Coral GOD-POD reagent kit for quantitative glucose measurement in clinical chemistry workflows.",
     "price": 480,
     "stock": true,
     "unit": "kit",
     "brand": "Coral Clinical Systems",
     "model": "GOD-POD",
-    "specification": "Glucose reagent and standard kit",
+    "specification": "The manufacturer lists this kit under its enzymatic chemistry reagents. Confirm the pack format and analyzer application with sales.",
     "photos": [
       {
-        "src": "https://coralclinicalsystems.com/uploads/product/glucose_image_6520220323.125728.JPG",
-        "label": "Product photo"
+        "src": "assets/products/coral-glucose-god-pod.jpg",
+        "label": "Coral glucose kit carton and bottles",
+        "source": "https://coralclinicalsystems.com/reagents/clinical-chemistry/enzymatic/glucose.html"
       }
     ],
-    "id": "glucose-reagent-kit-god-pod"
+    "id": "glucose-reagent-kit-god-pod",
+    "specificationSource": "https://coralclinicalsystems.com/reagents/clinical-chemistry/enzymatic/glucose.html"
   },
   {
     "name": "Glucose reagent kit · multi-pack",
@@ -1656,7 +1695,8 @@ const products = [
         "source": "https://en.wondfo.com/pt/lh-rapid-quantitative-test.html",
         "label": "Wondfo product image"
       }
-    ]
+    ],
+    "specificationSource": "https://en.wondfo.com/pt/lh-rapid-quantitative-test.html"
   },
   {
     "id": "finecare-fsh-quantitative-test",
@@ -1672,7 +1712,8 @@ const products = [
         "source": "https://en.wondfo.com/pt/fsh-rapid-quantitative-test.html",
         "label": "Wondfo product image"
       }
-    ]
+    ],
+    "specificationSource": "https://en.wondfo.com/pt/fsh-rapid-quantitative-test.html"
   },
   {
     "id": "finecare-amh-quantitative-test",
@@ -1688,7 +1729,8 @@ const products = [
         "source": "https://en.wondfo.com/pt/amh-rapid-quantitative-test.html",
         "label": "Wondfo product image"
       }
-    ]
+    ],
+    "specificationSource": "https://en.wondfo.com/pt/amh-rapid-quantitative-test.html"
   },
   {
     "id": "finecare-testosterone-quantitative-test",
@@ -1704,7 +1746,8 @@ const products = [
         "source": "https://en.wondfo.com/pt/testosterone-rapid-quantitative-test.html",
         "label": "Wondfo product image"
       }
-    ]
+    ],
+    "specificationSource": "https://en.wondfo.com/pt/testosterone-rapid-quantitative-test.html"
   },
   {
     "id": "finecare-e2-quantitative-test",
@@ -1720,7 +1763,8 @@ const products = [
         "source": "https://en.wondfo.com/pt/e2-rapid-quantitative-test.html",
         "label": "Wondfo product image"
       }
-    ]
+    ],
+    "specificationSource": "https://en.wondfo.com/pt/e2-rapid-quantitative-test.html"
   },
   {
     "id": "finecare-prl-quantitative-test",
@@ -1736,7 +1780,8 @@ const products = [
         "source": "https://en.wondfo.com/pt/prl-rapid-quantitative-test.html",
         "label": "Wondfo product image"
       }
-    ]
+    ],
+    "specificationSource": "https://en.wondfo.com/pt/prl-rapid-quantitative-test.html"
   },
   {
     "id": "finecare-progesterone-quantitative-test",
@@ -1752,7 +1797,8 @@ const products = [
         "source": "https://en.wondfo.com/pt/progesterone-rapid-quantitative-test.html",
         "label": "Wondfo product image"
       }
-    ]
+    ],
+    "specificationSource": "https://en.wondfo.com/pt/progesterone-rapid-quantitative-test.html"
   },
   {
     "id": "finecare-beta-hcg-quantitative-test",
@@ -1768,30 +1814,28 @@ const products = [
         "source": "https://en.wondfo.com/pt/%CE%B2-hcg-rapid-quantitative-test.html",
         "label": "Wondfo product image"
       }
-    ]
+    ],
+    "specificationSource": "https://en.wondfo.com/pt/%CE%B2-hcg-rapid-quantitative-test.html"
   },
   {
     "name": "Finecare TSH rapid quantitative test kit",
     "category": "Laboratory test kits",
-    "description": "TSH assay kit for the Finecare FIA system.",
+    "description": "Wondfo Finecare fluorescence immunoassay for quantitative thyroid-stimulating hormone measurement.",
     "price": 1250,
     "stock": false,
     "unit": "assay kit",
     "brand": "Wondfo",
     "model": "Finecare W220",
-    "specification": "Quantitative TSH assay for compatible Finecare analyzers",
+    "specification": "Reference W220. Confirm meter compatibility and the supplied pack size.",
     "photos": [
       {
-        "src": "https://demo.ahgez.com/projects/yourmedicalsuppliers/image/cache/catalog/Point%20Of%20Care%20Kits/Wondfo/FineCare/TSH%20Test/1-2586x1940.jpg",
-        "label": "Product photo"
-      },
-      {
-        "label": "Supplier box photograph",
-        "src": "https://5.imimg.com/data5/SELLER/Default/2023/5/305919778/AA/XP/MM/125039132/fine-care-tsh-kits-500x500.webp",
-        "source": "https://www.biotexlifescience.com/soil-testing-kit.html"
+        "src": "assets/products/finecare-tsh-w220.jpg",
+        "label": "Wondfo TSH kit with test cassettes",
+        "source": "https://en.wondfo.com/pt/tsh-rapid-quantitative-test.html"
       }
     ],
-    "id": "finecare-tsh-rapid-quantitative-test-kit"
+    "id": "finecare-tsh-rapid-quantitative-test-kit",
+    "specificationSource": "https://en.wondfo.com/pt/tsh-rapid-quantitative-test.html"
   },
   {
     "id": "randox-lan4214-assayed-chemistry-control-2",
@@ -1974,9 +2018,9 @@ const products = [
     "specificationSource": "https://www.uzzmed.com/product/mindray-supporting-calibrator-for-bs-230bs-240/",
     "photos": [
       {
-        "src": "https://www.med-us.shop/images/uploader/re/reagentas-lipids-calibrator-5x1ml-1.jpg",
-        "source": "https://www.med-us.shop/en/reagent-lipids-calibrator-5x1ml",
-        "label": "MedUS Medical pack photo"
+        "src": "assets/products/mindray-lipids-calibrator.jpg",
+        "label": "Mindray lipid calibrator carton and vials",
+        "source": "https://www.med-us.shop/en/reagent-lipids-calibrator-5x1ml"
       }
     ]
   },
