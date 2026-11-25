@@ -584,6 +584,142 @@ const products = [
     "id": "autoclave-18-l"
   },
   {
+    "id": "mindray-bs-600m-chemistry-ise",
+    "name": "Mindray BS-600M chemistry and electrolyte analyzer",
+    "category": "Biomedical equipment",
+    "brand": "Mindray",
+    "model": "BS-600M",
+    "description": "Clinical chemistry analyzer with built-in electrolyte testing.",
+    "specification": "Integrated ion-selective electrode (ISE) module for sodium, potassium, and chloride.",
+    "photos": [
+      {
+        "label": "Mindray product photograph",
+        "src": "https://www.mindray.com/content/dam/xpace/en/products-solutions/products/laboratory-diagnostics/chemistry/medium-test-volume/bs-600m/bs-600m-kv-pc.jpg",
+        "source": "https://www.mindray.com/en/products/laboratory-diagnostics/chemistry/medium-test-volume/bs-600m"
+      },
+      {
+        "label": "Built-in electrolyte module",
+        "src": "https://www.mindray.com/content/dam/xpace/en/products-solutions/products/laboratory-diagnostics/chemistry/medium-test-volume/bs-600m/bs-600m-fig5-1-pc.jpg",
+        "source": "https://www.mindray.com/en/products/laboratory-diagnostics/chemistry/medium-test-volume/bs-600m"
+      }
+    ]
+  },
+  {
+    "id": "urit-5160-hematology-analyzer",
+    "name": "URIT-5160 hematology analyzer",
+    "category": "Biomedical equipment",
+    "brand": "URIT",
+    "model": "URIT-5160",
+    "description": "Automated hematology analyzer for laboratory blood counts.",
+    "specification": "Confirm the instrument configuration, reagent package, and installation with sales.",
+    "photos": [
+      {
+        "label": "Supplier product photograph",
+        "src": "https://umc-medical.com/wp-content/uploads/2025/04/th_20230228092443592-removebg-preview-e1750671612162.png",
+        "source": "https://umc-medical.com/services/urit-5160/"
+      },
+      {
+        "label": "Equipment store view",
+        "src": "https://ueeshop.ly200-cdn.com/u_file/UPAP/UPAP543/2501/3d57f6b167.jpg",
+        "source": "https://icenteco.com/products/urit-5160-fully-auto-blood-analyzerhematology-analyzer-price-2309"
+      }
+    ]
+  },
+  {
+    "id": "urit-910c-plus-electrolyte-analyzer",
+    "name": "URIT-910C Plus electrolyte analyzer",
+    "category": "Biomedical equipment",
+    "brand": "URIT",
+    "model": "URIT-910C Plus",
+    "description": "Standalone analyzer for laboratory electrolyte testing.",
+    "specification": "Confirm the electrolyte panel and sampling configuration with sales.",
+    "photos": [
+      {
+        "label": "URIT product listing photograph",
+        "src": "https://img.medicalexpo.fr/images_me/photo-g/96897-17303797.jpg",
+        "source": "https://www.medicalexpo.fr/prod/guilin-urit-electronic-group-co-ltd/product-96897-1034500.html"
+      },
+      {
+        "label": "Equipment store view",
+        "src": "https://ueeshop.ly200-cdn.com/u_file/UPAP/UPAP842/2502/products/14/ce17f2e4f5.jpg.500x500.jpg",
+        "source": "https://www.ysenmedical.com/products/urit-910c-plus-electrolyte-analyzer"
+      },
+      {
+        "label": "Additional equipment store view",
+        "src": "https://ueeshop.ly200-cdn.com/u_file/UPAP/UPAP842/2502/products/14/a04d84634e.jpg.500x500.jpg",
+        "source": "https://www.ysenmedical.com/products/urit-910c-plus-electrolyte-analyzer"
+      }
+    ]
+  },
+  {
+    "id": "urit-8021a-chemistry-analyzer",
+    "name": "URIT-8021A chemistry analyzer",
+    "category": "Biomedical equipment",
+    "brand": "URIT",
+    "model": "URIT-8021A",
+    "description": "Fully automatic clinical chemistry analyzer.",
+    "specification": "Confirm the reagent configuration and included accessories with sales.",
+    "photos": [
+      {
+        "label": "Equipment store product view",
+        "src": "https://oss-cdn.watermed.com/shop/product/MSLBA73/2.jpg",
+        "source": "https://www.watermed.com/product/urit-8021a-fully-automatic-chemistry-analyzer-blood-test-machine/3904"
+      },
+      {
+        "label": "Alternate equipment store view",
+        "src": "https://oss-cdn.watermed.com/shop/product/MSLBA73/3.jpg",
+        "source": "https://www.watermed.com/product/urit-8021a-fully-automatic-chemistry-analyzer-blood-test-machine/3904"
+      }
+    ]
+  },
+  {
+    "id": "sysmex-xn-550-hematology-analyzer",
+    "name": "Sysmex XN-550 hematology analyzer",
+    "category": "Biomedical equipment",
+    "brand": "Sysmex",
+    "model": "XN-550",
+    "description": "Automated hematology analyzer from the Sysmex XN-L series.",
+    "specification": "Confirm the configuration and installation package with sales.",
+    "photos": [
+      {
+        "label": "Sysmex product photograph",
+        "src": "https://www.sysmex.com/-/media/project/sysmex/sysmex/images/pdp_hero/xn-550_v3_724x498.png?h=498&hash=AD31809DB7986760FF84D924690510A3&iar=0&sc_lang=en-ca&w=724",
+        "source": "https://www.sysmex.com/en-ca/lab-solutions/hematology/xn-l-series/xn-550"
+      },
+      {
+        "label": "Left-facing view",
+        "src": "https://www.sysmex.com/-/media/project/sysmex/sysmex/images/product_carousel/xn-550_faceleft_589x415.png?h=415&hash=1C456089261BECF1088D57713790FA4E&iar=0&sc_lang=en-ca&w=589",
+        "source": "https://www.sysmex.com/en-ca/lab-solutions/hematology/xn-l-series/xn-550"
+      },
+      {
+        "label": "Front view",
+        "src": "https://www.sysmex.com/-/media/project/sysmex/sysmex/images/product_carousel/xn-550_straight_589x415.png?h=415&hash=2E0DFD8DE5CEC1F4FB1B9C06204359F8&iar=0&sc_lang=en-ca&w=589",
+        "source": "https://www.sysmex.com/en-ca/lab-solutions/hematology/xn-l-series/xn-550"
+      }
+    ]
+  },
+  {
+    "id": "sysmex-biomajesty-jca-bm6010-c",
+    "name": "BioMajesty JCA-BM6010/C chemistry and electrolyte analyzer",
+    "category": "Biomedical equipment",
+    "brand": "Sysmex BioMajesty",
+    "model": "JCA-BM6010/C",
+    "description": "Clinical chemistry system featured in the Sysmex Asia Pacific catalog.",
+    "specification": "Supports sodium, potassium, and chloride measurement by indirect ISE.",
+    "photos": [
+      {
+        "label": "Sysmex product photograph",
+        "src": "https://www.sysmex-ap.com/wp-content/uploads/2020/05/JCA-BM6010.jpg",
+        "source": "https://www.sysmex-ap.com/product/jca-bm6010-c/"
+      },
+      {
+        "label": "BioMajesty alternate product photograph",
+        "src": "https://www.jeol.com/products/assets/images/56_g02.jpg",
+        "source": "https://www.jeol.com/products/medical/ca/JCA-BM6010_C.php"
+      }
+    ]
+  },
+  {
     "name": "Mindray BA-88A semi-auto chemistry analyzer",
     "category": "Biomedical equipment",
     "description": "Compact analyzer for routine clinical chemistry assays with touchscreen operation.",
@@ -595,13 +731,14 @@ const products = [
     "specification": "Semi-automatic benchtop clinical chemistry analyzer",
     "photos": [
       {
-        "src": "https://ueeshop.ly200-cdn.com/u_file/UPAP/UPAP543/2501/7499906cf9.jpg.500x500.jpg",
-        "label": "Product photo"
+        "label": "Mindray product photograph",
+        "src": "https://www.mindray.com/content/dam/xpace/en_in/products-solutions/products/laboratory-diagnostics/chemistry/small-test-volume/ba-88a/glp31-s1-web.jpg",
+        "source": "https://www.mindray.com/in/products/laboratory-diagnostics/chemistry/small-test-volume/ba-88a/"
       },
       {
-        "label": "Rear panel",
-        "src": "https://labmedik.ru/image/cache/catalog/product/labmedik/meditsinskie_analizatory/biohimicheskie_analizatory/0/editor23531-1000x1000.jpg",
-        "source": "https://labmedik.ru/analizator-biohimicheskij-mindray-ba-88a"
+        "label": "Mindray alternate product view",
+        "src": "https://www.mindray.com/content/dam/xpace/en_in/products-solutions/products/laboratory-diagnostics/chemistry/small-test-volume/ba-88a/a88026b86baa46eca064cd33d8b1c99c.jpg",
+        "source": "https://www.mindray.com/in/products/laboratory-diagnostics/chemistry/small-test-volume/ba-88a/"
       }
     ],
     "id": "mindray-ba-88a-semi-auto-chemistry-analyzer"
@@ -659,13 +796,14 @@ const products = [
     "specification": "Automated CBC with 3-part differential",
     "photos": [
       {
-        "src": "https://img.medicalexpo.com/pt/images_me/photo-g/70856-18748688.webp",
-        "label": "Product photo"
+        "label": "Mindray product photograph",
+        "src": "https://www.mindray.com/content/dam/xpace/en/products-solutions/products/laboratory-diagnostics/hematology/small-test-volume/bc-30s/glp10-s1-web.jpg",
+        "source": "https://www.mindray.com/en/products/laboratory-diagnostics/hematology/3-part-differential-analyzers/bc-30s"
       },
       {
-        "label": "Supplier product view",
-        "src": "https://medicalequipment-msl.com/upload/img/20181114/201811141654398640.jpg",
-        "source": "https://www.medicalequipment-msl.com/htm/mindray-analyzer/Mindray-BC-30s.html"
+        "label": "Mindray brochure cover",
+        "src": "https://www.mindray.com/content/dam/xpace/en_in/resources/brochures/bc-30s-product-brochure-en_in.pdf.thumb.1280.1280.png",
+        "source": "https://www.mindray.com/in/products/laboratory-diagnostics/hematology/3-part-differential-analyzers/bc-30s/"
       }
     ],
     "id": "mindray-bc-30s-hematology-analyzer"
@@ -682,18 +820,19 @@ const products = [
     "specification": "Fully automatic benchtop chemistry analyzer",
     "photos": [
       {
-        "src": "https://www.rajbiosis.org/assets/front/images/BS-240.jpg",
-        "label": "Product photo"
+        "label": "Mindray BS-240 product photograph",
+        "src": "https://www.mindray.com/content/dam/xpace/en/products-solutions/products/laboratory-diagnostics/chemistry/small-test-volume/bs-240/glp23-s2-web.jpg",
+        "source": "https://www.mindray.com/en/products/laboratory-diagnostics/chemistry/small-test-volume/bs-240"
       },
       {
-        "label": "Open-lid product view",
-        "src": "https://ueeshop.ly200-cdn.com/u_file/UPAP/UPAP543/2303/12e507aa18.jpg",
-        "source": "https://icenteco.com/products/new-mindray-bs-240-fully-automatic-biochemistry-analyzer-1281"
+        "label": "Benchtop analyzer view",
+        "src": "https://www.mindray.com/content/dam/xpace/en/products-solutions/products/laboratory-diagnostics/chemistry/small-test-volume/bs-240/glp32-s3-2.jpg",
+        "source": "https://www.mindray.com/en/products/laboratory-diagnostics/chemistry/small-test-volume/bs-240"
       },
       {
-        "label": "Supplier product view",
-        "src": "https://skrooll.com.ph/images/thumbnails/1593/1376/detailed/4/chemistry2_bs240_mindray.png",
-        "source": "https://skrooll.com.ph/bs-240-mindray-chemistry-analyzer-automated/"
+        "label": "Wash system detail",
+        "src": "https://www.mindray.com/content/dam/xpace/en/products-solutions/products/laboratory-diagnostics/chemistry/small-test-volume/bs-240/glp32-s4-1.jpg",
+        "source": "https://www.mindray.com/en/products/laboratory-diagnostics/chemistry/small-test-volume/bs-240"
       }
     ],
     "id": "mindray-bs-240-fully-automatic-chemistry-analyzer"
