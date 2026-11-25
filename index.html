@@ -210,7 +210,32 @@ footer {background:#eeefe8;border-top:1px solid var(--line);padding:23px 0;color
 .dialog-links a {text-decoration:underline;text-underline-offset:3px}
 @media (max-width:620px) {.card .body {padding:10px}.gallery-stage{margin:6px 6px 0}.gallery-open img{padding:7px}.gallery-thumbs{padding:6px 7px 0}.gallery-expand{bottom:5px;right:5px}}
 @media (prefers-reduced-motion:reduce) {.gallery-open img {transition:none}.gallery-open:hover img:not(.detail){transform:none}}
+
+.brand,nav .brand {
+  display:inline-flex;align-items:center;gap:8px;line-height:1;
+  color:#183a32;text-decoration:none;flex-shrink:0;
+}
+.identity-mark {width:58px;height:58px;display:block;object-fit:contain;flex:none}
+.identity-text {display:block;min-width:0}
+.identity-name {
+  display:block;font-family:"Manrope",system-ui,sans-serif;font-size:1.8rem;
+  font-weight:800;letter-spacing:-.067em;line-height:1.02;
+  color:#173d34;text-shadow:0 1px #a7bdb0,0 2px #d4e4da;
+}
+.identity-name span {color:#38725d}
+.identity-company {
+  display:block;margin-top:5px;color:#42554e;
+  font-size:.63rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+  white-space:nowrap;
+}
+@media(max-width:520px) {
+  .identity-mark {width:45px;height:45px}
+  .identity-name {font-size:1.52rem}
+  .identity-company {font-size:.55rem;letter-spacing:.055em}
+  .brand,nav .brand {gap:5px}
+}
 </style>
+<link rel="icon" type="image/png" href="assets/brand/dek450-3d-mark.png">
 </head>
 
 <body>
@@ -218,8 +243,8 @@ footer {background:#eeefe8;border-top:1px solid var(--line);padding:23px 0;color
 <header class="masthead">
   <div class="nav wrap">
     <a class="brand" href="#" aria-label="Dek450 Medsupplies Limited home">
-      <span class="brand-mark" aria-hidden="true">+</span>
-      <span><span class="wordmark">Dek450</span><span class="brand-name">MEDSUPPLIES LIMITED</span></span>
+      <img class="identity-mark" src="assets/brand/dek450-3d-mark.png" width="58" height="58" alt="">
+      <span class="identity-text"><strong class="identity-name">Dek<span>450</span></strong><span class="identity-company">Medsupplies Limited</span></span>
     </a>
     <nav class="navlinks" aria-label="Main navigation">
       <a href="#catalog" data-category-link="All">Catalog</a>

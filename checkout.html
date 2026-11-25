@@ -47,10 +47,36 @@ button,.button{font:inherit}
 #orderText{min-height:215px;font-size:.86rem}
 @media(max-width:740px){.layout{grid-template-columns:1fr} main{padding-top:25px}}
 @media(max-width:410px){.fields{grid-template-columns:1fr}.wrap{width:calc(100% - 24px)}}
+
+.brand,nav .brand {
+  display:inline-flex;align-items:center;gap:8px;line-height:1;
+  color:#183a32;text-decoration:none;flex-shrink:0;
+}
+.identity-mark {width:58px;height:58px;display:block;object-fit:contain;flex:none}
+.identity-text {display:block;min-width:0}
+.identity-name {
+  display:block;font-family:"Manrope",system-ui,sans-serif;font-size:1.8rem;
+  font-weight:800;letter-spacing:-.067em;line-height:1.02;
+  color:#173d34;text-shadow:0 1px #a7bdb0,0 2px #d4e4da;
+}
+.identity-name span {color:#38725d}
+.identity-company {
+  display:block;margin-top:5px;color:#42554e;
+  font-size:.63rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+  white-space:nowrap;
+}
+@media(max-width:520px) {
+  .identity-mark {width:45px;height:45px}
+  .identity-name {font-size:1.52rem}
+  .identity-company {font-size:.55rem;letter-spacing:.055em}
+  .brand,nav .brand {gap:5px}
+}
 </style>
+<link rel="icon" type="image/png" href="assets/brand/dek450-3d-mark.png">
 </head>
 <body>
-<header><nav class="wrap" aria-label="Checkout navigation"><a class="brand" href="index.html">Dek450 Medsupplies Limited</a><a href="index.html#catalog">Back to catalog</a></nav></header>
+<header><nav class="wrap" aria-label="Checkout navigation"><a class="brand" href="index.html" aria-label="Dek450 Medsupplies Limited home"><img class="identity-mark" src="assets/brand/dek450-3d-mark.png" width="58" height="58" alt="">
+      <span class="identity-text"><strong class="identity-name">Dek<span>450</span></strong><span class="identity-company">Medsupplies Limited</span></span></a><a href="index.html#catalog">Back to catalog</a></nav></header>
 <main class="wrap">
 <h1>Checkout</h1>
 <p class="intro">Review your basket and prepare an order request for the sales team.</p>
