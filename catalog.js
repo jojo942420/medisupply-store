@@ -19,6 +19,186 @@ const products = [
     "id": "gynecology-examination-chair"
   },
   {
+    "id": "randox-pd2616-g6pd-reagent",
+    "name": "Randox G6PD deficiency screening reagent",
+    "category": "Laboratory test kits",
+    "brand": "Randox",
+    "model": "PD2616",
+    "description": "Clinical chemistry reagent kit for screening glucose-6-phosphate dehydrogenase deficiency.",
+    "specification": "Lyophilized screen test. R1a: 3 × 25 mL. R1b: 1 × 80 mL. Confirm the instrument-specific application with sales.",
+    "specificationSource": "https://store.randox.com/product/pd2616/",
+    "photos": [
+      {
+        "src": "https://www.labcarecolombia.com/web/image/product.product/39224/image_1024/%5BRA%20PD2616%5D%20Reactivo%20para%20Glucosa-6-%20Fosfato%20Deshidrogenasa%20%28G6PDH%29.%20Randox%20%28UK%29%20?unique=5f0f98e",
+        "source": "https://www.labcarecolombia.com/shop/ra-pd2616-reactivo-para-glucosa-6-fosfato-deshidrogenasa-g6pdh-randox-uk-35249",
+        "label": "Supplier product photo"
+      }
+    ]
+  },
+  {
+    "id": "pointe-g7683-180-g6pd-reagent",
+    "name": "Pointe G6PD quantitative reagent set",
+    "category": "Laboratory test kits",
+    "brand": "Sekisui Diagnostics · Pointe",
+    "model": "G7683-180",
+    "description": "Clinical chemistry reagent set for quantitative measurement of glucose-6-phosphate dehydrogenase activity.",
+    "specification": "R1: 10 × 6 mL. R2: 1 × 120 mL. Confirm instrument compatibility with sales.",
+    "specificationSource": "https://sekisuidiagnostics.com/product/pointe-glucose-6-phosphate-dehydrogenase-g6pd/",
+    "photos": [
+      {
+        "src": "https://library.sekisui-dx.com/asset/89aea1ca-b034-4796-9968-bebd20947fb5/For_Web/POINTE-G6PD-Product-Image.png",
+        "source": "https://sekisuidiagnostics.com/product/pointe-glucose-6-phosphate-dehydrogenase-g6pd/",
+        "label": "Manufacturer product photo"
+      }
+    ]
+  },
+  {
+    "id": "eldoncard-2511-blood-grouping",
+    "name": "EldonCard 2511 ABO/RhD grouping card",
+    "category": "Laboratory test kits",
+    "brand": "Eldon Biologicals",
+    "model": "EldonCard 2511",
+    "description": "Dry-reagent card for forward ABO and RhD blood grouping.",
+    "specification": "Card fields contain anti-A, anti-B and anti-D reagents plus a control field. Ask sales for the available pack size.",
+    "specificationSource": "https://eldoncard.com/wp-content/uploads/2022/12/product-sheet-2511-dec-2022.pdf",
+    "photos": [
+      {
+        "src": "https://i.ebayimg.com/images/g/ntEAAeSwhk9o9ioQ/s-l1200.png",
+        "source": "https://www.ebay.com/itm/116836585379",
+        "label": "Retailer package photo"
+      }
+    ]
+  },
+  {
+    "id": "tulip-erycard-2-abo-rhd-kit",
+    "name": "Tulip Erycard 2.0 ABO/RhD blood grouping kit",
+    "category": "Laboratory test kits",
+    "brand": "Tulip Diagnostics",
+    "model": "Erycard 2.0",
+    "description": "Card-format assay for forward ABO and RhD blood grouping.",
+    "specification": "Includes anti-A, anti-B and anti-D test areas and an autocontrol. Ask sales for the available pack size.",
+    "specificationSource": "https://www.tulipgroup.com/PDFs/Blood_Banking/TechSpecs/ERYCARD-2.0-TS.pdf",
+    "photos": [
+      {
+        "src": "https://thyromart.com/cdn/shop/files/39-Erycard2.0_2.png?v=1724751514&width=900",
+        "source": "https://thyromart.com/products/abo-blood-grouping-rapid-test-kit",
+        "label": "Supplier product photo"
+      }
+    ]
+  },
+  {
+    "id": "bio-rad-diaclon-abod-reverse-grouping",
+    "name": "Bio-Rad DiaClon ABO/D + Reverse Grouping cards",
+    "category": "Laboratory test kits",
+    "brand": "Bio-Rad · DiaMed",
+    "model": "ID-System 001234",
+    "description": "Gel cards for ABO and RhD typing with reverse ABO grouping in the Bio-Rad ID-System.",
+    "specification": "Six microtubes: anti-A, anti-B, anti-D, control and two microtubes for reverse grouping. Reference 001234 is listed in a pack of 48 cards.",
+    "specificationSource": "https://backend.ih-area.bio-rad.com/system/files/H010111_ID-System%20Catalog_EN_2024.03.pdf",
+    "photos": [
+      {
+        "src": "https://static.insales-cdn.com/images/products/1/188/341098684/large_001234.jpg",
+        "source": "https://medika.store/product/001234-id-diaklon-abod-perekrestnaya-reaktsiya-monoklonalnye-at-id-diaclon-abod-reverse-grouping-monoclonal-antibodies-48-kart-diamed-gmbh-shveytsariya",
+        "label": "Supplier product photo"
+      }
+    ]
+  },
+  {
+    "id": "evident-olympus-cx23-microscope",
+    "name": "Evident Olympus CX23 binocular microscope",
+    "category": "Microscopes",
+    "brand": "Evident · Olympus",
+    "model": "CX23",
+    "description": "Upright brightfield microscope for teaching and routine slide viewing.",
+    "specification": "LED illumination, plan achromat objectives, 20 mm field number and a rackless mechanical stage.",
+    "specificationSource": "https://evidentscientific.com/en/products/upright/cx23",
+    "photos": [
+      {
+        "src": "https://evidentscientific.com/en/products/upright/media_18fd8b779cf8b777a4ba35eebd7f360ebc6ce029e.jpg?format=jpg&optimize=medium&width=750",
+        "source": "https://evidentscientific.com/en/products/upright/cx23",
+        "label": "Manufacturer product view"
+      },
+      {
+        "src": "https://evidentscientific.com/en/products/upright/media_11771e719fbbe7874d79b2048605082dd87f173ba.jpg?format=jpg&optimize=medium&width=750",
+        "source": "https://evidentscientific.com/en/products/upright/cx23",
+        "label": "Mechanical stage detail"
+      }
+    ]
+  },
+  {
+    "id": "nikon-eclipse-e100-microscope",
+    "name": "Nikon Eclipse E100-LED binocular microscope",
+    "category": "Microscopes",
+    "brand": "Nikon",
+    "model": "Eclipse E100-LED",
+    "description": "Upright microscope for teaching and routine brightfield observation.",
+    "specification": "CFI infinity-corrected optics and LED transmitted illumination. Confirm the objective set with sales.",
+    "specificationSource": "https://www.microscope.healthcare.nikon.com/en_EU/products/upright-microscopes/eclipse-e100",
+    "photos": [
+      {
+        "src": "https://www.coherent.com.au/content/products/E100.1.jpg",
+        "source": "https://www.coherent.com.au/products/optical-microscopes-imaging/microscopes-upright/nikon-eclipse-eled-educational-microscope-658.html",
+        "label": "Supplier product view"
+      },
+      {
+        "src": "https://www.microscope.healthcare.nikon.com/guides/e100/en/images/quickguide/img1.jpg",
+        "source": "https://www.microscope.healthcare.nikon.com/guides/e100/en/quickguide/",
+        "label": "Manufacturer handling view"
+      }
+    ]
+  },
+  {
+    "id": "leica-dm500-microscope",
+    "name": "Leica DM500 compound microscope",
+    "category": "Microscopes",
+    "brand": "Leica Microsystems",
+    "model": "DM500",
+    "description": "Upright compound microscope for laboratory teaching and slide observation.",
+    "specification": "Infinity optical system, built-in LED illumination and a preset, precentered condenser. Objective sets vary by configuration.",
+    "specificationSource": "https://downloads.leica-microsystems.com/DM500/Brochure%20or%20Flyer/Leica_EDU_TechData_Overview-EN.pdf",
+    "photos": [
+      {
+        "src": "https://catalogomedicomx.s3.amazonaws.com/produccion/img/p/2/8/5/6/1/28561-large_default.jpg",
+        "source": "https://www.catalogomedico.mx/microscopio-3137.html",
+        "label": "Supplier product view"
+      }
+    ]
+  },
+  {
+    "id": "zeiss-primostar-3-microscope",
+    "name": "ZEISS Primostar 3 trinocular microscope",
+    "category": "Microscopes",
+    "brand": "ZEISS",
+    "model": "Primostar 3 · 415501-0041-000",
+    "description": "Upright microscope with a trinocular head for teaching and routine brightfield work.",
+    "specification": "Full Köhler configuration with a 22 mm field of view, five-position nosepiece and a 75 × 50 mm mechanical stage.",
+    "specificationSource": "https://www.micro-shop.zeiss.com/en/us/system/Primostar%203/10335/",
+    "photos": [
+      {
+        "src": "https://www.micro-shop.zeiss.com/data/image/shop-catalog-product/415501-0041-000_lg.jpg",
+        "source": "https://www.micro-shop.zeiss.com/en/us/system/Primostar%203/10335/",
+        "label": "Manufacturer store product view"
+      }
+    ]
+  },
+  {
+    "id": "motic-ba310e-microscope",
+    "name": "Motic BA310E trinocular microscope",
+    "category": "Microscopes",
+    "brand": "Motic",
+    "model": "BA310E",
+    "description": "Upright compound microscope for routine laboratory and teaching work.",
+    "specification": "Infinity-corrected plan achromat objectives. The BA310E series supports interchangeable 3 W LED or 6 V/30 W halogen illumination. Confirm the requested configuration with sales.",
+    "specificationSource": "https://moticmicroscopes.com/products/ba310e",
+    "photos": [
+      {
+        "src": "https://moticmicroscopes.com/cdn/shop/products/ba310e_trino_d9caaa4c-ae62-4c99-b756-d0ae5e8a43a1.png?v=1682720995",
+        "source": "https://moticmicroscopes.com/products/ba310e",
+        "label": "Manufacturer trinocular product view"
+      }
+    ]
+  },
+  {
     "id": "mindray-c5-1s-probe",
     "name": "Mindray C5-1s convex ultrasound probe",
     "category": "Ultrasound supplies",
