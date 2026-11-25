@@ -1,0 +1,760 @@
+const products = [
+  {
+    "name": "Gynecology examination chair",
+    "category": "Medical supplies",
+    "brand": "Brand to confirm",
+    "model": "Configuration to confirm",
+    "description": "Padded examination chair with a segmented seat and leg supports.",
+    "specification": "Pink upholstery and metal frame. Step and footrest configurations are pictured separately.",
+    "photos": [
+      {
+        "src": "assets/products/exam-chair-steps.jpg",
+        "label": "Chair with two-step stool"
+      },
+      {
+        "src": "assets/products/exam-chair-footrest.jpg",
+        "label": "Chair with frame-mounted footrest"
+      }
+    ],
+    "id": "gynecology-examination-chair"
+  },
+  {
+    "name": "JT-S70A portable ultrasound",
+    "category": "Biomedical equipment",
+    "brand": "Brand to confirm",
+    "model": "JT-S70A",
+    "description": "Laptop-style digital ultrasound system for clinical facilities.",
+    "specification": "The pictured brochure lists a 12.1-inch display, two active probe connectors, and a rechargeable lithium-ion battery.",
+    "photos": [
+      {
+        "src": "assets/products/jt-s70a.jpg",
+        "label": "Open console and brochure"
+      }
+    ],
+    "id": "jt-s70a-portable-ultrasound"
+  },
+  {
+    "name": "Accurate H. pylori antigen test cassette",
+    "category": "Laboratory test kits",
+    "brand": "Accurate",
+    "model": "25 tests",
+    "description": "Cassette kit for H. pylori antigen testing in stool specimens.",
+    "specification": "Box label lists 25 test cassettes and 25 buffer tubes.",
+    "photos": [
+      {
+        "src": "assets/products/accurate-h-pylori.jpg",
+        "label": "Box label and packaging"
+      }
+    ],
+    "id": "accurate-h-pylori-antigen-test-cassette"
+  },
+  {
+    "name": "Vivatest sickle cell screening kit",
+    "category": "Laboratory test kits",
+    "brand": "Vivatest",
+    "model": "One Step Rapid Test",
+    "description": "Sickle cell screening kit for in vitro diagnostic use.",
+    "specification": "Photo shows individually wrapped test components and the kit insert.",
+    "photos": [
+      {
+        "src": "assets/products/vivatest-sickle-cell.jpg",
+        "label": "Box and test components"
+      }
+    ],
+    "id": "vivatest-sickle-cell-screening-kit"
+  },
+  {
+    "name": "Golden Care sickle cell test kit",
+    "category": "Laboratory test kits",
+    "brand": "Golden Care",
+    "model": "25 test cassettes",
+    "description": "Immunochromatographic sickle cell screening assay.",
+    "specification": "Label lists test cassettes, prefilled buffer vials, and droppers.",
+    "photos": [
+      {
+        "src": "assets/products/golden-care-sickle-cell.jpg",
+        "label": "Box front and kit contents label"
+      }
+    ],
+    "id": "golden-care-sickle-cell-test-kit"
+  },
+  {
+    "name": "Laboratory reagent bottle · 250 mL",
+    "category": "Medical supplies",
+    "brand": "Brand to confirm",
+    "model": "Boro 3.3",
+    "description": "Clear graduated glass lab bottle with a blue screw cap.",
+    "specification": "250 mL nominal capacity and approximate volume markings.",
+    "photos": [
+      {
+        "src": "assets/products/boro-bottle.jpg",
+        "label": "Bottle, cap, and graduation marks"
+      }
+    ],
+    "id": "laboratory-reagent-bottle-250-ml"
+  },
+  {
+    "name": "Portable steam autoclave",
+    "category": "Biomedical equipment",
+    "brand": "Brand to confirm",
+    "model": "Capacity to confirm",
+    "description": "Vertical steam sterilizer with a polished metal body and clamped lid.",
+    "specification": "Top-mounted pressure gauge, carry handle, and side fitting pictured.",
+    "photos": [
+      {
+        "src": "assets/products/portable-autoclave.jpg",
+        "label": "Front view with gauge and lid"
+      }
+    ],
+    "id": "portable-steam-autoclave"
+  },
+  {
+    "name": "Adjustable hospital bed frame",
+    "category": "Medical supplies",
+    "brand": "Brand to confirm",
+    "model": "Model to confirm",
+    "description": "Wheeled hospital bed frame with segmented mattress platform.",
+    "specification": "Raised backrest, scissor-style base, and wood-look end panels pictured.",
+    "photos": [
+      {
+        "src": "assets/products/hospital-bed.jpg",
+        "label": "Side view with raised backrest"
+      }
+    ],
+    "id": "adjustable-hospital-bed-frame"
+  },
+  {
+    "name": "Two-tier dressing trolley",
+    "category": "Medical supplies",
+    "brand": "Brand to confirm",
+    "model": "Model to confirm",
+    "description": "Wheeled clinical trolley for organizing supplies and instruments.",
+    "specification": "Two shelves, guard rails, two drawers, and a side bowl pictured.",
+    "photos": [
+      {
+        "src": "assets/products/dressing-trolley.jpg",
+        "label": "Front three-quarter view"
+      }
+    ],
+    "id": "two-tier-dressing-trolley"
+  },
+  {
+    "name": "Manual wheelchair · black",
+    "category": "Medical supplies",
+    "brand": "Brand to confirm",
+    "model": "Model to confirm",
+    "description": "Manual wheelchair with black upholstery and rear push rims.",
+    "specification": "Padded armrests, footplates, front casters, and attendant handles pictured.",
+    "photos": [
+      {
+        "src": "assets/products/wheelchair-black.jpg",
+        "label": "Black wheelchair, front three-quarter view"
+      }
+    ],
+    "id": "manual-wheelchair-black"
+  },
+  {
+    "name": "Manual wheelchair · teal",
+    "category": "Medical supplies",
+    "brand": "Brand to confirm",
+    "model": "Model to confirm",
+    "description": "Manual wheelchair with teal and black upholstery.",
+    "specification": "Rear push rims, front casters, footplates, and attendant handles pictured.",
+    "photos": [
+      {
+        "src": "assets/products/wheelchair-teal.jpg",
+        "label": "Teal wheelchair, front three-quarter view"
+      }
+    ],
+    "id": "manual-wheelchair-teal"
+  },
+  {
+    "name": "Finecare immunoassay kit assortment",
+    "category": "Laboratory test kits",
+    "brand": "Wondfo Finecare",
+    "model": "Assay to confirm",
+    "description": "Assorted Finecare rapid quantitative assay packs for compatible analyzers.",
+    "specification": "Several distinct assay packs are shown. Confirm the requested assay when ordering.",
+    "photos": [
+      {
+        "src": "assets/products/finecare-assortment.jpg",
+        "label": "Assortment of Finecare assay boxes"
+      }
+    ],
+    "id": "finecare-immunoassay-kit-assortment"
+  },
+  {
+    "name": "Golden Care G6PD test kit",
+    "category": "Laboratory test kits",
+    "brand": "Golden Care",
+    "model": "G6PD kit",
+    "description": "Golden Care in vitro diagnostic kit for glucose-6-phosphate dehydrogenase (G6PD) testing.",
+    "specification": "Confirm the catalog reference, pack size, and supplied components with sales.",
+    "photos": [
+      {
+        "src": "assets/products/golden-care-ivd.jpg",
+        "label": "Golden Care G6PD kit packaging"
+      }
+    ],
+    "id": "golden-care-g6pd-test-kit"
+  },
+  {
+    "name": "IVD kit · 25-test pack",
+    "category": "Laboratory test kits",
+    "brand": "Brand to confirm",
+    "model": "Assay to confirm",
+    "description": "Diagnostic kit packaging reference. Ask the sales team for the exact item.",
+    "specification": "Visible box markings show IVD and 25 tests.",
+    "photos": [
+      {
+        "src": "assets/products/ivd-packaging.jpg",
+        "label": "End labels on boxed kits"
+      }
+    ],
+    "id": "ivd-kit-25-test-pack"
+  },
+  {
+    "name": "Portable console · model to confirm",
+    "category": "Other products",
+    "brand": "Brand to confirm",
+    "model": "Model to confirm",
+    "description": "Portable equipment console shown from the rear. Confirm device type with the sales team.",
+    "specification": "Integrated carry handle, two connectors, and side holders pictured.",
+    "photos": [
+      {
+        "src": "assets/products/portable-console.jpg",
+        "label": "Rear and connector-side view"
+      }
+    ],
+    "id": "portable-console-model-to-confirm"
+  },
+  {
+    "name": "GSAN point-of-sale bundle",
+    "category": "Other products",
+    "brand": "GSAN",
+    "model": "Model to confirm",
+    "description": "Countertop checkout equipment for retail and pharmacy counters.",
+    "specification": "Display, thermal receipt printer, barcode scanner, and cash drawer pictured.",
+    "photos": [
+      {
+        "src": "assets/products/gsan-pos.jpg",
+        "label": "Point-of-sale components shown together"
+      }
+    ],
+    "id": "gsan-point-of-sale-bundle"
+  },
+  {
+    "name": "Dek450 Pharmacy dietary supplement",
+    "category": "Other products",
+    "brand": "Dek450 Pharmacy",
+    "model": "Blood Pressure Support",
+    "description": "Dietary supplement with hawthorn and hibiscus, as shown on the label.",
+    "specification": "Label shows a 60-capsule pack.",
+    "photos": [
+      {
+        "src": "assets/products/dek450-supplement.jpg",
+        "label": "Product label and Supplement Facts"
+      }
+    ],
+    "id": "dek450-pharmacy-dietary-supplement"
+  },
+  {
+    "name": "LAUNCH X-431 PAD VII",
+    "category": "Other products",
+    "brand": "LAUNCH",
+    "model": "X-431 PAD VII",
+    "description": "Automotive diagnostic tablet with SmartLink interface.",
+    "specification": "Rugged touchscreen tablet, carry handle, and separate interface pictured.",
+    "photos": [
+      {
+        "src": "assets/products/launch-front.jpg",
+        "label": "Front view with SmartLink"
+      },
+      {
+        "src": "assets/products/launch-angle.jpg",
+        "label": "Angled view with stand and connector"
+      }
+    ],
+    "id": "launch-x-431-pad-vii"
+  },
+  {
+    "name": "Top-loading washer",
+    "category": "Other products",
+    "brand": "Brand to confirm",
+    "model": "Model to confirm",
+    "description": "Compact top-loading washer with a transparent lid.",
+    "specification": "Top-mounted controls and a perforated inner basket pictured.",
+    "photos": [
+      {
+        "src": "assets/products/top-load-unit.jpg",
+        "label": "Top and front controls"
+      }
+    ],
+    "id": "top-loading-washer"
+  },
+  {
+    "name": "Curved desktop monitor",
+    "category": "Other products",
+    "brand": "Brand to confirm",
+    "model": "Model to confirm",
+    "description": "Curved display on a desktop stand.",
+    "specification": "Screen size, resolution, and included accessories to confirm.",
+    "photos": [
+      {
+        "src": "assets/products/curved-monitor.jpg",
+        "label": "Desktop setup showing the curved screen"
+      }
+    ],
+    "id": "curved-desktop-monitor"
+  },
+  {
+    "name": "Digital blood pressure monitor",
+    "category": "Medical supplies",
+    "description": "Automatic upper-arm monitor with clear digital display.",
+    "price": 420,
+    "stock": true,
+    "unit": "each",
+    "brand": "Omron",
+    "model": "HEM-7183 pictured",
+    "specification": "Digital upper-arm cuff monitor",
+    "photos": [
+      {
+        "src": "https://cdn11.bigcommerce.com/s-mkp1sb9vcu/images/stencil/450x450/products/1825/4387/HEM-7183__06800.1779617289.png?c=1",
+        "label": "Product photo"
+      }
+    ],
+    "id": "digital-blood-pressure-monitor"
+  },
+  {
+    "name": "Clinical stethoscope",
+    "category": "Medical supplies",
+    "description": "Lightweight acoustic stethoscope for daily assessments.",
+    "price": 185,
+    "stock": true,
+    "unit": "each",
+    "brand": "Littmann",
+    "model": "Model to confirm",
+    "specification": "Black tubing and rainbow-finish chestpiece",
+    "photos": [
+      {
+        "src": "assets/products/littmann-stethoscope.jpg",
+        "label": "Stethoscope in its case"
+      }
+    ],
+    "id": "clinical-stethoscope"
+  },
+  {
+    "name": "Infrared thermometer",
+    "category": "Medical supplies",
+    "description": "Non-contact temperature checks with quick readings.",
+    "price": 260,
+    "stock": false,
+    "unit": "each",
+    "brand": "Origin Medical",
+    "model": "FC-IR202 pictured",
+    "specification": "Non-contact infrared forehead thermometer",
+    "photos": [
+      {
+        "src": "https://lowcostat.com.au/cdn/shop/files/611JB4xuzmL._SL1500.jpg?v=1749597369",
+        "label": "Product photo"
+      }
+    ],
+    "id": "infrared-thermometer"
+  },
+  {
+    "name": "Examination gloves · nitrile",
+    "category": "Disposables",
+    "description": "Powder-free, single-use examination gloves. Box of 100.",
+    "price": 95,
+    "stock": true,
+    "unit": "box",
+    "brand": "NACOSA",
+    "model": "100 per box pictured",
+    "specification": "Powder-free nitrile examination gloves",
+    "photos": [
+      {
+        "src": "https://assets.fishersci.com/TFS-Assets/CCG/product-images/502522222.JPG-650.jpg",
+        "label": "Product photo"
+      }
+    ],
+    "id": "examination-gloves-nitrile"
+  },
+  {
+    "name": "Surgical face masks",
+    "category": "Disposables",
+    "description": "Pleated disposable masks with comfortable ear loops.",
+    "price": 38,
+    "stock": true,
+    "unit": "box of 50",
+    "brand": "Medi Mask",
+    "model": "50 per box pictured",
+    "specification": "Pleated single-use masks with ear loops",
+    "photos": [
+      {
+        "src": "https://hpa.chebupharma.com/web/image/product.template/19073/image",
+        "label": "Product photo"
+      }
+    ],
+    "id": "surgical-face-masks"
+  },
+  {
+    "name": "Syringes · 5 ml",
+    "category": "Disposables",
+    "description": "Sterile, single-use syringes. Individually wrapped.",
+    "price": 2.5,
+    "stock": true,
+    "unit": "each",
+    "brand": "Brand to confirm",
+    "model": "5 mL",
+    "specification": "Individually wrapped single-use syringe",
+    "photos": [
+      {
+        "src": "https://www.gotosuppliers.com/files/info/202304/12/aai20loucljiyo8.jpg",
+        "label": "Product photo"
+      }
+    ],
+    "id": "syringes-5-ml"
+  },
+  {
+    "name": "Gauze swabs · sterile",
+    "category": "Disposables",
+    "description": "Soft sterile gauze for wound care. Pack of 100.",
+    "price": 55,
+    "stock": false,
+    "unit": "pack",
+    "brand": "Ammeda",
+    "model": "7.5 × 7.5 cm pictured",
+    "specification": "Sterile woven gauze swabs. Confirm pack size.",
+    "photos": [
+      {
+        "src": "https://www.dnrwheels.com/cdn/shop/products/860051AmmedaSterileGauzeSwabs7.5x7.5cm_2_1000x.png?v=1584596552",
+        "label": "Product photo"
+      }
+    ],
+    "id": "gauze-swabs-sterile"
+  },
+  {
+    "name": "Pulse oximeter",
+    "category": "Biomedical equipment",
+    "description": "Finger-tip SpO₂ and pulse rate monitor with OLED screen.",
+    "price": 310,
+    "stock": true,
+    "unit": "each",
+    "brand": "Boxym",
+    "model": "C1 OLED pictured",
+    "specification": "Fingertip display for SpO₂ and pulse rate",
+    "photos": [
+      {
+        "src": "https://images.prom.ua/2750583036_w640_h640_2750583036.jpg",
+        "label": "Product photo"
+      }
+    ],
+    "id": "pulse-oximeter"
+  },
+  {
+    "name": "Portable suction machine",
+    "category": "Biomedical equipment",
+    "description": "Compact electric suction unit for clinical environments.",
+    "price": 2850,
+    "stock": false,
+    "unit": "each",
+    "brand": "Dynarex",
+    "model": "Resp-O2 pictured",
+    "specification": "Portable electric suction unit with collection canister",
+    "photos": [
+      {
+        "src": "https://www.mountainside-medical.com/cdn/shop/files/esp-O2-Portable-Home-Suction-Machine-Unit-with-Rechargeable-Lithium-Ion-Battery_512x512.jpg?v=1710793460",
+        "label": "Product photo"
+      }
+    ],
+    "id": "portable-suction-machine"
+  },
+  {
+    "name": "Patient monitor · 5 parameter",
+    "category": "Biomedical equipment",
+    "description": "Bedside monitoring for ECG, SpO₂, NIBP, temperature and pulse.",
+    "price": 12800,
+    "stock": true,
+    "unit": "each",
+    "brand": "Mindray",
+    "model": "ePM12m pictured",
+    "specification": "Bedside multiparameter monitor. Confirm configuration.",
+    "photos": [
+      {
+        "src": "https://anatomiyamed.com/upload/resize_cache/iblock/71c/93xac1xe40k9u228sjcgtddpsrbzujk7/800_800_2/%D0%9C%D0%BE%D0%BD%D0%B8%D1%82%D0%BE%D1%80%20%D0%BF%D0%B0%D1%86%D0%B8%D0%B5%D0%BD%D1%82%D0%B0%20Mindray%20ePM%2012m%20%D0%B5%D1%89%D0%B5%20%281%29.jpg",
+        "label": "Product photo"
+      }
+    ],
+    "id": "patient-monitor-5-parameter"
+  },
+  {
+    "name": "Oxygen concentrator · 5 L",
+    "category": "Biomedical equipment",
+    "description": "Portable oxygen concentrator for clinical use.",
+    "price": 9500,
+    "stock": true,
+    "unit": "each",
+    "brand": "Yuwell",
+    "model": "8F-5A pictured",
+    "specification": "5 L oxygen concentrator",
+    "photos": [
+      {
+        "src": "https://cdn.shopify.com/s/files/1/1290/8299/products/Yuwell8F-5AOxygenConcentrator-2.jpg?v=1626340221",
+        "label": "Product photo"
+      }
+    ],
+    "id": "oxygen-concentrator-5-l"
+  },
+  {
+    "name": "Autoclave · 18 L",
+    "category": "Biomedical equipment",
+    "description": "Tabletop steam sterilizer with simple cycle controls.",
+    "price": 7200,
+    "stock": false,
+    "unit": "each",
+    "brand": "BIOBASE",
+    "model": "BKM-Z18B pictured",
+    "specification": "18 L tabletop steam sterilizer",
+    "photos": [
+      {
+        "src": "https://bizweb.dktcdn.net/100/415/687/products/bkm-z18b-tbpt.jpg?v=1748056737633",
+        "label": "Product photo"
+      }
+    ],
+    "id": "autoclave-18-l"
+  },
+  {
+    "name": "Mindray BA-88A semi-auto chemistry analyzer",
+    "category": "Biomedical equipment",
+    "description": "Compact analyzer for routine clinical chemistry assays with touchscreen operation.",
+    "price": 18500,
+    "stock": true,
+    "unit": "each",
+    "brand": "Mindray",
+    "model": "BA-88A",
+    "specification": "Semi-automatic benchtop clinical chemistry analyzer",
+    "photos": [
+      {
+        "src": "https://ueeshop.ly200-cdn.com/u_file/UPAP/UPAP543/2501/7499906cf9.jpg.500x500.jpg",
+        "label": "Product photo"
+      }
+    ],
+    "id": "mindray-ba-88a-semi-auto-chemistry-analyzer"
+  },
+  {
+    "name": "Erba Chem 5x semi-auto chemistry analyzer",
+    "category": "Biomedical equipment",
+    "description": "Semi-automated analyzer for routine biochemistry testing in small and medium labs.",
+    "price": 22000,
+    "stock": true,
+    "unit": "each",
+    "brand": "Erba",
+    "model": "Chem 5x",
+    "specification": "Semi-automatic clinical chemistry analyzer",
+    "photos": [
+      {
+        "src": "https://d3edssu4vf7j1p.cloudfront.net/images/detailed/112/Erba_Chem_5x_Clinical_Chemistry_Analyzer_z78v-mx.jpg",
+        "label": "Product photo"
+      }
+    ],
+    "id": "erba-chem-5x-semi-auto-chemistry-analyzer"
+  },
+  {
+    "name": "Bioelab ES-100P semi-auto chemistry analyzer",
+    "category": "Biomedical equipment",
+    "description": "Touchscreen clinical chemistry analyzer with integrated printer for routine testing.",
+    "price": 19800,
+    "stock": false,
+    "unit": "each",
+    "brand": "Bioelab",
+    "model": "ES-100P",
+    "specification": "Semi-automatic benchtop clinical chemistry analyzer",
+    "photos": [
+      {
+        "src": "https://ddc-dfs.yyigou.com/dfs/default/M00/95/CF/rBQAyGLjikSAMzfEAAE3p-RR6fw373.jpg",
+        "label": "Product photo"
+      }
+    ],
+    "id": "bioelab-es-100p-semi-auto-chemistry-analyzer"
+  },
+  {
+    "name": "Mindray BC-30s hematology analyzer",
+    "category": "Biomedical equipment",
+    "description": "Automated 3-part differential hematology analyzer for complete blood count testing.",
+    "price": 68000,
+    "stock": true,
+    "unit": "each",
+    "brand": "Mindray",
+    "model": "BC-30s",
+    "specification": "Automated CBC with 3-part differential",
+    "photos": [
+      {
+        "src": "https://img.medicalexpo.com/pt/images_me/photo-g/70856-18748688.webp",
+        "label": "Product photo"
+      }
+    ],
+    "id": "mindray-bc-30s-hematology-analyzer"
+  },
+  {
+    "name": "Mindray BS-240 fully automatic chemistry analyzer",
+    "category": "Biomedical equipment",
+    "description": "Benchtop analyzer for routine clinical chemistry testing.",
+    "price": 145000,
+    "stock": false,
+    "unit": "each",
+    "brand": "Mindray",
+    "model": "BS-240",
+    "specification": "Fully automatic benchtop chemistry analyzer",
+    "photos": [
+      {
+        "src": "https://www.rajbiosis.org/assets/front/images/BS-240.jpg",
+        "label": "Product photo"
+      }
+    ],
+    "id": "mindray-bs-240-fully-automatic-chemistry-analyzer"
+  },
+  {
+    "name": "Finecare FIA Meter hormone analyzer",
+    "category": "Biomedical equipment",
+    "description": "Fluorescence immunoassay platform for point-of-care hormone and biomarker testing.",
+    "price": 32000,
+    "stock": true,
+    "unit": "each",
+    "brand": "Wondfo",
+    "model": "Finecare FIA Meter Plus FS-113 pictured",
+    "specification": "Fluorescence immunoassay reader",
+    "photos": [
+      {
+        "src": "https://cpimg.tistatic.com/12177298/b/4/Finecare-FIA-Meter.jpeg",
+        "label": "Product photo"
+      }
+    ],
+    "id": "finecare-fia-meter-hormone-analyzer"
+  },
+  {
+    "name": "Glucose reagent kit · GOD-POD",
+    "category": "Laboratory test kits",
+    "description": "Clinical chemistry reagents and glucose standard for quantitative glucose testing.",
+    "price": 480,
+    "stock": true,
+    "unit": "kit",
+    "brand": "Coral Clinical Systems",
+    "model": "GOD-POD",
+    "specification": "Glucose reagent and standard kit",
+    "photos": [
+      {
+        "src": "https://coralclinicalsystems.com/uploads/product/glucose_image_6520220323.125728.JPG",
+        "label": "Product photo"
+      }
+    ],
+    "id": "glucose-reagent-kit-god-pod"
+  },
+  {
+    "name": "Glucose reagent kit · multi-pack",
+    "category": "Laboratory test kits",
+    "description": "In-vitro diagnostic glucose reagents for routine chemistry analyzer workflows.",
+    "price": 390,
+    "stock": true,
+    "unit": "kit",
+    "brand": "BioSci",
+    "model": "True-Detect glucose reagent pictured",
+    "specification": "Clinical chemistry glucose reagent kit",
+    "photos": [
+      {
+        "src": "https://5.imimg.com/data5/SELLER/Default/2024/8/440530678/WG/AO/CD/46104667/biosci-true-detect-glucose-test-reagent-1000x1000.png",
+        "label": "Product photo"
+      }
+    ],
+    "id": "glucose-reagent-kit-multi-pack"
+  },
+  {
+    "name": "Urinalysis reagent strips · 10 parameter",
+    "category": "Laboratory test kits",
+    "description": "Urine reagent strips for glucose, protein, blood, ketones and other screening parameters.",
+    "price": 160,
+    "stock": true,
+    "unit": "100-strip vial",
+    "brand": "Brand to confirm",
+    "model": "URS-10",
+    "specification": "10-parameter strips, 100 per vial",
+    "photos": [
+      {
+        "src": "https://www.lexiconsupply.com/cdn/shop/files/8c6ce2a556a8196fe431de898077eb0363b2fc2b.jpg?v=1762977027",
+        "label": "Product photo"
+      }
+    ],
+    "id": "urinalysis-reagent-strips-10-parameter"
+  },
+  {
+    "name": "HIV 1/2 rapid test kit",
+    "category": "Laboratory test kits",
+    "description": "Rapid screening cassette kit for professional diagnostic use. Follow local testing protocols.",
+    "price": 250,
+    "stock": false,
+    "unit": "kit",
+    "brand": "Swift",
+    "model": "Rapid cassette pictured",
+    "specification": "HIV screening cassette",
+    "photos": [
+      {
+        "src": "https://images.pharmaplus.co.ke/processed_images/700/700_x_700/S1541.webp",
+        "label": "Product photo"
+      }
+    ],
+    "id": "hiv-1-2-rapid-test-kit"
+  },
+  {
+    "name": "Malaria Pf rapid test kit",
+    "category": "Laboratory test kits",
+    "description": "Rapid cassette for malaria Pf antigen screening.",
+    "price": 220,
+    "stock": true,
+    "unit": "kit",
+    "brand": "Brand to confirm",
+    "model": "Pf antigen cassette",
+    "specification": "Malaria Pf rapid diagnostic test",
+    "photos": [
+      {
+        "src": "https://image.made-in-china.com/2f0j00rVGosKLdlZpS/Malaria-Rapid-Diagostic-Test-Kit-Intermedical-Malaria-PF-Malaria-Rapid-Test-Kit.webp",
+        "label": "Product photo"
+      }
+    ],
+    "id": "malaria-pf-rapid-test-kit"
+  },
+  {
+    "name": "hCG pregnancy rapid test kit",
+    "category": "Laboratory test kits",
+    "description": "Urine hCG rapid test cassette kit for qualitative screening.",
+    "price": 90,
+    "stock": true,
+    "unit": "kit",
+    "brand": "Swift",
+    "model": "Urine hCG cassette pictured",
+    "specification": "Qualitative pregnancy test",
+    "photos": [
+      {
+        "src": "https://api.pharmaplus.co.ke/images/700_x_700/S1540.webp",
+        "label": "Product photo"
+      }
+    ],
+    "id": "hcg-pregnancy-rapid-test-kit"
+  },
+  {
+    "name": "Finecare TSH rapid quantitative test kit",
+    "category": "Laboratory test kits",
+    "description": "TSH assay kit for the Finecare FIA system.",
+    "price": 1250,
+    "stock": false,
+    "unit": "assay kit",
+    "brand": "Wondfo",
+    "model": "Finecare W220",
+    "specification": "Quantitative TSH assay for compatible Finecare analyzers",
+    "photos": [
+      {
+        "src": "https://demo.ahgez.com/projects/yourmedicalsuppliers/image/cache/catalog/Point%20Of%20Care%20Kits/Wondfo/FineCare/TSH%20Test/1-2586x1940.jpg",
+        "label": "Product photo"
+      }
+    ],
+    "id": "finecare-tsh-rapid-quantitative-test-kit"
+  }
+];

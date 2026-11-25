@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout | Dek450 Medsupplies Limited</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--ink:#182a2e;--muted:#506266;--accent:#123b36;--paper:#f8f7f2;--line:#dce2dc}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 "DM Sans",system-ui,sans-serif}
+[hidden]{display:none!important}
+a{color:var(--accent);text-underline-offset:4px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #b66232;outline-offset:3px}
+.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{background:white;border-bottom:1px solid var(--line);padding:18px 0}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+nav .brand{font-weight:800;text-decoration:none} nav a{font-size:.88rem}
+main{padding:36px 0 60px}
+h1,h2{font-family:"DM Serif Display",Georgia,serif;font-weight:400;margin:0 0 9px;line-height:1.12}
+h1{font-size:clamp(2.6rem,6vw,4rem)} h2{font-size:1.72rem}
+.intro{color:var(--muted);margin:0 0 26px}
+.layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:24px;align-items:start}
+.panel{border:1px solid var(--line);border-radius:8px;background:white;padding:clamp(16px,3vw,27px)}
+.basket + .panel{margin-top:14px}
+.line{display:grid;grid-template-columns:54px minmax(0,1fr) 65px;gap:12px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+.line img{display:block;width:54px;height:54px;object-fit:contain;border-radius:4px;background:#f3f6f2}
+.line p{margin:3px 0;color:var(--muted);font-size:.82rem}
+.quantity{font-size:.75rem;color:var(--muted)}
+.quantity input{padding:5px}
+.remove{border:0;background:transparent;color:var(--accent);text-decoration:underline;padding:0;cursor:pointer;font-size:.8rem}
+.total{display:flex;justify-content:space-between;gap:10px;margin:14px 0 5px;font-weight:800}
+.note{font-size:.84rem;color:var(--muted);margin:8px 0 16px}
+fieldset{padding:0;margin:0 0 23px;border:0;min-width:0}
+legend{font-size:1.07rem;font-weight:800;margin-bottom:8px;padding:0}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+label{display:block;font-weight:650;font-size:.87rem}
+.full{grid-column:1/-1}
+input,textarea,select{display:block;width:100%;font:inherit;color:var(--ink);background:white;border:1px solid #bdcbc3;border-radius:5px;padding:9px 10px;margin-top:4px}
+textarea{resize:vertical;min-height:78px}
+button,.button{font:inherit}
+.button{display:inline-flex;justify-content:center;align-items:center;border:1px solid var(--accent);border-radius:5px;background:var(--accent);color:white;padding:10px 15px;font-weight:700;text-decoration:none;cursor:pointer}
+.button.secondary{background:white;color:var(--accent)}
+.button:disabled{opacity:.55;cursor:default}
+.review-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:12px}
+#review{margin-top:22px}
+#orderText{min-height:215px;font-size:.86rem}
+@media(max-width:740px){.layout{grid-template-columns:1fr} main{padding-top:25px}}
+@media(max-width:410px){.fields{grid-template-columns:1fr}.wrap{width:calc(100% - 24px)}}
+</style>
+</head>
+<body>
+<header><nav class="wrap" aria-label="Checkout navigation"><a class="brand" href="index.html">Dek450 Medsupplies Limited</a><a href="index.html#catalog">Back to catalog</a></nav></header>
+<main class="wrap">
+<h1>Checkout</h1>
+<p class="intro">Review your basket and prepare an order request for the sales team.</p>
+<div class="layout">
+<section class="panel basket" aria-labelledby="basketHeading">
+  <h2 id="basketHeading">Your basket</h2>
+  <p id="emptyBasket" hidden>Your basket is empty. <a href="index.html#catalog">Browse products</a></p>
+  <div id="lines"></div>
+  <div id="totals" hidden>
+    <div class="total"><span>Estimated subtotal</span><span id="subtotal"></span></div>
+    <p class="note">Quote items and delivery are separate. Sales will confirm prices, stock, and any delivery fees.</p>
+  </div>
+  <p class="note" id="basketStatus" role="status"></p>
+</section>
+<div>
+<form class="panel" id="checkoutForm">
+  <h2>Contact and delivery</h2>
+  <p class="note">Fields marked * are required.</p>
+  <fieldset>
+    <legend>Customer details</legend>
+    <div class="fields">
+      <label>Full name *<input name="name" autocomplete="name" maxlength="100" required></label>
+      <label>Phone number *<input name="phone" type="tel" autocomplete="tel" maxlength="25" required></label>
+      <label>Email<input name="email" type="email" autocomplete="email" maxlength="120"></label>
+      <label>Facility or company<input name="company" autocomplete="organization" maxlength="120"></label>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Delivery or pickup</legend>
+    <label>Fulfilment method *
+      <select id="method" name="method" required>
+        <option value="">Select a method</option>
+        <option value="delivery">Delivery</option>
+        <option value="pickup">Pickup</option>
+      </select>
+    </label>
+    <p id="pickupNote" class="note" hidden>Sales will confirm the pickup location and time.</p>
+    <div class="fields" style="margin-top:12px" id="deliveryFields" hidden>
+      <label>Region *<input name="region" autocomplete="address-level1" maxlength="100" required disabled></label>
+      <label>Town or city *<input name="city" autocomplete="address-level2" maxlength="100" required disabled></label>
+      <label class="full">Street address or GhanaPost GPS address *<input name="address" autocomplete="street-address" maxlength="180" required disabled></label>
+      <label class="full">Landmark or delivery instructions<textarea name="directions" maxlength="350" disabled></textarea></label>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Order requirements</legend>
+    <label>Product options, quantities for quote, or other requests<textarea name="notes" maxlength="500" placeholder="For example, glove sizes or an equipment model"></textarea></label>
+  </fieldset>
+  <button type="submit" class="button" id="reviewButton" disabled>Review request</button>
+  <p class="note">Review your details before opening WhatsApp or copying your request. Payment and delivery are arranged with sales.</p>
+</form>
+<section id="review" class="panel" aria-labelledby="reviewHeading" hidden>
+  <h2 id="reviewHeading" tabindex="-1">Review your request</h2>
+  <label for="orderText">Request text</label><textarea id="orderText" readonly></textarea>
+  <div class="review-actions">
+    <a class="button" id="whatsapp" target="_blank" rel="noopener noreferrer">Continue to WhatsApp</a>
+    <button class="button secondary" id="copy" type="button">Copy request</button>
+  </div>
+  <p class="note">WhatsApp opens a draft for 0533805134 for you to send. You can also call <a href="tel:0533805134">0533805134</a> to confirm your order.</p>
+  <p class="note" id="copyStatus" role="status"></p>
+</section>
+</div>
+</div>
+</main>
+<script src="catalog.js"></script>
+<script src="basket.js"></script>
+<script src="checkout.js"></script>
+</body>
+</html>
