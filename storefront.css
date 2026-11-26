@@ -15,7 +15,7 @@ img { display: block; max-width: 100%; }
 .hero-frame { padding-top: 34px; }
 .hero { display: grid; grid-template-columns: 1.02fr .98fr; min-height: 440px; background: var(--navy); color: var(--white); }
 .hero-copy { align-self: center; padding: clamp(35px, 5vw, 73px); }
-.hero h1 { font-size: clamp(2.7rem, 5vw, 5rem); font-weight: 650; letter-spacing: -.065em; line-height: 1.01; max-width: 14ch; }
+.hero h1 { font-size: clamp(2.7rem, 5vw, 5rem); font-weight: 650; letter-spacing: -.045em; line-height: 1.05; max-width: 15ch; }
 .hero p { max-width: 42ch; margin-top: 20px; color: #e0e8f2; font-size: clamp(.98rem, 1.2vw, 1.12rem); }
 .hero-photo { position: relative; min-width: 0; min-height: 300px; background: #b7c1ca; overflow: hidden; }
 .hero-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 54% 50%; }
@@ -27,7 +27,7 @@ img { display: block; max-width: 100%; }
 
 .shop { padding-block: 61px 72px; }
 .sectionhead { margin-bottom: 22px; }
-.sectionhead h2, .contact-panel h2 { font-size: clamp(1.95rem, 4vw, 3.15rem); font-weight: 650; letter-spacing: -.06em; line-height: 1.08; }
+.sectionhead h2, .contact-panel h2 { font-size: clamp(1.95rem, 4vw, 3.15rem); font-weight: 650; letter-spacing: -.045em; line-height: 1.08; }
 .catalog-layout { display: grid; grid-template-columns: 192px minmax(0, 1fr); grid-template-areas: "categories toolbar" "categories results"; gap: 16px 27px; }
 .category-nav { grid-area: categories; align-self: start; position: sticky; top: 20px; border-top: 2px solid var(--navy); padding-top: 10px; }
 .category-nav h3 { font-size: .88rem; font-weight: 700; margin: 0 0 7px 11px; }
@@ -128,6 +128,9 @@ img { display: block; max-width: 100%; }
   .gallery-thumbs { padding-inline: 9px; }
   .gallery-thumbs button { width: 29px; height: 29px; }
   .controls { gap: 8px; }
+  .filters { flex-wrap: nowrap; overflow-x: auto; padding-block: 2px 8px; scrollbar-width: thin; scrollbar-color: #aebac8 transparent; }
+  .filter { flex: none; }
+  .filter:focus-visible { outline-offset: -2px; }
   .contact-panel { grid-template-columns: 1fr; gap: 22px; margin-bottom: 25px; }
   .contact-location { border-left: 0; border-top: 1px solid #516078; padding: 15px 0 0; }
 }
