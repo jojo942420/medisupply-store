@@ -7,8 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="store-theme.css?v=navy-1">
-<link rel="stylesheet" href="storefront.css?v=navy-2">
+<link rel="stylesheet" href="store-theme.css?v=open-layout-1">
+<link rel="stylesheet" href="storefront.css?v=open-layout-1">
 <link rel="icon" type="image/png" href="assets/brand/dek450-3d-mark.png">
 </head>
 
@@ -27,7 +27,10 @@
     </nav>
     <div class="navright">
       <a class="phone" href="tel:0533805134">0533805134</a>
-      <a class="cart" id="cart" href="checkout.html">Basket <span id="cartCount" aria-live="polite">0</span></a>
+      <a class="cart" id="cart" href="checkout.html" aria-label="Basket, 0 items">
+        <img src="assets/brand/checkout-shopping-cart.png" width="42" height="42" alt="">
+        <span id="cartCount" aria-hidden="true">0</span>
+      </a>
     </div>
   </div>
 </header>
@@ -96,7 +99,7 @@
 <footer class="site-footer">
   <div class="wrap foot">
     <span>© <span id="year"></span> PK GREENE SUPPLY VENTURE</span>
-    <span>Contact sales to confirm prices and availability.</span>
+    <span>Contact sales for quotes and availability.</span>
   </div>
 </footer>
 
@@ -109,12 +112,11 @@
     <a id="photoSource" target="_blank" rel="noopener noreferrer" hidden>Photo source</a>
   </div>
 </dialog>
-<script src="catalog.js?v=studio-catalog-1"></script>
+<script src="catalog.js?v=quote-only-1"></script>
 <script src="basket.js"></script>
 <script src="store-service.js?v=1"></script>
 <script>
 let category="All";
-const money=n=>new Intl.NumberFormat("en-GH",{style:"currency",currency:"GHS",maximumFractionDigits:n%1?2:0}).format(n);
 
 const catalog = document.querySelector("#products");
 const escapeHtml = value => String(value).replace(/[&<>"']/g, character => ({
@@ -139,10 +141,8 @@ function renderPhotoGallery(product, name) {
 function productCard(product, index) {
   const name = escapeHtml(product.name);
   const availability = product.stock === true ? "In stock" : product.stock === false ? "Out of stock" : "Confirm availability";
-  const pricing = typeof product.price === "number"
-    ? '<div class="price">' + money(product.price) + '<small>per ' + escapeHtml(product.unit) + '</small></div>' +
-      '<button class="add" ' + (product.stock ? "" : "disabled") + ' aria-label="Add ' + name + ' to basket" data-add>Add to basket</button>'
-    : '<div class="price">Price on request</div><button type="button" class="add add-quote" data-add aria-label="Request a quote for ' + name + '">Add to request</button>';
+  const action = '<button class="add" type="button" ' + (product.stock === false ? 'disabled ' : '') +
+    'aria-label="Add ' + name + ' to request" data-add>Add to request</button>';
   return '<article class="card" data-product="' + index + '" data-view="0">' + renderPhotoGallery(product, name) +
     '<div class="body"><span class="card-category">' + escapeHtml(product.category) + '</span><h3>' + name + '</h3><p class="brand-model">' + escapeHtml(product.brand) + ' · ' +
     escapeHtml(product.model) + '</p><p>' + escapeHtml(product.description) +
@@ -151,7 +151,7 @@ function productCard(product, index) {
       '" target="_blank" rel="noopener noreferrer">Product specifications source</a></p>' : '') +
     '</details><div class="stock ' + (product.stock === true ? "in" : product.stock === false ? "out" : "") +
     '">' + (typeof product.stock === "boolean" ? '<i class="dot"></i>' : "") + availability +
-    '</div><div class="buyrow">' + pricing + '</div></div></article>';
+    '</div><div class="card-actions">' + action + '</div></div></article>';
 }
 
 function render() {
@@ -267,7 +267,9 @@ document.querySelectorAll("[data-category-link]").forEach(link =>
 document.querySelector("#search").addEventListener("input", render);
 const count = document.querySelector("#cartCount");
 function updateBasketCount() {
-  count.textContent = getBasket().reduce((sum, line) => sum + line.quantity, 0);
+  const quantity = getBasket().reduce((sum, line) => sum + line.quantity, 0);
+  count.textContent = quantity;
+  document.querySelector("#cart").setAttribute("aria-label", "Basket, " + quantity + (quantity === 1 ? " item" : " items"));
 }
 updateBasketCount();
 window.addEventListener("pageshow", updateBasketCount);

@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="store-theme.css?v=navy-1">
-  <link rel="stylesheet" href="checkout.css?v=navy-1">
+  <link rel="stylesheet" href="store-theme.css?v=open-layout-1">
+  <link rel="stylesheet" href="checkout.css?v=open-layout-1">
 </head>
 <body>
 <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -61,10 +61,7 @@
         <p>Your basket is empty.</p><a href="index.html#catalog">Browse the catalog <svg class="icon" aria-hidden="true" focusable="false"><use href="#co-arrow"></use></svg></a>
       </div>
       <div id="lines"></div>
-      <div id="totals" hidden>
-        <div class="total"><span>Estimated subtotal</span><strong id="subtotal"></strong></div>
-        <p class="summary-note"><svg class="icon" aria-hidden="true" focusable="false"><use href="#co-info"></use></svg><span>Quote items, equipment availability and delivery fees are confirmed by sales.</span></p>
-      </div>
+      <p class="summary-note" id="basketNote" hidden><svg class="icon" aria-hidden="true" focusable="false"><use href="#co-info"></use></svg><span>Sales will send you a quote and confirm availability.</span></p>
       <p class="status" id="basketStatus" role="status"></p>
     </aside>
 
@@ -140,7 +137,7 @@
       <section id="orderSent" class="panel receipt" aria-labelledby="orderSentHeading" hidden>
         <span class="receipt-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#co-check"></use></svg></span>
         <h2 id="orderSentHeading" tabindex="-1">Order request received</h2>
-        <p>Our sales team will reach out in a few minutes on WhatsApp at <strong id="confirmedWhatsApp"></strong> to confirm availability, final pricing, and pickup or delivery.</p>
+        <p>Our sales team will reach out in a few minutes on WhatsApp at <strong id="confirmedWhatsApp"></strong> to share your quote and confirm availability and fulfilment.</p>
         <p id="invoiceStatus" class="invoice-status" role="status"></p>
         <p id="orderReference" class="reference"></p>
         <div class="review-actions">
@@ -156,9 +153,9 @@
   <span>PK GREENE SUPPLY VENTURE</span>
   <a href="tel:+233533805134"><svg class="icon" aria-hidden="true" focusable="false"><use href="#co-phone"></use></svg> Checkout help · 053 380 5134</a>
 </footer>
-<script src="catalog.js?v=studio-catalog-1"></script>
+<script src="catalog.js?v=quote-only-1"></script>
 <script src="basket.js"></script>
 <script src="store-service.js?v=1"></script>
-<script src="checkout.js?v=checkout-invoice-1"></script>
+<script src="checkout.js?v=quote-only-1"></script>
 </body>
 </html>

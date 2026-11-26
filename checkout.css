@@ -21,23 +21,23 @@ h2 { font-size: clamp(1.45rem, 3vw, 1.85rem); }
 .progress li::before { content: ""; width: 7px; height: 7px; border: 1px solid #738498; border-radius: 50%; }
 .progress [aria-current] { color: var(--navy); font-weight: 700; }
 .progress [aria-current]::before, .progress .done::before { background: #214db2; border-color: #214db2; }
-.layout { display: grid; grid-template-columns: minmax(0, 1.42fr) minmax(300px, .94fr); align-items: start; gap: 24px; }
+.layout { display: grid; grid-template-columns: minmax(0, 1.42fr) minmax(290px, .94fr); align-items: start; gap: clamp(22px, 4vw, 52px); }
 .layout.is-complete { grid-template-columns: minmax(0, 690px); justify-content: center; }
 .checkout-content { grid-column: 1; grid-row: 1; min-width: 0; }
-.panel { border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); padding: clamp(17px, 3vw, 29px); }
-.basket { grid-column: 2; grid-row: 1; position: sticky; top: 16px; padding: clamp(16px, 2.2vw, 24px); }
+.panel { min-width: 0; padding: 10px 0 20px; }
+.basket { grid-column: 2; grid-row: 1; position: sticky; top: 16px; padding-left: clamp(17px, 3vw, 32px); border-left: 1px solid var(--line); }
 .basket-title, .panel-heading { display: flex; align-items: center; gap: 10px; }
 .panel-heading { justify-content: space-between; gap: 12px; margin-bottom: 21px; }
 .basket-title h2 { font-size: clamp(1.4rem, 2.6vw, 1.72rem); }
 .basket-icon, .receipt-icon { display: grid; place-items: center; width: 35px; height: 35px; border-radius: 10px; background: var(--blue-light); color: var(--blue); flex: none; }
 .basket-count { margin-left: auto; border-radius: 999px; padding: 3px 8px; font-size: .72rem; white-space: nowrap; color: var(--navy); background: var(--blue-light); font-weight: 700; }
-.empty-basket { margin-top: 16px; padding: 15px; background: #eff4fa; border-radius: 10px; color: var(--muted); }
+.empty-basket { margin-top: 13px; padding: 5px 0; color: var(--muted); }
 .empty-basket p { margin: 0 0 5px; }
 .empty-basket a { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; }
 .line { display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; align-items: start; gap: 10px; padding: 14px 0; border-bottom: 1px solid var(--line); }
 .line:first-child { margin-top: 4px; }
 #lines:not(:empty) { max-height: min(47vh, 460px); overflow-y: auto; scrollbar-gutter: stable; padding-inline: 3px; }
-.line img { display: block; width: 52px; height: 52px; object-fit: contain; border-radius: 7px; background: #f5f7fa; }
+.line img { display: block; width: 52px; height: 52px; object-fit: contain; border-radius: 8px; background: var(--white); }
 .line strong { display: block; font-size: .88rem; line-height: 1.35; overflow-wrap: anywhere; }
 .line p { margin: 3px 0; font-size: .77rem; color: var(--muted); }
 .line-tools { display: grid; justify-items: end; gap: 3px; }
@@ -50,10 +50,10 @@ h2 { font-size: clamp(1.45rem, 3vw, 1.85rem); }
 .remove, .text-button { display: inline-flex; align-items: center; gap: 5px; border: 0; background: transparent; color: var(--blue); padding: 2px 1px; font-weight: 700; cursor: pointer; }
 .remove { font-size: .72rem; min-height: 27px; }
 .remove:hover, .text-button:hover { text-decoration: underline; }
-.total { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin-top: 15px; font-size: .9rem; font-weight: 700; }
-.total strong { font-size: 1.15rem; color: var(--navy); white-space: nowrap; }
+
+
 .summary-note, .hint, .status { color: var(--muted); font-size: .81rem; }
-.summary-note { display: flex; align-items: flex-start; gap: 7px; margin: 10px 0 0; }
+.summary-note { display: flex; align-items: flex-start; gap: 7px; margin: 15px 0 0; }
 .summary-note .icon { margin-top: 2px; }
 .status { margin: 10px 0 0; }
 .status:empty { display: none; }
@@ -110,6 +110,7 @@ textarea::placeholder { color: #536071; }
 
   .layout, .layout.is-complete { grid-template-columns: minmax(0, 1fr); gap: 13px; }
   .basket, .checkout-content { grid-column: auto; grid-row: auto; position: static; }
+  .basket { border-left: 0; border-bottom: 1px solid var(--line); padding: 0 0 18px; }
   #lines:not(:empty) { max-height: none; overflow: visible; padding-inline: 0; }
   .checkout { width: calc(100% - 32px); padding-top: 21px; }
   .heading { align-items: start; flex-direction: column; margin-bottom: 15px; }

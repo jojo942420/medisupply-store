@@ -2,7 +2,6 @@
 
 dek450CatalogReady.then(() => {
   const byId = id => document.getElementById(id);
-  const formatMoney = new Intl.NumberFormat("en-GH", {style:"currency", currency:"GHS"});
   const productIndex = new Map(products.map(product => [product.id, product]));
   const form = byId("checkoutForm");
   const lines = byId("lines");
@@ -49,16 +48,13 @@ dek450CatalogReady.then(() => {
     return svg;
   }
 
-  function renderTotals() {
+  function renderBasketSummary() {
     const count = basket.reduce((sum, item) => sum + item.quantity, 0);
-    const priced = basket.filter(item => typeof productIndex.get(item.id).price === "number");
-    const subtotal = priced.reduce((sum, item) => sum + productIndex.get(item.id).price * item.quantity, 0);
     byId("basketCount").textContent = count + (count === 1 ? " item" : " items");
     byId("basketCount").hidden = !count;
     byId("emptyBasket").hidden = count > 0;
-    byId("totals").hidden = !count;
+    byId("basketNote").hidden = !count;
     byId("reviewButton").disabled = !count;
-    byId("subtotal").textContent = priced.length ? formatMoney.format(subtotal) : "Quote required";
   }
 
   function renderOrder() {
@@ -74,9 +70,8 @@ dek450CatalogReady.then(() => {
       image.addEventListener("error", () => { image.style.visibility = "hidden"; });
       const info = document.createElement("div");
       const name = document.createElement("strong");
-      const price = document.createElement("p");
       name.textContent = product.name;
-      info.append(name, price);
+      info.append(name);
       if (product.category === "Biomedical equipment") {
         const lead = document.createElement("p");
         lead.className = "line-timing";
@@ -104,8 +99,6 @@ dek450CatalogReady.then(() => {
       control.append(minus, quantity, plus);
       quantity.addEventListener("change", () => setQuantity(quantity.valueAsNumber));
       function updateLine() {
-        price.textContent = typeof product.price === "number"
-          ? formatMoney.format(product.price * item.quantity) + " estimated" : "Price on request";
         quantity.value = item.quantity;
         minus.disabled = item.quantity <= 1;
         plus.disabled = item.quantity >= 999;
@@ -122,7 +115,7 @@ dek450CatalogReady.then(() => {
         saveBasket(basket);
         hideReview();
         updateLine();
-        renderTotals();
+        renderBasketSummary();
         byId("basketStatus").textContent = "Quantity updated.";
       }
       updateLine();
@@ -145,7 +138,7 @@ dek450CatalogReady.then(() => {
       row.append(image, info, tools);
       lines.append(row);
     }
-    renderTotals();
+    renderBasketSummary();
   }
 
   function syncDelivery() {
