@@ -161,7 +161,7 @@ dek450CatalogReady.then(() => {
       ["WhatsApp", customer.phone],
       [delivery ? "Delivery address" : "Pickup location", delivery
         ? [[customer.address, customer.city, customer.region].join(", "), customer.directions].filter(Boolean).join("\n")
-        : "PK GREENE SUPPLY VENTURE\nNDC Junction, Cowpea Street, CB69\nKlagon, Lashibi, Tema"],
+        : "PK GREEN SUPPLY VENTURE\nNDC Junction, Cowpea Street, CB69\nKlagon, Lashibi, Tema"],
       ["Order notes", customer.notes],
     ];
     for (const [label, value] of rows) {
@@ -252,7 +252,7 @@ dek450CatalogReady.then(() => {
       byId("invoiceStatus").textContent = result.whatsapp === "accepted"
         ? "Your invoice was submitted to WhatsApp."
         : result.invoiceUrl ? "Your pro forma invoice is ready to view now." : "Sales will confirm your invoice when they reach out.";
-      byId("followup").href = "https://wa.me/233533805134?text=" + encodeURIComponent("Hello PK GREENE SUPPLY VENTURE, I’m following up on order request " + result.id + ".");
+      byId("followup").href = "https://wa.me/233533805134?text=" + encodeURIComponent("Hello PK GREEN SUPPLY VENTURE, I’m following up on order request " + result.id + ".");
       byId("orderSent").hidden = false;
       byId("orderSentHeading").focus();
     } catch (issue) {
