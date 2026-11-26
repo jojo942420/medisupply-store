@@ -1,0 +1,38 @@
+:root {
+  color-scheme: light;
+  --navy: #172b46;
+  --ink: #202d3d;
+  --muted: #536071;
+  --blue: #214db2;
+  --blue-dark: #173d96;
+  --blue-light: #edf3fc;
+  --paper: #f7f7f3;
+  --white: #fff;
+  --line: #dce1e6;
+  --input-line: #aebac8;
+  --focus: #315ec9;
+  --font: "Instrument Sans", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.55 var(--font); }
+button, input, textarea { font: inherit; }
+a { color: inherit; text-underline-offset: .22em; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+.wrap { width: min(1320px, calc(100% - 80px)); margin-inline: auto; }
+.masthead, .site-header { background: var(--white); border-bottom: 1px solid var(--line); }
+.nav, .topbar { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { display: inline-flex; flex: none; align-items: center; text-decoration: none; gap: 12px; }
+.brand::before { content: ""; width: 4px; height: 33px; background: var(--blue); }
+.wordmark { color: var(--navy); font-size: 1.2rem; font-weight: 700; line-height: 1.04; letter-spacing: -.055em; white-space: nowrap; }
+.wordmark span { display: block; margin-top: 5px; color: var(--muted); font-size: .58em; font-weight: 650; letter-spacing: .16em; }
+
+@media (max-width: 900px) { .wrap { width: calc(100% - 44px); } }
+@media (max-width: 600px) {
+  .wrap { width: calc(100% - 32px); }
+  .nav, .topbar { min-height: 64px; gap: 12px; }
+  .brand { gap: 8px; }
+  .brand::before { height: 28px; width: 3px; }
+  .wordmark { font-size: 1.04rem; }
+}
