@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="store-theme.css?v=open-layout-1">
-<link rel="stylesheet" href="storefront.css?v=open-layout-1">
+<link rel="stylesheet" href="storefront.css?v=sales-contact-1">
 <link rel="icon" type="image/png" href="assets/brand/dek450-3d-mark.png">
 </head>
 
@@ -26,7 +26,9 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="navright">
-      <a class="phone" href="tel:0533805134">0533805134</a>
+      <a class="quick-contact" href="https://wa.me/233533805134" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp 0533805134">
+        <img src="assets/brand/sales-whatsapp.png" width="27" height="27" alt=""> WhatsApp
+      </a>
       <a class="cart" id="cart" href="checkout.html" aria-label="Basket, 0 items">
         <img src="assets/brand/checkout-shopping-cart.png" width="42" height="42" alt="">
         <span id="cartCount" aria-hidden="true">0</span>
@@ -81,18 +83,41 @@
   <section class="contact-panel wrap" id="contact" aria-labelledby="contact-title">
     <div class="contact-copy">
       <h2 id="contact-title">Talk to our sales team</h2>
-      <p>Call for product enquiries, equipment quotes, and bulk orders.</p>
-      <div class="phone-list">
-        <a href="tel:0533805134">0533805134</a>
-        <a href="tel:0502113175">0502113175</a>
-        <a href="tel:0248442602">0248442602</a>
-      </div>
+      <p>Ask about availability, equipment quotes or bulk orders.</p>
+      <ul class="sales-channels">
+        <li><a class="sales-channel" href="https://wa.me/233533805134" target="_blank" rel="noopener noreferrer">
+          <img src="assets/brand/sales-whatsapp.png" width="52" height="52" alt="" loading="lazy" decoding="async">
+          <span><span class="sales-channel-label">WhatsApp</span><strong>0533805134</strong></span>
+          <span class="sales-channel-arrow" aria-hidden="true">↗</span>
+        </a></li>
+        <li><a class="sales-channel" href="tel:+233502113175">
+          <img src="assets/brand/sales-phone.png" width="52" height="52" alt="" loading="lazy" decoding="async">
+          <span><span class="sales-channel-label">Call</span><strong>0502113175</strong></span>
+          <span class="sales-channel-arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li><a class="sales-channel" href="tel:+233248442602">
+          <img src="assets/brand/sales-phone.png" width="52" height="52" alt="" loading="lazy" decoding="async">
+          <span><span class="sales-channel-label">Call</span><strong>0248442602</strong></span>
+          <span class="sales-channel-arrow" aria-hidden="true">→</span>
+        </a></li>
+      </ul>
     </div>
-    <div class="contact-location">
-        <h3>Pickup location</h3>
-        <p><strong>PK GREENE SUPPLY VENTURE</strong></p>
-        <address>NDC Junction · Cowpea Street · CB69<br>Klagon, Lashibi, Tema<br>Near Sakumono Police Station</address>
-        <p class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Dek450+Pharmacy+Limited%2C+Cowpea+Street%2C+Lashibi%2C+Tema%2C+Ghana" target="_blank" rel="noopener noreferrer">Find the pickup location on Google Maps</a><a href="https://www.google.com/maps/dir/?api=1&amp;destination=5.62225%2C-0.06865" target="_blank" rel="noopener noreferrer">Directions to Sakumono Police Station</a></p>
+    <div class="contact-location" id="pickup">
+      <div class="pickup-heading">
+        <img src="assets/brand/pickup-pin.png" width="58" height="58" alt="" loading="lazy" decoding="async">
+        <div>
+          <h3>Pickup address</h3>
+          <address>CB69 Cowpea Street, NDC Junction<br>Klagon, Lashibi, Tema</address>
+        </div>
+      </div>
+      <figure class="pickup-map">
+        <figcaption>Cowpea Street area</figcaption>
+        <iframe title="Map of the Cowpea Street pickup area in Klagon" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.0614%2C5.6600%2C-0.0478%2C5.6705&amp;layer=mapnik" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </figure>
+      <div class="map-links">
+        <a href="https://www.openstreetmap.org/#map=16/5.66525/-0.05460" target="_blank" rel="noopener noreferrer">Open area map ↗</a>
+        <a href="https://wa.me/233533805134?text=Hello%20PK%20GREENE%20SUPPLY%20VENTURE%2C%20please%20share%20the%20exact%20pickup%20pin%20for%20CB69%20Cowpea%20Street%20in%20Klagon." target="_blank" rel="noopener noreferrer">Ask for the exact pin on WhatsApp ↗</a>
+      </div>
     </div>
   </section>
 </main>

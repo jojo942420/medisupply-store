@@ -134,3 +134,7 @@ textarea::placeholder { color: #536071; }
 .line .line-timing { color: #704919; font-size: .75rem; }
 .receipt .invoice-status { color: var(--blue); font-weight: 700; }
 @media (max-width: 430px) { .checkout-art { width: 77px; } .checkout-heading p { margin-top: 5px; } }
+
+.checkout-contact { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 16px; }
+.checkout-contact a { min-height: 36px; }
+.checkout-contact img { width: 25px; height: 25px; object-fit: contain; }
