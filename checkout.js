@@ -249,10 +249,9 @@ dek450CatalogReady.then(() => {
       const invoice = byId("invoiceLink");
       invoice.hidden = !result.invoiceUrl;
       if (result.invoiceUrl) invoice.href = result.invoiceUrl;
-      byId("invoiceStatus").textContent = result.whatsapp === "accepted"
-        ? "Your invoice was submitted to WhatsApp."
-        : result.invoiceUrl ? "Your pro forma invoice is ready to view now." : "Sales will confirm your invoice when they reach out.";
-      byId("followup").href = "https://wa.me/233533805134?text=" + encodeURIComponent("Hello PK GREEN SUPPLY VENTURE, I’m following up on order request " + result.id + ".");
+      byId("invoiceStatus").textContent = result.invoiceUrl
+        ? "Your pro forma invoice is ready to view."
+        : "Sales will confirm your invoice when they reach out.";
       byId("orderSent").hidden = false;
       byId("orderSentHeading").focus();
     } catch (issue) {
