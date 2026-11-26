@@ -1,15 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GH">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Shop trusted medical supplies, clinical disposables and biomedical equipment.">
-<title>PK GREEN SUPPLY VENTURE | Medical and Laboratory Supplies</title>
+<title>Medical Supplies in Ghana | PK Green Supply Venture</title>
+<meta name="description" content="Request quotes for medical supplies, clinical disposables and biomedical equipment in Ghana. Browse the catalog or arrange pickup in Klagon, Tema.">
+<meta name="robots" content="max-image-preview:large">
+<meta name="google-site-verification" content="D8bcvDyk2MyGR79i-zGWBpvPuw0A3Uz0q0JvtHxRrdU">
+<link rel="canonical" href="https://pkgreene.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PK GREEN SUPPLY VENTURE">
+<meta property="og:title" content="Medical Supplies in Ghana | PK Green Supply Venture">
+<meta property="og:description" content="Request quotes for medical supplies, clinical disposables and biomedical equipment in Ghana. Browse the catalog or arrange pickup in Klagon, Tema.">
+<meta property="og:url" content="https://pkgreene.com/">
+<meta property="og:image" content="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&amp;fit=crop&amp;w=1600&amp;h=900">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pkgreene.com/#company",
+      "name": "PK GREEN SUPPLY VENTURE",
+      "url": "https://pkgreene.com/",
+      "logo": "https://pkgreene.com/assets/brand/dek450-3d-mark.png",
+      "telephone": "+233502113175",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "CB69 Cowpea Street, NDC Junction, Klagon, Lashibi",
+        "addressLocality": "Tema",
+        "addressRegion": "Greater Accra",
+        "addressCountry": "GH"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "name": "PK GREEN SUPPLY VENTURE",
+      "url": "https://pkgreene.com/",
+      "inLanguage": "en-GH",
+      "publisher": {
+        "@id": "https://pkgreene.com/#company"
+      }
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="store-theme.css?v=open-layout-1">
 <link rel="stylesheet" href="storefront.css?v=sales-agent-1">
 <link rel="icon" type="image/png" href="assets/brand/dek450-3d-mark.png">
+<link rel="stylesheet" href="guides.css?v=1">
 </head>
 
 <body>
@@ -55,6 +96,12 @@
       </figure>
     </section>
   </div>
+  <nav class="wrap guide-links" aria-label="Supply categories and buying guide">
+    <a href="medical-supplies.html">Medical supplies</a>
+    <a href="clinical-disposables.html">Clinical disposables</a>
+    <a href="laboratory-equipment.html">Laboratory equipment</a>
+    <a href="medical-supply-buying-guide.html">Buying guide</a>
+  </nav>
   <section class="shop wrap" id="catalog" aria-labelledby="catalog-title">
     <div class="sectionhead"><h2 id="catalog-title">Product catalog</h2></div>
     <div class="catalog-layout">
@@ -334,7 +381,9 @@ catalog.addEventListener("click", event => {
   window.setTimeout(() => { button.textContent = oldText; }, 900);
 });
 document.querySelector("#year").textContent = new Date().getFullYear();
-render();
+const requestedCategory = new URLSearchParams(location.search).get("category");
+const categoryNames = Array.from(document.querySelectorAll(".filter"), button => button.dataset.filter);
+selectCategory(categoryNames.includes(requestedCategory) ? requestedCategory : "All");
 dek450CatalogReady.then(loaded => {
   if (!loaded) return;
   updateBasketCount();
