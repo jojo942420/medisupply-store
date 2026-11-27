@@ -48,7 +48,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="store-theme.css?v=open-layout-1">
-<link rel="stylesheet" href="storefront.css?v=sales-agent-1">
+<link rel="stylesheet" href="storefront.css?v=product-cards-1">
 <link rel="icon" type="image/png" href="assets/brand/dek450-3d-mark.png">
 <link rel="stylesheet" href="guides.css?v=1">
 </head>
@@ -214,7 +214,7 @@ function renderPhotoGallery(product, name) {
   return '<div class="gallery-stage"><button type="button" class="gallery-open" data-gallery aria-label="Open photo gallery for ' +
     name + '"><img src="' + escapeHtml(first.src) + '" alt="' + name + ' — ' + escapeHtml(first.label) +
     '" loading="lazy" decoding="async"><span class="photo-unavailable" hidden>Photo unavailable</span></button>' +
-    '<span class="gallery-expand" aria-hidden="true">↗</span></div>' +
+    '</div>' +
     (thumbnails ? '<div class="gallery-thumbs" role="group" aria-label="Photo views for ' + name + '">' + thumbnails + '</div>' : '');
 }
 
