@@ -121,6 +121,17 @@ img { display: block; max-width: 100%; }
 .photo-dialog h2 { font-size: clamp(1.12rem, 3vw, 1.45rem); font-weight: 680; letter-spacing: -.025em; }
 .photo-dialog button { min-height: 36px; padding: 5px 10px; border: 1px solid var(--input-line); border-radius: 4px; background: var(--white); color: var(--navy); cursor: pointer; font-size: .84rem; }
 .photo-dialog button:hover { background: var(--blue-light); }
+.photo-dialog .close-button {
+  display: grid;
+  place-items: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 1.625rem;
+  line-height: 1;
+}
 .dialog-image { display: grid; place-items: center; margin: 12px 0; height: min(55vh, 475px); overflow: hidden; background: var(--white); border: 1px solid var(--line); }
 .dialog-image img { width: 100%; height: 100%; min-height: 0; object-fit: contain; padding: 9px; }
 .dialog-caption, .dialog-links { color: var(--muted); font-size: .8rem; }

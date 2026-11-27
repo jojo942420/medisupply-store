@@ -48,7 +48,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="store-theme.css?v=open-layout-1">
-<link rel="stylesheet" href="storefront.css?v=product-cards-1">
+<link rel="stylesheet" href="storefront.css?v=gallery-close-1">
 <link rel="icon" type="image/png" href="assets/brand/dek450-3d-mark.png">
 <link rel="stylesheet" href="guides.css?v=1">
 </head>
@@ -184,7 +184,12 @@
 </footer>
 
 <dialog id="photoDialog" class="photo-dialog" aria-labelledby="photoTitle">
-  <header><h2 id="photoTitle"></h2><button id="photoClose" type="button" autofocus>Close</button></header>
+  <header>
+    <h2 id="photoTitle"></h2>
+    <button class="close-button" id="photoClose" type="button" aria-label="Close photo gallery" title="Close photo gallery" autofocus>
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </header>
   <div class="dialog-image"><img id="photoLarge" alt=""><span id="photoError" hidden>Photo unavailable</span></div>
   <footer><button id="photoPrevious" type="button">Previous</button><span class="dialog-caption" id="photoCaption" aria-live="polite"></span><button id="photoNext" type="button">Next</button></footer>
   <div class="dialog-links">
