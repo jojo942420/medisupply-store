@@ -64,7 +64,7 @@ dek450CatalogReady.then(() => {
       const row = document.createElement("div");
       row.className = "line";
       const image = document.createElement("img");
-      image.src = product.photos[0].src;
+      image.src = productPhotoUrl(product.photos[0].src);
       image.alt = "";
       image.loading = "lazy";
       image.addEventListener("error", () => { image.style.visibility = "hidden"; });
