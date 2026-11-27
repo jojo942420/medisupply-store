@@ -48,20 +48,20 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="store-theme.css?v=open-layout-1">
-<link rel="stylesheet" href="storefront.css?v=product-card-refresh-1">
+<link rel="stylesheet" href="storefront.css?v=shop-and-contact-1">
 <link rel="icon" type="image/png" href="assets/brand/dek450-3d-mark.png">
 <link rel="stylesheet" href="guides.css?v=1">
 </head>
 
 <body>
-<a class="skip" href="#catalog">Skip to catalog</a>
+<a class="skip" href="#catalog">Skip to supplies</a>
 <header class="masthead">
   <div class="nav wrap">
     <a class="brand" href="#" aria-label="PK GREEN SUPPLY VENTURE home">
       <span class="wordmark">PK GREEN <span>SUPPLY VENTURE</span></span>
     </a>
     <nav class="navlinks" aria-label="Main navigation">
-      <a href="#catalog" data-category-link="All">Catalog</a>
+      <a href="#catalog" data-category-link="All">Shop</a>
       <a href="#catalog" data-category-link="Biomedical equipment">Equipment</a>
       <a href="#catalog" data-category-link="Laboratory test kits">Laboratory</a>
       <a href="#contact">Contact</a>
@@ -84,7 +84,7 @@
         <h1 id="hero-title">Medical supplies for clinics and labs</h1>
         <p>Shop clinical disposables, diagnostic test kits and biomedical equipment. Our sales team can confirm stock and prepare a quote.</p>
         <div class="actions">
-          <a class="btn" href="#catalog" data-category-link="All">Browse the catalog</a>
+          <a class="btn" href="#catalog" data-category-link="All">Shop supplies</a>
           <a class="text-link sales-agent-link" href="#contact">
             <span class="sales-agent-avatar"><img src="assets/brand/sales-agent.jpg" width="40" height="40" alt="" decoding="async"></span>
             <span>Speak with sales</span>
@@ -103,14 +103,16 @@
     <a href="medical-supply-buying-guide.html">Buying guide</a>
   </nav>
   <section class="shop wrap" id="catalog" aria-labelledby="catalog-title">
-    <div class="sectionhead"><h2 id="catalog-title">Product catalog</h2></div>
+    <div class="shop-heading">
+      <h2 id="catalog-title">Shop supplies</h2>
+      <label class="search-field" for="search">
+        <span class="search-label">Search supplies</span>
+        <span class="search-control">
+          <input id="search" class="search" type="search" placeholder="Product name, brand or model">
+        </span>
+      </label>
+    </div>
     <div class="catalog-layout">
-      <div class="controls">
-        <div class="search-field">
-          <input id="search" class="search" type="search" placeholder="Search products" aria-label="Search products">
-        </div>
-        <div id="resultCount" aria-live="polite"></div>
-      </div>
       <nav class="category-nav" aria-labelledby="categories-heading">
         <h3 id="categories-heading">Categories</h3>
         <div class="filters" role="group" aria-label="Product categories">
@@ -125,55 +127,49 @@
         </div>
       </nav>
       <div class="catalog-main">
+        <div class="browse-results">
+          <h3 id="browse-title">All products</h3>
+          <p id="resultCount" role="status"></p>
+        </div>
         <div id="cartNotice" class="cart-notice" role="status"></div>
         <div class="grid" id="products"></div>
       </div>
     </div>
   </section>
   <section class="contact-panel wrap" id="contact" aria-labelledby="contact-title">
-    <div class="contact-copy">
-      <div class="sales-intro">
-        <span class="sales-agent-avatar"><img src="assets/brand/sales-agent.jpg" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
-        <div>
-          <h2 id="contact-title">Talk to our sales team</h2>
-          <p>Ask about availability, equipment quotes or bulk orders.</p>
+    <div class="sales-card">
+      <h2 id="contact-title">Talk to sales</h2>
+      <p class="sales-intro">Get a quote, check stock or ask about bulk orders.</p>
+      <a class="whatsapp-action" href="https://wa.me/233533805134" target="_blank" rel="noopener noreferrer">
+        <span class="chat-icon" aria-hidden="true"></span>
+        <span>WhatsApp</span>
+        <strong>053 380 5134</strong>
+      </a>
+      <div class="sales-calls" role="group" aria-labelledby="call-heading">
+        <p id="call-heading">Call us</p>
+        <div class="call-links">
+          <a href="tel:+233502113175" aria-label="Call 050 211 3175">050 211 3175</a>
+          <a href="tel:+233248442602" aria-label="Call 024 844 2602">024 844 2602</a>
         </div>
       </div>
-      <ul class="sales-channels">
-        <li><a class="sales-channel" href="https://wa.me/233533805134" target="_blank" rel="noopener noreferrer">
-          <img src="assets/brand/sales-whatsapp.png" width="52" height="52" alt="" loading="lazy" decoding="async">
-          <span><span class="sales-channel-label">WhatsApp</span><strong>0533805134</strong></span>
-          <span class="sales-channel-arrow" aria-hidden="true">↗</span>
-        </a></li>
-        <li><a class="sales-channel" href="tel:+233502113175">
-          <img src="assets/brand/sales-phone.png" width="52" height="52" alt="" loading="lazy" decoding="async">
-          <span><span class="sales-channel-label">Call</span><strong>0502113175</strong></span>
-          <span class="sales-channel-arrow" aria-hidden="true">→</span>
-        </a></li>
-        <li><a class="sales-channel" href="tel:+233248442602">
-          <img src="assets/brand/sales-phone.png" width="52" height="52" alt="" loading="lazy" decoding="async">
-          <span><span class="sales-channel-label">Call</span><strong>0248442602</strong></span>
-          <span class="sales-channel-arrow" aria-hidden="true">→</span>
-        </a></li>
-      </ul>
     </div>
-    <div class="contact-location" id="pickup">
+    <section class="contact-location" id="pickup" aria-labelledby="pickup-title">
       <div class="pickup-heading">
-        <img src="assets/brand/pickup-pin.png" width="58" height="58" alt="" loading="lazy" decoding="async">
+        <span class="pickup-icon" aria-hidden="true"></span>
         <div>
-          <h3>Pickup address</h3>
-          <address>CB69 Cowpea Street, NDC Junction<br>Klagon, Lashibi, Tema</address>
+          <h3 id="pickup-title">Pickup address</h3>
+          <address><strong>CB69 Cowpea Street</strong><br>NDC Junction, Klagon, Lashibi, Tema</address>
         </div>
       </div>
       <figure class="pickup-map">
-        <figcaption>Cowpea Street area</figcaption>
         <iframe title="Map of the Cowpea Street pickup area in Klagon" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.0614%2C5.6600%2C-0.0478%2C5.6705&amp;layer=mapnik" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <figcaption>Cowpea Street area map</figcaption>
       </figure>
       <div class="map-links">
-        <a href="https://www.openstreetmap.org/#map=16/5.66525/-0.05460" target="_blank" rel="noopener noreferrer">Open area map ↗</a>
-        <a href="https://wa.me/233533805134?text=Hello%20PK%20GREEN%20SUPPLY%20VENTURE%2C%20please%20share%20the%20exact%20pickup%20pin%20for%20CB69%20Cowpea%20Street%20in%20Klagon." target="_blank" rel="noopener noreferrer">Ask for the exact pin on WhatsApp ↗</a>
+        <a href="https://www.openstreetmap.org/#map=16/5.66525/-0.05460" target="_blank" rel="noopener noreferrer">Open area map</a>
+        <a href="https://wa.me/233533805134?text=Hello%20PK%20GREEN%20SUPPLY%20VENTURE%2C%20please%20share%20the%20exact%20pickup%20pin%20for%20CB69%20Cowpea%20Street%20in%20Klagon." target="_blank" rel="noopener noreferrer">Ask for the exact pin on WhatsApp</a>
       </div>
-    </div>
+    </section>
   </section>
 </main>
 <footer class="site-footer">
@@ -249,7 +245,7 @@ function render() {
     (category === "All" || product.category === category) &&
     [product.name, product.description, product.category, product.brand, product.model, product.specification]
       .join(" ").toLowerCase().includes(query));
-  document.querySelector("#resultCount").textContent = items.length + (items.length === 1 ? " item" : " items");
+  document.querySelector("#resultCount").textContent = items.length + (items.length === 1 ? " product" : " products");
   catalog.innerHTML = items.length ? items.map(({product, index}) => productCard(product, index)).join("")
     : '<div class="empty">No products match your search. Try another term or category.</div>';
 }
@@ -338,6 +334,7 @@ catalog.addEventListener("click", event => {
 });
 function selectCategory(value) {
   category = value;
+  document.querySelector("#browse-title").textContent = value === "All" ? "All products" : value;
   document.querySelectorAll(".filter").forEach(button => {
     const selected = button.dataset.filter === category;
     button.classList.toggle("active", selected);
