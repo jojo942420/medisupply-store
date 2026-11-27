@@ -48,7 +48,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="store-theme.css?v=open-layout-1">
-<link rel="stylesheet" href="storefront.css?v=shop-and-contact-1">
+<link rel="stylesheet" href="storefront.css?v=store-supplies-1">
 <link rel="icon" type="image/png" href="assets/brand/dek450-3d-mark.png">
 <link rel="stylesheet" href="guides.css?v=1">
 </head>
@@ -61,14 +61,14 @@
       <span class="wordmark">PK GREEN <span>SUPPLY VENTURE</span></span>
     </a>
     <nav class="navlinks" aria-label="Main navigation">
-      <a href="#catalog" data-category-link="All">Shop</a>
+      <a href="#catalog" data-category-link="All">Store supplies</a>
       <a href="#catalog" data-category-link="Biomedical equipment">Equipment</a>
       <a href="#catalog" data-category-link="Laboratory test kits">Laboratory</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="navright">
       <a class="quick-contact" href="https://wa.me/233533805134" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp 0533805134">
-        <img src="assets/brand/sales-whatsapp.png" width="27" height="27" alt=""> WhatsApp
+        <span class="chat-icon" aria-hidden="true"></span> WhatsApp
       </a>
       <a class="cart" id="cart" href="checkout.html" aria-label="Basket, 0 items">
         <img src="assets/brand/checkout-shopping-cart.png" width="42" height="42" alt="">
@@ -84,9 +84,13 @@
         <h1 id="hero-title">Medical supplies for clinics and labs</h1>
         <p>Shop clinical disposables, diagnostic test kits and biomedical equipment. Our sales team can confirm stock and prepare a quote.</p>
         <div class="actions">
-          <a class="btn" href="#catalog" data-category-link="All">Shop supplies</a>
+          <a class="btn" href="#catalog" data-category-link="All">Store supplies</a>
           <a class="text-link sales-agent-link" href="#contact">
-            <span class="sales-agent-avatar"><img src="assets/brand/sales-agent.jpg" width="40" height="40" alt="" decoding="async"></span>
+            <!-- Support portrait footage by Mikhail Nilov on Pexels, video 7682758. -->
+            <picture class="sales-agent-avatar" aria-hidden="true">
+              <source media="(prefers-reduced-motion: no-preference)" type="image/webp" srcset="assets/brand/sales-support-motion.webp">
+              <img src="assets/brand/sales-support-poster.webp" width="96" height="96" alt="" decoding="async">
+            </picture>
             <span>Speak with sales</span>
           </a>
         </div>
@@ -104,7 +108,8 @@
   </nav>
   <section class="shop wrap" id="catalog" aria-labelledby="catalog-title">
     <div class="shop-heading">
-      <h2 id="catalog-title">Shop supplies</h2>
+      <h2 id="catalog-title">Store supplies</h2>
+      <img class="store-photo" src="assets/products/urit-5160-hematology-analyzer-view-1.webp" width="298" height="300" alt="" decoding="async">
       <label class="search-field" for="search">
         <span class="search-label">Search supplies</span>
         <span class="search-control">
