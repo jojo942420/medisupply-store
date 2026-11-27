@@ -45,7 +45,12 @@ img { display: block; max-width: 100%; }
   margin-bottom: clamp(22px, 3vw, 36px);
   padding: clamp(20px, 3.4vw, 42px);
   border-radius: 18px;
-  background: var(--sage);
+  /* Medical Tools on the Table by Pavel Danilyuk, Pexels photo 7108117. */
+  --supplies-overlay: linear-gradient(90deg, var(--sage), rgb(231 239 232 / 94%) 28%, rgb(231 239 232 / 43%) 57%, rgb(231 239 232 / 82%));
+  background-color: var(--sage);
+  background-image: var(--supplies-overlay), url("assets/brand/store-supplies-background.webp");
+  background-position: center, center 53%;
+  background-size: cover;
   color: var(--forest);
 }
 .shop-heading h2, .sales-card h2 { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 680; line-height: 1.02; letter-spacing: -.05em; }
@@ -234,7 +239,12 @@ img { display: block; max-width: 100%; }
 }
 @media (max-width: 690px) { .navlinks { display: none; } }
 @media (max-width: 600px) {
-  .shop-heading { grid-template-columns: minmax(0, 1fr) 76px; grid-template-areas: "title photo" "search search"; border-radius: 14px; }
+  .shop-heading {
+    --supplies-overlay: linear-gradient(180deg, rgb(231 239 232 / 70%), rgb(231 239 232 / 63%) 42%, rgb(231 239 232 / 93%));
+    grid-template-columns: minmax(0, 1fr) 76px;
+    grid-template-areas: "title photo" "search search";
+    border-radius: 14px;
+  }
   .store-photo { height: 76px; }
   .sales-card, .contact-location { border-radius: 14px; }
   .hero-frame { padding-top: 16px; }
