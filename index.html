@@ -48,7 +48,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="store-theme.css?v=open-layout-1">
-<link rel="stylesheet" href="storefront.css?v=store-supplies-photo-1">
+<link rel="stylesheet" href="storefront.css?v=owner-prices-1">
 <link rel="icon" type="image/png" href="assets/brand/dek450-3d-mark.png">
 <link rel="stylesheet" href="guides.css?v=1">
 </head>
@@ -228,8 +228,13 @@ function renderPhotoGallery(product, name) {
     '</div>';
 }
 
+const priceFormatter = new Intl.NumberFormat("en-GH", { style: "currency", currency: "GHS" });
+
 function productCard(product, index) {
   const name = escapeHtml(product.name);
+  const price = Number.isFinite(product.price)
+    ? '<p class="product-price">' + priceFormatter.format(product.price) + '</p>'
+    : "";
   const availability = product.stock === true ? "In stock" : product.stock === false ? "Out of stock" : "Confirm availability";
   const action = '<button class="add" type="button" ' + (product.stock === false ? 'disabled ' : '') +
     'aria-label="Add ' + name + ' to request" data-add>Add to request</button>';
@@ -239,7 +244,7 @@ function productCard(product, index) {
     '</p><details class="product-specs"><summary><span class="specs-icon" aria-hidden="true"></span>Specifications</summary><p>' + escapeHtml(product.specification) +
     '</p>' + (product.specificationSource ? '<p><a href="' + escapeHtml(product.specificationSource) +
       '" target="_blank" rel="noopener noreferrer">Product specifications source</a></p>' : '') +
-    '</details><div class="card-footer"><div class="stock ' + (product.stock === true ? "in" : product.stock === false ? "out" : "") +
+    '</details><div class="card-footer">' + price + '<div class="stock ' + (product.stock === true ? "in" : product.stock === false ? "out" : "") +
     '"><span class="dot" aria-hidden="true"></span>' + availability +
     '</div>' + action + '</div></div></article>';
 }
